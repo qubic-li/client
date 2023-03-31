@@ -54,3 +54,6 @@ you can also see what is going on by observing the logs.
 the service logs to `/var/log/qli.log` or `/var/log/qli.error.log`.
 
 to live watch it on the console use `tail -f /var/log/qli.log`.
+
+## Customizing
+you can customize the settings of your client in the settings file `/q/appsettings.json`
