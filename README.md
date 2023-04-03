@@ -14,8 +14,12 @@ The installerscript places all qubic.li stuff in `/q`.
 
 ### Ubuntu 22.04
 ```bash
+# download and install microsoft sourcese for dotnet installation
+wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
 # Update Sources and install needed packages
-apt update && apt install dotnet6 unzip -y
+apt update && apt install aspnetcore-runtime-6.0 unzip -y
 # download service installation script
 wget https://qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
