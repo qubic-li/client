@@ -13,6 +13,7 @@ All commands should either be executed by root or you need to prepend the `sudo`
 The installerscript places all qubic.li stuff in `/q`.
 
 ### Ubuntu 22.04
+If the below installation of dotnet6 is not working on your ubuntu please consider to install it directly from microsoft: https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-2204
 ```bash
 # Update packages
 apt update
