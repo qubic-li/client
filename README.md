@@ -4,10 +4,11 @@ This is the main client component from qubic.li. It connects to the backend api 
 The Client runs on Docker, Windows and Linux. Below you find the instructions how to use it.
 
 1. [Security Warning](#security-warning)
-2. [What's needed](#whats-needed)
-3. [Using Docker](#using-docker)
-4. [Windows](#windows)
-5. [Linux Service Installatin](#linux-service)
+2. [Download](#download)
+3. [What's needed](#whats-needed)
+4. [Using Docker](#using-docker)
+5. [Windows](#windows)
+6. [Linux Service Installatin](#linux-service)
    1. [Ubuntu 22.04](#ubuntu-2204)
    2. [Debian 11](#debian-11)
    3. [Monitoring](#service-monitoring)
@@ -19,6 +20,12 @@ The client is able to download runners, which then performs the AI Training task
 
 Find more information about the "principle of least privilege" on wikipedia: https://en.wikipedia.org/wiki/Principle_of_least_privilege
 
+## Download
+
+| OS |  Platform 	|  Version 	|  Download |
+|--- |---	|---	|---	|
+| Windows | x64	| 1.1.8	| https://qubic.li/downloads/qli-Client-1.1.8-Windows-x64.zip	|
+| Linux | x64	| 1.1.8	| https://qubic.li/downloads/qli-Client-1.1.8-Linux-x64.tar	|
 
 ## What's needed
 To run the qubic.li Client you need .Net Runtime in Version 6 on all platforms. You can get it from: https://dotnet.microsoft.com/en-us/download/dotnet/6.0.
@@ -28,11 +35,7 @@ The runner needs also the VC Redistributable which can be obtained from: https:/
 ## Windows
 You can run the client directly in your Windows. The Client provices a .exe file which can be executed by a double click.
 
-Download the Client from the Release Section. Or from here. The Client must not be installed.
-
-|  Platform 	|  Version 	|  Download |
-|---	|---	|---	|
-| x64	| Windows 10/11 1.1.7	| https://qubic.li/downloads/qli-Client-1.1.7-Windows-x64.zip	|
+Download the Client from the above link. The Client must not be installed.
 
 
 ## Using Docker
@@ -60,8 +63,8 @@ If the below installation of dotnet6 is not working on your ubuntu please consid
 ```bash
 # Update packages
 apt update
-# Install needed packages
-apt install dotnet6 unzip -y
+# Install .Net 6
+apt install dotnet6 -y
 # download service installation script
 wget https://qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
@@ -78,8 +81,8 @@ chmod u+x qli-Service-install.sh
 wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
-# Update Sources and install needed packages
-apt update && apt install aspnetcore-runtime-6.0 unzip -y
+# Update Sources and install .Net 6 package
+apt update && apt install aspnetcore-runtime-6.0 -y
 # download service installation script
 wget https://qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
