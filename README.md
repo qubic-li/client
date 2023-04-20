@@ -66,12 +66,14 @@ apt update
 # Install .Net 6
 apt install dotnet6 -y
 # download service installation script
-wget https://qubic.li/cloud-init/qli-Service-install.sh
+rm qli-Service-install.sh || wget https://qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
 # Syntax: qli-Service-install.sh <threads> <accessToken> [alias]
 ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
+# remove service install script
+rm qli-Service-install.sh
 ```
 
 
@@ -84,12 +86,14 @@ rm packages-microsoft-prod.deb
 # Update Sources and install .Net 6 package
 apt update && apt install aspnetcore-runtime-6.0 -y
 # download service installation script
-wget https://qubic.li/cloud-init/qli-Service-install.sh
+rm qli-Service-install.sh || wget https://qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
 # Syntax: qli-Service-install.sh <threads> <accessToken> [alias]
 ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
+# remove service install script
+rm qli-Service-install.sh
 ```
 
 ### Service Monitoring
