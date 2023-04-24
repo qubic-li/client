@@ -24,8 +24,8 @@ Find more information about the "principle of least privilege" on wikipedia: htt
 
 | OS |  Platform 	|  Version 	|  Download |
 |--- |---	|---	|---	|
-| Windows | x64	| 1.1.10	| https://qubic.li/downloads/qli-Client-1.1.10-Windows-x64.zip	|
-| Linux | x64	| 1.1.10	| https://qubic.li/downloads/qli-Client-1.1.10-Linux-x64.tar	|
+| Windows | x64	| 1.1.11	| https://qubic.li/downloads/qli-Client-1.1.11-Windows-x64.zip	|
+| Linux | x64	| 1.1.11	| https://qubic.li/downloads/qli-Client-1.1.11-Linux-x64.tar	|
 
 ## What's needed
 To run the qubic.li Client you need .Net Runtime in Version 6 on all platforms. You can get it from: https://dotnet.microsoft.com/en-us/download/dotnet/6.0.
