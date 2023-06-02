@@ -14,6 +14,7 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
    2. [Debian 11](#debian-11)
    3. [Monitoring](#service-monitoring)
    4. [Service Customizing](#customizing)
+8. [Troubleshooting](#troubleshooting)
 
 
 ## Security Warning
@@ -46,6 +47,8 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 To run the qubic.li Client you need .Net Runtime in Version 6 on all platforms. You can get it from: https://dotnet.microsoft.com/en-us/download/dotnet/6.0.
 
 The runner needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
+
+The CPU where you run the Client must support `AVX2` instructions.
 
 ## Command Line Arguments vs. Configuration
 You can either start the Client by providing command line arguments or using an [appsettings.json](#customizing) file.
@@ -149,6 +152,5 @@ You can create a custom file with the name `appsettings.production.json` which h
 
 *Only one of these can be defined.
 
-
-
-
+## Troubleshooting
+The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
