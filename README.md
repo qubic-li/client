@@ -4,11 +4,12 @@ This is the main client component from qubic.li. It connects to the backend api 
 The Client runs on Docker, Windows and Linux. Below you find the instructions how to use it.
 
 1. [Security Warning](#security-warning)
-2. [Download](#download)
-3. [What's needed](#whats-needed)
-4. [Using Docker](#using-docker)
-5. [Windows](#windows)
-6. [Linux Service Installatin](#linux-service)
+2. [Pool Mining](#pool-mining)
+3. [Download](#download)
+4. [What's needed](#whats-needed)
+5. [Using Docker](#using-docker)
+6. [Windows](#windows)
+7. [Linux Service Installatin](#linux-service)
    1. [Ubuntu 22.04](#ubuntu-2204)
    2. [Debian 11](#debian-11)
    3. [Monitoring](#service-monitoring)
@@ -20,17 +21,40 @@ The client is able to download runners, which then performs the AI Training task
 
 Find more information about the "principle of least privilege" on wikipedia: https://en.wikipedia.org/wiki/Principle_of_least_privilege
 
+## Pool Mining
+If you don't want to operate your own Qubic infrastructure. You can join the qubic.li pool mining. You can either register an account on qubic.li or you can join pool mining register-less.
+
+If you want to create your own account, follow the instructions here: https://doc.qubic.world/becoming-a-computor-miner/how-to-participate
+
+If you want regitration-less pool mining, do the following:
+1. Create a Qubic Id (e.g. on https://wallet.qubic.li)
+2. Download Client from below
+3. Start your Client with `qli-Client <PUBLICID> <Threads>`
+
+You can also put your PayoutId into the [configuration file](#customizing) if you don't want to use command line arguments.
+
 ## Download
 
-| OS |  Platform 	|  Version 	|  Download |
-|--- |---	|---	|---	|
-| Windows | x64	| 1.1.11	| https://qubic.li/downloads/qli-Client-1.1.11-Windows-x64.zip	|
+| OS |  Platform 	|  Version 	|  Download | Description
+|--- |---	|---	|---	|--- |
+| Windows | x64	| 1.1.11	| https://qubic.li/downloads/qli-Client-1.1.11-Windows-x64.zip	| 
+| Windows | x64	| 1.2.0 (preview)	| https://qubic.li/downloads/qli-Client-1.2.0-Windows-x64.zip	|
+| Windows | x64	| 1.2.0 (preview)	| https://qubic.li/downloads/qli-Client-1.2.0-Windows-x64-Plain.zip	| Version without default configuration
 | Linux | x64	| 1.1.11	| https://qubic.li/downloads/qli-Client-1.1.11-Linux-x64.tar	|
 
 ## What's needed
 To run the qubic.li Client you need .Net Runtime in Version 6 on all platforms. You can get it from: https://dotnet.microsoft.com/en-us/download/dotnet/6.0.
 
 The runner needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
+
+## Command Line Arguments vs. Configuration
+You can either start the Client by providing command line arguments or using an [appsettings.json](#customizing) file.
+
+|  Argument 	|  Default Value 	|  Description 	|
+|---	|---	|---	|
+| PayoutId	| NULL	| The Qubic ID you want to receive the mining payouts if you participate in pool mining	|
+| Threads	| 1	| How many threads should be used for the AI Training.	|
+| Alias	| qubic.li Client	| You can give your Client a Name which will be displayed in the |
 
 ## Windows
 You can run the client directly in your Windows. The Client provices a .exe file which can be executed by a double click.
@@ -109,7 +133,7 @@ the service logs to `/var/log/qli.log` or `/var/log/qli.error.log`.
 to live watch it on the console, use `tail -f /var/log/qli.log`.
 
 
-### Customizing
+## Customizing
 you can customize the settings of your client in the settings file `/q/appsettings.json`
 
 This file contains the configuration of your client and need to be placed at the same location as the executable.
@@ -119,8 +143,11 @@ You can create a custom file with the name `appsettings.production.json` which h
 |---	|---	|---	|
 |  baseUrl 	|  https://mine.qubic.li/ 	|  The Base Url of the API 	|
 |  amountOfThreads 	|  1 	|  How many threads should be used for the AI Training.	|
-|  accessToken 	|  JWT Token 	| This is you personal JWT Token which you can obtain from the Control Panel at qubic.li 	|
+|  accessToken* 	|  JWT Token 	| This is you personal JWT Token which you can obtain from the Control Panel at qubic.li 	|
+|  payoutId* 	|  NULL 	| This is the ID you want to get token payout for your found solutions.	|
 |  alias 	|  qli Client 	| You can give your Client a Name which will be displayed in the Control Panel. If empty it uses the Hostname.	|
+
+*Only one of these can be defined.
 
 
 
