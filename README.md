@@ -30,7 +30,7 @@ If you want to create your own account, follow the instructions here: https://do
 If you want regitration-less pool mining, do the following:
 1. Create a Qubic Id (e.g. on https://wallet.qubic.li)
 2. Download Client from below (Version >=1.2)
-3. Start your Client with `qli-Client <PUBLICID> <Threads>`
+3. Start your Client with `qli-Client <QUBICID> <THREADS>`
 
 You can also put your PayoutId into the [configuration file](#customizing) if you don't want to use command line arguments.
 
