@@ -88,6 +88,7 @@ The installerscript places all qubic.li stuff in `/q`.
 
 ### Ubuntu 22.04
 If the below installation of dotnet6 is not working on your ubuntu please consider to install it directly from microsoft: https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-2204
+Don't forget to replace the token from the below examples with your own.
 
 ```bash
 # Update packages
@@ -99,7 +100,7 @@ rm qli-Service-install.sh || wget https://qubic.li/cloud-init/qli-Service-instal
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
-# Syntax: qli-Service-install.sh <threads> <accessToken> [alias]
+# Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
 ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
 # remove service install script
 rm qli-Service-install.sh
@@ -119,7 +120,7 @@ rm qli-Service-install.sh || wget https://qubic.li/cloud-init/qli-Service-instal
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
-# Syntax: qli-Service-install.sh <threads> <accessToken> [alias]
+# Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
 ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
 # remove service install script
 rm qli-Service-install.sh
