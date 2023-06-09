@@ -12,7 +12,7 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 7. [Linux Service Installatin](#linux-service)
    1. [Ubuntu 22.04](#ubuntu-2204)
    2. [Debian 11](#debian-11)
-   3. [Redhat Enterprise 8.8](#redhat-enterprise-8.8)
+   3. [Redhat Enterprise 8.8](#redhat-enterprise-88)
    4. [Monitoring](#service-monitoring)
    5. [Service Customizing](#customizing)
 8. [Troubleshooting](#troubleshooting)
