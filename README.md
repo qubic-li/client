@@ -12,8 +12,9 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 7. [Linux Service Installatin](#linux-service)
    1. [Ubuntu 22.04](#ubuntu-2204)
    2. [Debian 11](#debian-11)
-   3. [Monitoring](#service-monitoring)
-   4. [Service Customizing](#customizing)
+   3. [Redhat Enterprise 8.8](#Redhat-Enterprise-8.8)
+   4. [Monitoring](#service-monitoring)
+   5. [Service Customizing](#customizing)
 8. [Troubleshooting](#troubleshooting)
 
 
@@ -102,8 +103,6 @@ chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
 # Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
 ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
-# remove service install script
-rm qli-Service-install.sh
 ```
 
 
@@ -122,8 +121,21 @@ chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
 # Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
 ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
-# remove service install script
-rm qli-Service-install.sh
+```
+
+### Redhat Enterprise 8.8
+```bash
+# Update packages
+sudo yum update
+# Install .Net 6
+sudo yum install dotnet-sdk-6.0 -y
+# download service installation script
+rm qli-Service-install.sh || wget https://qubic.li/cloud-init/qli-Service-install.sh
+# set the script as executable
+chmod u+x qli-Service-install.sh
+# install qubic.li client as systemd service
+# Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
+sudo ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
 ```
 
 ### Service Monitoring
