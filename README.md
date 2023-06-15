@@ -40,10 +40,8 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 
 | OS |  Platform 	|  Version 	|  Download | Description
 |--- |---	|---	|---	|--- |
-| Windows | x64	| 1.1.11	| https://qubic.li/downloads/qli-Client-1.1.11-Windows-x64.zip	| 
 | Windows | x64	| 1.2.0 (preview)	| https://qubic.li/downloads/qli-Client-1.2.0-Windows-x64.zip	|
 | Windows | x64	| 1.2.0 (preview)	| https://qubic.li/downloads/qli-Client-1.2.0-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.1.11	| https://qubic.li/downloads/qli-Client-1.1.11-Linux-x64.tar	|
 | Linux | x64	| 1.2.0 (preview)	| https://qubic.li/downloads/qli-Client-1.2.0-Linux-x64.tar	|
 
 ## What's needed
