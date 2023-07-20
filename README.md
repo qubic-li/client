@@ -40,9 +40,9 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 
 | OS |  Platform 	|  Version 	|  Download | Description
 |--- |---	|---	|---	|--- |
-| Windows | x64	| 1.2.0	| https://qubic.li/downloads/qli-Client-1.2.0-Windows-x64.zip	|
-| Windows | x64	| 1.2.0	| https://qubic.li/downloads/qli-Client-1.2.0-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.2.0	| https://qubic.li/downloads/qli-Client-1.2.0-Linux-x64.tar	|
+| Windows | x64	| 1.2.0	| https://app.qubic.li/downloads/qli-Client-1.2.0-Windows-x64.zip	|
+| Windows | x64	| 1.2.0	| https://app.qubic.li/downloads/qli-Client-1.2.0-Windows-x64-Plain.zip	| Version without default configuration
+| Linux | x64	| 1.2.0	| https://app.qubic.li/downloads/qli-Client-1.2.0-Linux-x64.tar	|
 
 ## What's needed
 To run the qubic.li Client you need .Net Runtime in Version 6 on all platforms. You can get it from: https://dotnet.microsoft.com/en-us/download/dotnet/6.0.
@@ -95,7 +95,7 @@ apt update
 # Install .Net 6
 apt install dotnet6 -y
 # download service installation script
-rm qli-Service-install.sh || wget https://qubic.li/cloud-init/qli-Service-install.sh
+rm qli-Service-install.sh || wget https://app.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
@@ -113,7 +113,7 @@ rm packages-microsoft-prod.deb
 # Update Sources and install .Net 6 package
 apt update && apt install aspnetcore-runtime-6.0 -y
 # download service installation script
-rm qli-Service-install.sh || wget https://qubic.li/cloud-init/qli-Service-install.sh
+rm qli-Service-install.sh || wget https://app.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
@@ -128,7 +128,7 @@ sudo yum update
 # Install .Net 6
 sudo yum install dotnet-sdk-6.0 -y
 # download service installation script
-rm qli-Service-install.sh || wget https://qubic.li/cloud-init/qli-Service-install.sh
+rm qli-Service-install.sh || wget https://app.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
