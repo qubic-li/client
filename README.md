@@ -165,5 +165,28 @@ You can create a custom file with the name `appsettings.production.json` which h
 
 *Only one of these can be defined.
 
+### sample configuration with token
+```json
+{
+	"Settings": {
+		"baseUrl": "https://ai.diyschool.ch/",
+		"amountOfThreads": 16,
+		"alias": "",
+		"accessToken": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ"
+	}
+}
+```
+### sample configuration with payout id
+```json
+{
+	"Settings": {
+		"baseUrl": "https://ai.diyschool.ch/",
+		"amountOfThreads": 16,
+		"alias": "VGIWRRNVVRRXSEASPENCIMVNANPCFHAASZVPBIEFLCRYHWSZYSGXHNSBYPVN",
+		"accessToken": null
+	}
+}
+```
+
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
