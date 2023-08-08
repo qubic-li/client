@@ -171,7 +171,7 @@ You can create a custom file with the name `appsettings.production.json` which h
 	"Settings": {
 		"baseUrl": "https://mine.qubic.li/",
 		"amountOfThreads": 16,
-		"alias": "",
+		"alias": "Client 3",
 		"accessToken": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ"
 	}
 }
@@ -182,7 +182,8 @@ You can create a custom file with the name `appsettings.production.json` which h
 	"Settings": {
 		"baseUrl": "https://mine.qubic.li/",
 		"amountOfThreads": 16,
-		"alias": "VGIWRRNVVRRXSEASPENCIMVNANPCFHAASZVPBIEFLCRYHWSZYSGXHNSBYPVN",
+		"alias": "My super miner",
+		"payoutId": "VGIWRRNVVRRXSEASPENCIMVNANPCFHAASZVPBIEFLCRYHWSZYSGXHNSBYPVN",
 		"accessToken": null
 	}
 }
