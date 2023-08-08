@@ -183,8 +183,7 @@ You can create a custom file with the name `appsettings.production.json` which h
 		"baseUrl": "https://mine.qubic.li/",
 		"amountOfThreads": 16,
 		"alias": "My super miner",
-		"payoutId": "VGIWRRNVVRRXSEASPENCIMVNANPCFHAASZVPBIEFLCRYHWSZYSGXHNSBYPVN",
-		"accessToken": null
+		"payoutId": "VGIWRRNVVRRXSEASPENCIMVNANPCFHAASZVPBIEFLCRYHWSZYSGXHNSBYPVN"
 	}
 }
 ```
