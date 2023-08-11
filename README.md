@@ -166,20 +166,6 @@ You can create a custom file with the name `appsettings.production.json` which h
 
 *Only one of these can be defined.
 
-## Remove Client
-To remove the qubic.li Client execute the following commands.
-```
-# stop service
-systemctl stop qli
-# remove service definition
-rm /etc/systemd/system/qli.service
-# reload systemd
-systemctl daemon-reload
-# remove all related files
-rm -R /q
-rm /var/log/qli.log
-```
-
 ### sample configuration with token
 ```json
 {
@@ -201,6 +187,20 @@ rm /var/log/qli.log
 		"payoutId": "VGIWRRNVVRRXSEASPENCIMVNANPCFHAASZVPBIEFLCRYHWSZYSGXHNSBYPVN"
 	}
 }
+```
+
+## Remove Client
+To remove the qubic.li Client execute the following commands.
+```
+# stop service
+systemctl stop qli
+# remove service definition
+rm /etc/systemd/system/qli.service
+# reload systemd
+systemctl daemon-reload
+# remove all related files
+rm -R /q
+rm /var/log/qli.log
 ```
 
 ## Troubleshooting
