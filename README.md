@@ -15,6 +15,7 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
    3. [Redhat Enterprise 8.8](#redhat-enterprise-88)
    4. [Monitoring](#service-monitoring)
    5. [Service Customizing](#customizing)
+   6. [Remove Client](#remove-client)
 8. [Troubleshooting](#troubleshooting)
 
 
@@ -164,6 +165,20 @@ You can create a custom file with the name `appsettings.production.json` which h
 |  alias 	|  qli Client 	| You can give your Client a Name which will be displayed in the Control Panel. If empty it uses the Hostname.	|
 
 *Only one of these can be defined.
+
+## Remove Client
+To remove the qubic.li Client execute the following commands.
+```
+# stop service
+systemctl stop qli
+# remove service definition
+rm /etc/systemd/system/qli.service
+# reload systemd
+systemctl daemon-reload
+# remove all related files
+rm -R /q
+rm /var/log/qli.log
+```
 
 ### sample configuration with token
 ```json
