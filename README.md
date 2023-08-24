@@ -103,7 +103,13 @@ chmod u+x qli-Service-install.sh
 # Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
 ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
 ```
-
+for **ubuntu 20.04** you might need to install a more recent libc version.
+```
+# add repo (use a mirror near your location from: https://packages.ubuntu.com/jammy/amd64/libc6/download)
+echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list
+apt update
+apt install libc6
+```
 
 ### Debian 11
 ```bash
