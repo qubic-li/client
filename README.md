@@ -43,7 +43,7 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 |--- |---	|---	|---	|--- |
 | Windows | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Windows-x64.zip	|
 | Windows | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Linux-x64.tar	|
+| Linux | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Linux-x64.tar.gz	|
 
 ## What's needed
 To run the qubic.li Client you need .Net Runtime in Version 6 on all platforms. You can get it from: https://dotnet.microsoft.com/en-us/download/dotnet/6.0.
