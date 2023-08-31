@@ -41,9 +41,9 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 
 | OS |  Platform 	|  Version 	|  Download | Description
 |--- |---	|---	|---	|--- |
-| Windows | x64	| 1.2.0	| https://app.qubic.li/downloads/qli-Client-1.2.0-Windows-x64.zip	|
-| Windows | x64	| 1.2.0	| https://app.qubic.li/downloads/qli-Client-1.2.0-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.2.0	| https://app.qubic.li/downloads/qli-Client-1.2.0-Linux-x64.tar	|
+| Windows | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Windows-x64.zip	|
+| Windows | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Windows-x64-Plain.zip	| Version without default configuration
+| Linux | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Linux-x64.tar	|
 
 ## What's needed
 To run the qubic.li Client you need .Net Runtime in Version 6 on all platforms. You can get it from: https://dotnet.microsoft.com/en-us/download/dotnet/6.0.
@@ -67,7 +67,7 @@ You can run the client directly in your Windows. The Client provices a .exe file
 Download the Client from the above link. The Client must not be installed.
 
 
-## Using Docker
+## Using Docker (DEPRECATED)
 You can use Docker to run the qubic.li Client. Use the official Docker Image from: https://hub.docker.com/r/j0et0m/qubicliclient
 
 Don't forget to set the correct Environment Settings.
