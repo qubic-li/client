@@ -11,7 +11,7 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 6. [Windows](#windows)
 7. [Linux Service Installatin](#linux-service)
    1. [Ubuntu 22.04](#ubuntu-2204)
-   2. [Debian 11](#debian-11)
+   2. [Debian 12](#debian-12)
    3. [Redhat Enterprise 8.8](#redhat-enterprise-88)
    4. [Monitoring](#service-monitoring)
    5. [Service Customizing](#customizing)
@@ -67,7 +67,8 @@ You can run the client directly in your Windows. The Client provices a .exe file
 Download the Client from the above link. The Client must not be installed.
 
 
-## Using Docker (DEPRECATED)
+## Using Docker
+> DEPRECATED
 You can use Docker to run the qubic.li Client. Use the official Docker Image from: https://hub.docker.com/r/j0et0m/qubicliclient
 
 Don't forget to set the correct Environment Settings.
@@ -91,12 +92,8 @@ If the below installation of dotnet6 is not working on your ubuntu please consid
 Don't forget to replace the token from the below examples with your own.
 
 ```bash
-# Update packages
-apt update
-# Install .Net 6
-apt install dotnet6 -y
 # download service installation script
-rm qli-Service-install.sh || wget https://app.qubic.li/cloud-init/qli-Service-install.sh
+wget -O qli-Service-install.sh https://app.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
@@ -111,24 +108,20 @@ apt update
 apt install libc6
 ```
 
-### Debian 11
+### Debian 12
 ```bash
-# download and install microsoft sourcese for dotnet installation
-wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.deb
-# Update Sources and install .Net 6 package
-apt update && apt install aspnetcore-runtime-6.0 -y
 # download service installation script
-rm qli-Service-install.sh || wget https://app.qubic.li/cloud-init/qli-Service-install.sh
+wget -O qli-Service-install.sh https://app.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
 # Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
 ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
 ```
+for **debian 11** you might need to install a more recent libc version.
 
 ### Redhat Enterprise 8.8
+> DEPRECATED
 ```bash
 # Update packages
 sudo yum update
