@@ -41,9 +41,9 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 
 | OS |  Platform 	|  Version 	|  Download | Description
 |--- |---	|---	|---	|--- |
-| Windows | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Windows-x64.zip	|
-| Windows | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Linux-x64.tar.gz	|
+| Windows | x64	| 1.3.4	| https://app.qubic.li/downloads/qli-Client-1.3.4-Windows-x64.zip	|
+| Windows | x64	| 1.3.4	| https://app.qubic.li/downloads/qli-Client-1.3.4-Windows-x64-Plain.zip	| Version without default configuration
+| Linux | x64	| 1.3.4	| https://app.qubic.li/downloads/qli-Client-1.3.4-Linux-x64.tar.gz	|
 
 ## What's needed
 The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
