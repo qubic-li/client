@@ -46,11 +46,11 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 | Linux | x64	| 1.3.3	| https://app.qubic.li/downloads/qli-Client-1.3.3-Linux-x64.tar.gz	|
 
 ## What's needed
-To run the qubic.li Client you need .Net Runtime in Version 6 on all platforms. You can get it from: https://dotnet.microsoft.com/en-us/download/dotnet/6.0.
+The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
 
-The runner needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
+The runner on linux needs at least GLIBC 2.34.
 
-The CPU where you run the Client must support `AVX2` instructions.
+The CPU where you run the Client must support `AVX2` or `AVX512` instructions.
 
 ## Command Line Arguments vs. Configuration
 You can either start the Client by providing command line arguments or using an [appsettings.json](#customizing) file.
@@ -88,7 +88,6 @@ The installerscript places all qubic.li stuff in `/q`.
 
 
 ### Ubuntu 22.04
-If the below installation of dotnet6 is not working on your ubuntu please consider to install it directly from microsoft: https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-2204
 Don't forget to replace the token from the below examples with your own.
 
 ```bash
