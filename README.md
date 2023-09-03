@@ -164,7 +164,7 @@ You can create a custom file with the name `appsettings.production.json` which h
 |  useAvx2 	|  false 	| Set this to `true` to force the Client to use only AVX2	|
 |  allowHwInfoCollect	|  false 	| With that option set to `true` the client will collect CPU model, CPU Cache Size and RAM Size to get optimal runner for that maschine	|
 |  threadsDaySchedule 	|  empty 	| Can be used to schedule the training. e.g. training should only run during night time. |
-|  customRunner	|  false 	| Set this to `true`  to use a custom trainer. The Client will not automatically update runner. | 
+|  customRunner	|  false 	| Set this to `true`  to use a custom trainer. The Client will not automatically update runner. [Details](customRunner.md) | 
 
 *Only one of these can be defined.
 
