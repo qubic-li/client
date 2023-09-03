@@ -14,4 +14,4 @@
 + Added automated selection of AVX2/512 runner
 
 # Version 1.2.3
-+ New Setting: '"customRunner": true' to enforce a custom runner
++ New Setting: `"customRunner": true` to enforce a [custom runner](customRunner.md)
