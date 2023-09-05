@@ -41,16 +41,16 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 
 | OS |  Platform 	|  Version 	|  Download | Description
 |--- |---	|---	|---	|--- |
-| Windows | x64	| 1.3.5	| https://app.qubic.li/downloads/qli-Client-1.3.5-Windows-x64.zip	|
-| Windows | x64	| 1.3.5	| https://app.qubic.li/downloads/qli-Client-1.3.5-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.3.5	| https://app.qubic.li/downloads/qli-Client-1.3.5-Linux-x64.tar.gz	|
+| Windows | x64	| 1.3.9	| https://app.qubic.li/downloads/qli-Client-1.3.9-Windows-x64.zip	|
+| Windows | x64	| 1.3.9	| https://app.qubic.li/downloads/qli-Client-1.3.9-Windows-x64-Plain.zip	| Version without default configuration
+| Linux | x64	| 1.3.9	| https://app.qubic.li/downloads/qli-Client-1.3.9-Linux-x64.tar.gz	|
 
 ## What's needed
 The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
 
-The runner on linux needs at least GLIBC 2.34.
+The runner on linux needs at least **GLIBC 2.34**.
 
-The CPU where you run the Client must support `AVX2` or `AVX512` instructions.
+The CPU where you run the Client **must** support `AVX2` or `AVX512` CPU instructions.
 
 ## Command Line Arguments vs. Configuration
 You can either start the Client by providing command line arguments or using an [appsettings.json](#customizing) file.
