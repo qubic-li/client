@@ -1,3 +1,9 @@
+# Version 1.3.9
++ Bugfixing
++ New Setting: `"serviceLock": true` to use qiner protocol for custom runner
++ New Log Format with display of average it/s
++ Signaling if the trainer isn't starting properly
+  
 # Version 1.3.5
 + Fixed AVX512 detection on Windows
 + Fixed Thread Settings from Portal
