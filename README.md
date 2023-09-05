@@ -165,6 +165,7 @@ You can create a custom file with the name `appsettings.production.json` which h
 |  allowHwInfoCollect	|  false 	| With that option set to `true` the client will collect CPU model, CPU Cache Size and RAM Size to get optimal runner for that maschine	|
 |  threadsDaySchedule 	|  empty 	| Can be used to schedule the training. e.g. training should only run during night time. |
 |  customRunner	|  false 	| Set this to `true`  to use a custom trainer. The Client will not automatically update runner. [Details](CustomRunner.md) | 
+|  serviceLock	|  false 	| Set this to `true`  to use a custom trainer with qiner protocol. | 
 
 *Only one of these can be defined.
 
