@@ -1,3 +1,8 @@
+# Version 1.4.0
++ Bugfixing
++ Possibility to Overwrite Params like AVX512
++ new argument `--version` to get current version of Client
+
 # Version 1.3.9
 + Bugfixing
 + New Setting: `"serviceLock": true` to use qiner protocol for custom runner
