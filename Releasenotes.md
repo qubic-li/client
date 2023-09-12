@@ -1,3 +1,7 @@
+# Version 1.4.2
++ Bugfixing
++ Automatic optimization of the environment
+
 # Version 1.4.0
 + Bugfixing
 + Possibility to Overwrite Params like AVX512
