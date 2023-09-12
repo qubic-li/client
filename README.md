@@ -43,7 +43,7 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 |--- |---	|---	|---	|--- |
 | Windows | x64	| 1.3.9	| https://app.qubic.li/downloads/qli-Client-1.3.9-Windows-x64.zip	|
 | Windows | x64	| 1.3.9	| https://app.qubic.li/downloads/qli-Client-1.3.9-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.3.9	| https://app.qubic.li/downloads/qli-Client-1.3.9-Linux-x64.tar.gz	|
+| Linux | x64	| 1.4.2	| https://app.qubic.li/downloads/qli-Client-1.4.2-Linux-x64.tar.gz	|
 
 ## What's needed
 The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
@@ -91,6 +91,8 @@ The installerscript places all qubic.li stuff in `/q`.
 Don't forget to replace the token from the below examples with your own.
 
 ```bash
+# update your sources
+apt update
 # download service installation script
 wget -O qli-Service-install.sh https://app.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
