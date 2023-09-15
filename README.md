@@ -38,12 +38,14 @@ If you want regitration-less pool mining, do the following:
 You can also put your PayoutId into the [configuration file](#customizing) if you don't want to use command line arguments.
 
 ## Download
+We recommend to update your Version if there is a change in the Minor Version (e.g. from 1.3 to 1.4).
+Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 
 | OS |  Platform 	|  Version 	|  Download | Description
 |--- |---	|---	|---	|--- |
-| Windows | x64	| 1.3.9	| https://app.qubic.li/downloads/qli-Client-1.3.9-Windows-x64.zip	|
-| Windows | x64	| 1.3.9	| https://app.qubic.li/downloads/qli-Client-1.3.9-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.4.2	| https://app.qubic.li/downloads/qli-Client-1.4.2-Linux-x64.tar.gz	|
+| Windows | x64	| 1.5.2	| https://app.qubic.li/downloads/qli-Client-1.5.2-Windows-x64.zip	|
+| Windows | x64	| 1.5.2	| https://app.qubic.li/downloads/qli-Client-1.5.2-Windows-x64-Plain.zip	| Version without default configuration
+| Linux | x64	| 1.5.2	| https://app.qubic.li/downloads/qli-Client-1.5.2-Linux-x64.tar.gz	|
 
 ## What's needed
 The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
