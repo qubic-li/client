@@ -1,3 +1,12 @@
+# Version 1.5.2
++ Optimized Communication between Client and API
++ Fixed blocking Bug
++ Deprecated: `"AVX2":true` setting
++ Optimized Detection of AVX512 and added Fallback to AVX2
++ Removed Deprecated Settings
++ Added Setting `AllowOptimization` to allow the trainer to try to optimize environment. (Default: false)
++ Reduced Runner Footprint
+
 # Version 1.4.2
 + Bugfixing
 + Automatic optimization of the environment
