@@ -1,4 +1,7 @@
 # Version 1.5.2
++ fixed bug which decreases training performance over time
+  
+# Version 1.5.2
 + Optimized Communication between Client and API
 + Fixed blocking Bug
 + Deprecated: `"AVX2":true` setting
