@@ -1,3 +1,6 @@
+# Version 1.5.4
++ fixed bug with Qiner communication protocol
+  
 # Version 1.5.2
 + fixed bug which decreases training performance over time
   
