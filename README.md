@@ -165,11 +165,13 @@ You can create a custom file with the name `appsettings.production.json` which h
 |  accessToken* 	|  JWT Token 	| This is you personal JWT Token which you can obtain from the Control Panel at qubic.li 	|
 |  payoutId* 	|  NULL 	| This is the ID you want to get token payout for your found solutions.	|
 |  alias 	|  qli Client 	| You can give your Client a Name which will be displayed in the Control Panel. If empty it uses the Hostname.	|
-|  useAvx2 	|  false 	| Set this to `true` to force the Client to use only AVX2	|
+|  useAvx2 	|  false 	| !DEPRECATED! Set this to `true` to force the Client to use only AVX2	|
 |  allowHwInfoCollect	|  false 	| With that option set to `true` the client will collect CPU model, CPU Cache Size and RAM Size to get optimal runner for that maschine	|
 |  threadsDaySchedule 	|  empty 	| Can be used to schedule the training. e.g. training should only run during night time. |
 |  customRunner	|  false 	| Set this to `true`  to use a custom trainer. The Client will not automatically update runner. [Details](CustomRunner.md) | 
 |  serviceLock	|  false 	| Set this to `true`  to use a custom trainer with qiner protocol. | 
+|  overwrites	|  {} 	| An object to overwrite specific settings. (e.g. `"AVX512":false` to disable AVX512) | 
+
 
 *Only one of these can be defined.
 
@@ -200,7 +202,7 @@ You can create a custom file with the name `appsettings.production.json` which h
 To remove the qubic.li Client execute the following commands.
 ```
 # stop service
-systemctl stop qli
+systemctl stop qli --no-block
 # remove service definition
 rm /etc/systemd/system/qli.service
 # reload systemd
