@@ -36,6 +36,8 @@ To use your own runner, set `customRunner` to `true`.
 For the communication between the runner and the client you can use the standard Qubic/Qiner protocol:
 The `qli-Client` starts the worker process and observes it's `STDOUT`.
 
+if you need a custom solution ask us in discord.
+
 ## Qubic/Qiner Protocol
 With this, your custom runner just needs to behave like the official Qiner from Qubic. (https://github.com/Qubic-World/qubic-miner-cpu)
 
