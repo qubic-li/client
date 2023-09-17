@@ -214,3 +214,14 @@ rm /var/log/qli.log
 
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
+
+### Reset Server
+if you think the client reports wrong or random hashrate you could restart your server. Or stop all qli services. (e.g. for linux: `systemctl stop qli --no-block && pskill -f qli && systemctl start qli`)
+
+### Possible Optimizations
+Every specific CPU or general Hardware configuration can need speific performance settings. Depending on your Setup you can try:
+
+1. Enable/Disable SMT/HT in Bios
+2. Choose another runner via Webinterface: https://app.qubic.li/main/mining/control
+3. Enabled/Disable Performance Boost (Windows)
+4. Enable/Disable specific Power Schema (Ubuntu)
