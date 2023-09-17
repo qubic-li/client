@@ -4,7 +4,7 @@ A custom runner is useful if you code your own trainer or if you want to experim
 
 1. [Prerequisites](#prerequisites)
 2. [Communication](#communication)
-3. [Qubic/Qiner Protocol](#qubic-qiner-protocol)
+3. [Qubic/Qiner Protocol](#qubicqiner-protocol)
    1. [Command Line Arguments](#command-line-arguments-qiner)
    2. [STDOUT](#stdout-qiner) 
 
@@ -33,12 +33,8 @@ The Configuration Options for a custom runner are:
 To use your own runner, set `customRunner` to `true`.
 
 ## Communication
-There are two Options how the Client communicates with the runner:
-
-1. Qubic/Qiner Protocol
-2. QLI Protocol
-
-Both work the same way. The `qli-Client` starts the worker process and observes it's `STDOUT`. This is used to start the worker to work for the right ID and display the current data.
+For the communication between the runner and the client you can use the standard Qubic/Qiner protocol:
+The `qli-Client` starts the worker process and observes it's `STDOUT`.
 
 ## Qubic/Qiner Protocol
 With this, your custom runner just needs to behave like the official Qiner from Qubic. (https://github.com/Qubic-World/qubic-miner-cpu)
@@ -65,4 +61,6 @@ Your custom runner must ouput at least the following:
 
 > these two parameters will be parsed by the client and displayed in the unified qli format. Including an average of it/s over the last 100 messages.
 
+### Solution Deliviery
+Use the standard Quiner protocol.
 
