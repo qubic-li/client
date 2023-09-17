@@ -1,5 +1,6 @@
 # Version 1.5.5
 + fixed bug on Windows with stopping to report status
++ automatic fallback to AVX2 on linux
 + DEPRECATED: custom QLI Protocol
 
 # Version 1.5.4
