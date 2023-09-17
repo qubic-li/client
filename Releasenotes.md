@@ -1,3 +1,6 @@
+# Version 1.5.5
++ fixed bug on Windows with stopping to report status
+
 # Version 1.5.4
 + fixed bug with Qiner communication protocol
   
