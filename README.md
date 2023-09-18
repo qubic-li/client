@@ -225,3 +225,5 @@ Every specific CPU or general Hardware configuration can need speific performanc
 2. Choose another runner via Webinterface: https://app.qubic.li/main/mining/control
 3. Enabled/Disable Performance Boost (Windows)
 4. Enable/Disable specific Power Schema (Ubuntu)
+5. Add/Remove `wine` in linux. (for ubuntu: `apt install wine -y` or `apt autoremove wine -y`
+6. Adjust Threads to your needs. Sometimes less threads is more effective thatn to many.
