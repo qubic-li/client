@@ -215,6 +215,23 @@ rm /var/log/qli.log
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
 
+### Reset Configuration
+if your trainer isn't working properly. try the following to reset local configuration:
+```
+# stop trainer
+systemctl stop qli --no-block
+# delete any existing configuration lock
+rm /q/*.lock
+# delete current runner
+rm /q/qli-runner
+# delete old solutions
+find /q/. -maxdepth 1 -regextype posix-extended -regex '.*\.e[[:digit:]]+' -delete
+# delete state files
+find /q/. -maxdepth 1 -regextype posix-extended -regex 'state\.[[:digit:]]+' -delete
+# start trainer
+systemctl start qli --no-block
+```
+
 ### Reset Server
 if you think the client reports wrong or random hashrate you could restart your server. Or stop all qli services. (e.g. for linux: `systemctl stop qli --no-block && pskill -f qli && systemctl start qli`)
 
