@@ -233,7 +233,7 @@ systemctl start qli --no-block
 ```
 
 ### Reset Server
-if you think the client reports wrong or random hashrate you could restart your server. Or stop all qli services. (e.g. for linux: `systemctl stop qli --no-block && pskill -f qli && systemctl start qli`)
+if you think the client reports wrong or random hashrate you could restart your server. Or stop all qli services. (e.g. for linux: `systemctl stop qli --no-block && pkill -f qli && systemctl start qli`)
 
 ### Possible Optimizations
 Every specific CPU or general Hardware configuration can need speific performance settings. Depending on your Setup you can try:
