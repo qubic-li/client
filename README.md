@@ -43,9 +43,9 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 
 | OS |  Platform 	|  Version 	|  Download | Description
 |--- |---	|---	|---	|--- |
-| Windows | x64	| 1.5.7	| https://app.qubic.li/downloads/qli-Client-1.5.7-Windows-x64.zip	|
-| Windows | x64	| 1.5.7	| https://app.qubic.li/downloads/qli-Client-1.5.7-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.5.7	| https://app.qubic.li/downloads/qli-Client-1.5.7-Linux-x64.tar.gz	|
+| Windows | x64	| 1.5.7	| https://dl.qubic.li/downloads/qli-Client-1.5.9-Windows-x64.zip	|
+| Windows | x64	| 1.5.7	| https://dl.qubic.li/downloads/qli-Client-1.5.9-Windows-x64-Plain.zip	| Version without default configuration
+| Linux | x64	| 1.5.7	| https://dl.qubic.li/downloads/qli-Client-1.5.9-Linux-x64.tar.gz	|
 
 ## What's needed
 The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
@@ -96,7 +96,7 @@ Don't forget to replace the token from the below examples with your own.
 # update your sources
 apt update
 # download service installation script
-wget -O qli-Service-install.sh https://app.qubic.li/cloud-init/qli-Service-install.sh
+wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
@@ -114,7 +114,7 @@ apt install libc6
 ### Debian 12
 ```bash
 # download service installation script
-wget -O qli-Service-install.sh https://app.qubic.li/cloud-init/qli-Service-install.sh
+wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
@@ -131,7 +131,7 @@ sudo yum update
 # Install .Net 6
 sudo yum install dotnet-sdk-6.0 -y
 # download service installation script
-rm qli-Service-install.sh || wget https://app.qubic.li/cloud-init/qli-Service-install.sh
+rm qli-Service-install.sh || wget https://dl.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
