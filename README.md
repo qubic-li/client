@@ -29,7 +29,7 @@ If you don't want to operate your own Qubic infrastructure. You can join the qub
 
 If you want to create your own account, follow the instructions here: https://doc.qubic.world/becoming-a-computor-miner/how-to-participate
 
-If you want regitration-less pool mining, do the following:
+If you want registration-less pool mining, do the following:
 1. Create a Qubic Id (e.g. on https://wallet.qubic.li)
 2. Download Client from below (Version >=1.2)
 3. Start your Client with `qli-Client <QUBICID> <THREADS>`
@@ -48,7 +48,7 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 | Linux | x64	| 1.5.7	| https://dl.qubic.li/downloads/qli-Client-1.5.9-Linux-x64.tar.gz	|
 
 ## What's needed
-The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
+The runner on Windows also requires the VC Redistributable, which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
 
 The runner on linux needs at least **GLIBC 2.34**.
 
