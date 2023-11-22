@@ -7,16 +7,15 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 2. [Pool Mining](#pool-mining)
 3. [Download](#download)
 4. [What's needed](#whats-needed)
-5. [Using Docker](#using-docker)
-6. [Windows](#windows)
-7. [Linux Service Installatin](#linux-service)
+5. [Windows](#windows)
+6. [Linux Service Installatin](#linux-service)
    1. [Ubuntu 22.04](#ubuntu-2204)
    2. [Debian 12](#debian-12)
    3. [Redhat Enterprise 8.8](#redhat-enterprise-88)
    4. [Monitoring](#service-monitoring)
    5. [Service Customizing](#customizing)
    6. [Remove Client](#remove-client)
-8. [Troubleshooting](#troubleshooting)
+7. [Troubleshooting](#troubleshooting)
 
 
 ## Security Warning
@@ -43,9 +42,9 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 
 | OS |  Platform 	|  Version 	|  Download | Description
 |--- |---	|---	|---	|--- |
-| Windows | x64	| 1.5.7	| https://dl.qubic.li/downloads/qli-Client-1.5.9-Windows-x64.zip	|
-| Windows | x64	| 1.5.7	| https://dl.qubic.li/downloads/qli-Client-1.5.9-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.5.7	| https://dl.qubic.li/downloads/qli-Client-1.5.9-Linux-x64.tar.gz	|
+| Windows | x64	| 1.6.0	| https://dl.qubic.li/downloads/qli-Client-1.6.0-Windows-x64.zip	|
+| Windows | x64	| 1.6.0	| https://dl.qubic.li/downloads/qli-Client-1.6.0-Windows-x64-Plain.zip	| Version without default configuration
+| Linux | x64	| 1.6.0	| https://dl.qubic.li/downloads/qli-Client-1.6.0-Linux-x64.tar.gz	|
 
 ## What's needed
 The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
@@ -67,20 +66,6 @@ You can either start the Client by providing command line arguments or using an 
 You can run the client directly in your Windows. The Client provices a .exe file which can be executed by a double click.
 
 Download the Client from the above link. The Client must not be installed.
-
-
-## Using Docker
-> DEPRECATED
-You can use Docker to run the qubic.li Client. Use the official Docker Image from: https://hub.docker.com/r/j0et0m/qubicliclient
-
-Don't forget to set the correct Environment Settings.
-
-|  Env 	|  Default Value 	|  Description 	|
-|---	|---	|---	|
-| Settings__accessToken	| qubic.li Token	| This is you personal JWT Token which you can obtain from the Control Panel at qubic.li	|
-| Settings__amountOfThreads	| 1	| How many threads should be used for the AI Training.	|
-| Settings__alias	| qubic.li Docker	| You can give your Client a Name which will be displayed in the Control Panel. If empty it uses the Hostname.	|
-
 
 ## Linux Service
 To install the qubic.li Service you can use our quick installation guide. Please consider to check the content of the service installation script.
