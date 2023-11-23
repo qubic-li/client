@@ -1,3 +1,7 @@
+# Version 1.6.1
++ Fixed potential Bug in Solution Delivery
++ Added http/2 support
+  
 # Version 1.6.0
 + Improved API Handling
 + General Bugfixing
