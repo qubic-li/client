@@ -1,4 +1,8 @@
 # Version 1.6.1
++ Fixed Bug in Solution Delivery in certain environments
++ Added compatibility for new Qubic protocol
+  
+# Version 1.6.1
 + Fixed potential Bug in Solution Delivery
 + Added http/2 support
   
