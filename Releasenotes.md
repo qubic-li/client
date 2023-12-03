@@ -1,3 +1,7 @@
+# Version 1.7.1
++ Optimized Network Traffic Handling
++ Significant performance boost
+
 # Version 1.7.0
 + Fixed Bug in Solution Delivery in certain environments
 + Added compatibility for new Qubic protocol
