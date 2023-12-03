@@ -1,3 +1,7 @@
+# Version 1.7.3
++ UPgrade from .Net 6 to 7
++ Added Intel Skylake detection for Linux
+  
 # Version 1.7.2
 + Downgrade from .Net 7 to 6
 + Removed AVX2 Fallback for Linux
