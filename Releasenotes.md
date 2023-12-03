@@ -1,3 +1,7 @@
+# Version 1.7.2
++ Downgrade from .Net 7 to 6
++ Removed AVX2 Fallback for Linux
+  
 # Version 1.7.1
 + Optimized Network Traffic Handling
 + Significant performance boost
