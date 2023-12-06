@@ -1,3 +1,7 @@
+# Version 1.7.5
++ Windows Release
++ Bugfixes
+
 # Version 1.7.3
 + UPgrade from .Net 6 to 7
 + Added Intel Skylake detection for Linux
