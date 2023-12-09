@@ -1,4 +1,4 @@
-# Version 1.7.5
+# Version 1.7.6
 + Fixed Bug where solution finding was delayed
 + Changed main communication Scheme from qiner to qli internal
   
