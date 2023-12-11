@@ -80,7 +80,9 @@ Don't forget to replace the token from the below examples with your own.
 ```bash
 # update your sources
 apt update
-# download service installation script
+# download service installation script with autoupdate
+# wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto.sh
+# download service installation script without auto update
 wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
