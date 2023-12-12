@@ -100,6 +100,8 @@ apt install libc6
 
 ### Debian 12
 ```bash
+# download service installation script with autoupdate
+# wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto.sh
 # download service installation script
 wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
@@ -115,8 +117,8 @@ for **debian 11** you might need to install a more recent libc version.
 ```bash
 # Update packages
 sudo yum update
-# Install .Net 6
-sudo yum install dotnet-sdk-6.0 -y
+# download service installation script with autoupdate
+# wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto.sh
 # download service installation script
 rm qli-Service-install.sh || wget https://dl.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
@@ -158,6 +160,8 @@ You can create a custom file with the name `appsettings.production.json` which h
 |  customRunner	|  false 	| Set this to `true`  to use a custom trainer. The Client will not automatically update runner. [Details](CustomRunner.md) | 
 |  serviceLock	|  false 	| Set this to `true`  to use a custom trainer with qiner protocol. | 
 |  overwrites	|  {} 	| An object to overwrite specific settings. (e.g. `"AVX512":false` to disable AVX512) | 
+|  autoupdateEnabled	|  false 	| Set this to `true` to enable auto update of the service client (from version 1.7.8) | 
+|  checkUpdateEnabled	|  true 	| Checks if there is a new version of the service client when starting | 
 
 
 *Only one of these can be defined.
