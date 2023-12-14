@@ -96,6 +96,7 @@ for **ubuntu 20.04** you might need to install a more recent libc version.
 echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list
 apt update
 apt install libc6
+apt install -y g++-11
 ```
 
 ### Debian 12
