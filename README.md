@@ -45,6 +45,7 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 | Windows | x64	| 1.7.9	| https://dl.qubic.li/downloads/qli-Client-1.7.9-Windows-x64.zip	|
 | Windows | x64	| 1.7.9	| https://dl.qubic.li/downloads/qli-Client-1.7.9-Windows-x64-Plain.zip	| Version without default configuration
 | Linux | x64	| 1.8.0	| https://dl.qubic.li/downloads/qli-Client-1.8.0-Linux-x64.tar.gz	| Min Version for GPU
+| Linux | x64	| 1.8.1	| https://dl.qubic.li/downloads/qli-Client-1.8.1-beta-Linux-x64.tar.gz	|
 
 ## What's needed
 The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
