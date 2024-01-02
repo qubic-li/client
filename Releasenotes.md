@@ -1,3 +1,9 @@
+# Version 1.8.1
++ Added optimized console logging. (new format: "SOL: X/Y" where Y is found solutions and X is submitted solutions)
+
+# Version 1.8.0
++ GPU Release
+
 # Version 1.7.6
 + Fixed Bug where solution finding was delayed
 + Changed main communication Scheme from qiner to qli internal
