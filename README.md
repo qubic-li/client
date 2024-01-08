@@ -88,7 +88,7 @@ wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-instal
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
 # Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
-./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
+./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImMyYmUyNTVkLWRkNzAtNDE4Mi04MDdkLWM1M2M5Yjc5ZDgyNiIsIk1pbmluZyI6IiIsIm5iZiI6MTcwNDczODc4NSwiZXhwIjoxNzM2Mjc0Nzg1LCJpYXQiOjE3MDQ3Mzg3ODUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.j8oI56OqV-gjoHxacwegetd2nha1zHLfSjW-REcNsp8q0lWW-NbvClPIuy_nig-YqpbyPXRPAZvYjh1SUjkw7g
 ```
 for **ubuntu 20.04** you might need to install a more recent libc version.
 ```
@@ -109,7 +109,7 @@ wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-instal
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
 # Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
-./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
+./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImMyYmUyNTVkLWRkNzAtNDE4Mi04MDdkLWM1M2M5Yjc5ZDgyNiIsIk1pbmluZyI6IiIsIm5iZiI6MTcwNDczODc4NSwiZXhwIjoxNzM2Mjc0Nzg1LCJpYXQiOjE3MDQ3Mzg3ODUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.j8oI56OqV-gjoHxacwegetd2nha1zHLfSjW-REcNsp8q0lWW-NbvClPIuy_nig-YqpbyPXRPAZvYjh1SUjkw7g
 ```
 for **debian 11** you might need to install a more recent libc version.
 
@@ -126,7 +126,7 @@ rm qli-Service-install.sh || wget https://dl.qubic.li/cloud-init/qli-Service-ins
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
 # Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
-sudo ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ
+sudo ./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImMyYmUyNTVkLWRkNzAtNDE4Mi04MDdkLWM1M2M5Yjc5ZDgyNiIsIk1pbmluZyI6IiIsIm5iZiI6MTcwNDczODc4NSwiZXhwIjoxNzM2Mjc0Nzg1LCJpYXQiOjE3MDQ3Mzg3ODUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.j8oI56OqV-gjoHxacwegetd2nha1zHLfSjW-REcNsp8q0lWW-NbvClPIuy_nig-YqpbyPXRPAZvYjh1SUjkw7g
 ```
 
 ### Service Monitoring
@@ -174,7 +174,7 @@ You can create a custom file with the name `appsettings.production.json` which h
 		"baseUrl": "https://mine.qubic.li/",
 		"amountOfThreads": 16,
 		"alias": "Client 3",
-		"accessToken": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVlNjJhZjhjLWU5ZTgtNDBiMS04ZmMyLTM5Mzg0Mzk5OTcwNyIsIk1pbmluZyI6IiIsIm5iZiI6MTY3MjE3MTIwMywiZXhwIjoxNzAzNzA3MjAzLCJpYXQiOjE2NzIxNzEyMDMsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.DJkHv_2K0eNiAkjKia8bxag5I4ixOtjk36AGE6zwzxiEFO_w8ovsoLY4ARONUwnak_N-5-W69PJbbKCphyICpQ"
+		"accessToken": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImMyYmUyNTVkLWRkNzAtNDE4Mi04MDdkLWM1M2M5Yjc5ZDgyNiIsIk1pbmluZyI6IiIsIm5iZiI6MTcwNDczODc4NSwiZXhwIjoxNzM2Mjc0Nzg1LCJpYXQiOjE3MDQ3Mzg3ODUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.j8oI56OqV-gjoHxacwegetd2nha1zHLfSjW-REcNsp8q0lWW-NbvClPIuy_nig-YqpbyPXRPAZvYjh1SUjkw7g"
 	}
 }
 ```
