@@ -1,5 +1,10 @@
+# Version 1.8.3
++ Fixed a bug in calculating local found solutions. (e.g. wrong "SOL: 12/300" display)
++ Fiexd a reporting bug
+  
 # Version 1.8.2
 + Fixed a bug in writing `stats.EPOCH.lock` file
+  
 # Version 1.8.1
 + Added optimized console logging. (new format: "SOL: X/Y" where Y is found solutions and X is submitted solutions)
 
