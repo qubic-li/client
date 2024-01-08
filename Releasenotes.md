@@ -1,7 +1,7 @@
 # Version 1.8.3
 + Fixed a bug in calculating local found solutions. (e.g. wrong "SOL: 12/300" display)
 + Fiexd a reporting bug
-+ Added display of epoch to console output
++ Added experimental display of epoch to console output
   
 # Version 1.8.2
 + Fixed a bug in writing `stats.EPOCH.lock` file
