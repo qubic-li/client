@@ -1,3 +1,6 @@
+# Version 1.8.5
++ Optimized Epoch Change
+  
 # Version 1.8.4
 + Added new Output line for GPU Trainers `GPU #0: 870 it/s | GPU #1: 884 it/s | GPU #2: 870 it/s | GPU #3: 872 it/s` to have this information available in hiveos
   
