@@ -212,6 +212,8 @@ if your trainer isn't working properly. try the following to reset local configu
 ```
 # stop trainer
 systemctl stop qli --no-block
+# ensure that all qli services are stopped/killed
+pkill -f qli
 # delete any existing configuration lock
 rm /q/*.lock
 # delete current runner
