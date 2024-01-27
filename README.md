@@ -211,6 +211,20 @@ The Client creates a folder `log` where all error messages are stored. If the Cl
 Somtimes the detection of AVX2/AVX512 is not accurate and it loads the wrong trainer.
 If this happens to you, you can enforce certain configuration.
 
+#### Enforce SKYLAKE
+add `"SKYLAKE": true` to overwrites in appsettings.json
+
+```json
+{
+	"Settings": {
+		"....": "..."
+		"overwrites": {
+			"SKYLAKE": true
+		}
+	}
+}
+```
+
 #### Enforce AVX2
 add `"AVX512": false` to overwrites in appsettings.json
 
