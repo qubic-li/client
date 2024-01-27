@@ -207,6 +207,24 @@ rm /var/log/qli.log
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
 
+### AVX CPU (Intel) not working
+Somtimes the detection of AVX2/AVX512 is not accurate and it loads the wrong trainer.
+If this happens to you, you can enforce certain configuration.
+
+#### Enforce AVX2
+add `"AVX512": false` to overwrites in appsettings.json
+
+```json
+{
+	"Settings": {
+		"....": "..."
+		"overwrites": {
+			"AVX512": false
+		}
+	}
+}
+```
+
 ### Reset Configuration
 if your trainer isn't working properly. try the following to reset local configuration:
 ```
