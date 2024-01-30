@@ -1,3 +1,6 @@
+# Version 1.8.6
++ Fixed wrong "skylake" overwrite for linux client
+
 # Version 1.8.5
 + Optimized Epoch Change
   
