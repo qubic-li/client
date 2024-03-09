@@ -1,4 +1,4 @@
-# Version 1.8.6
+# Version 1.8.7
 + Log time set to UTC
 + added graceful handling of runner
 + update to .net 8
