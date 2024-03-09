@@ -24,7 +24,7 @@ The client is able to download runners, which then performs the AI Training task
 Find more information about the "principle of least privilege" on wikipedia: https://en.wikipedia.org/wiki/Principle_of_least_privilege
 
 ## Pool Mining
-If you don't want to operate your own Qubic infrastructure. You can join the qubic.li pool mining. You can either register an account on qubic.li or you can join pool mining register-less.
+If you don't want to operate your own Qubic infrastructure. You can join the qubic.li pool mining. You can either register an account (highly recomended) on http://app.qubic.li or you can join pool mining register-less.
 
 If you want to create your own account, follow the instructions here: https://doc.qubic.world/becoming-a-computor-miner/how-to-participate
 
@@ -44,7 +44,10 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 |--- |---	|---	|---	|--- |
 | Windows | x64	| 1.8.5	| https://dl.qubic.li/downloads/qli-Client-1.8.5-Windows-x64.zip	|
 | Windows | x64	| 1.8.5	| https://dl.qubic.li/downloads/qli-Client-1.8.5-Windows-x64-Plain.zip	| Version without default configuration
+| Windows | x64	| 1.8.7 (beta)	| https://dl.qubic.li/downloads/qli-Client-1.8.7-Windows-x64.zip	|
+| Windows | x64	| 1.8.7 (beta)	| https://dl.qubic.li/downloads/qli-Client-1.8.7-Windows-x64-Plain.zip	| Version without default configuration
 | Linux | x64	| 1.8.6	| https://dl.qubic.li/downloads/qli-Client-1.8.6-Linux-x64.tar.gz	| 
+| Linux | x64	| 1.8.7 (beta) | https://dl.qubic.li/downloads/qli-Client-1.8.7-Linux-x64.tar.gz	| 
 
 ## What's needed
 The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
