@@ -16,7 +16,7 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
    5. [Service Customizing](#customizing)
    6. [Remove Client](#remove-client)
 7. [Troubleshooting](#troubleshooting)
-8. [Hive OS Documentation](https://github.com/qubic-li/client/releases/tag/v1.8.7/release_notes.md#Hive-OS-Documentation)
+8. [Hive OS Documentation](https://github.com/qubic-li/client/releases/tag/v1.8.7/release_notes.md#hive-os-documentation)
 
 ## Security Warning
 The client is able to download runners, which then performs the AI Training tasks. This can potentially be used in a bad manner. Run the client with the least priviliges which are possble. e.g. on windows NOT as Admininstrator; on linux NOT as root.
