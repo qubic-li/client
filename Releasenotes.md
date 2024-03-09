@@ -1,4 +1,10 @@
 # Version 1.8.6
++ Log time set to UTC
++ added graceful handling of runner
++ update to .net 8
++ optimized logging of found solutions during epoch
+  
+# Version 1.8.6
 + Fixed wrong "skylake" overwrite for linux client
 
 # Version 1.8.5
