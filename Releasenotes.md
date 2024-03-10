@@ -1,3 +1,6 @@
+# Version 1.8.8
++ added ability to resend unsubmitted solution after a client restart
+
 # Version 1.8.7
 + Log time set to UTC
 + added graceful handling of runner
