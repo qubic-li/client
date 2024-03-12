@@ -15,7 +15,7 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
    4. [Monitoring](#service-monitoring)
    5. [Service Customizing](#customizing)
    6. [Remove Client](#remove-client)
-7. [Hive OS/Rave Os Documentation](https://github.com/qubic-li/client/releases/tag/v1.8.7/release_notes.md)
+7. [Hive OS/Rave Os Documentation](https://github.com/qubic-li/client/releases/tag/v1.8.8/release_notes.md)
 8. [Troubleshooting](#troubleshooting)
 
 ## Security Warning
