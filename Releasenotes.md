@@ -1,3 +1,6 @@
+# Version 1.8.9
++ changed internal solution processing
+
 # Version 1.8.8
 + added ability to resend unsubmitted solution after a client restart
 
