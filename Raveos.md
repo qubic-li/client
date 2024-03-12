@@ -7,7 +7,8 @@ Version 1.8.8
 - Removed HugePages settings from RaveOs
 - Fixed path issue in raveos package
 - Other stability fixes
-
+- 
+<br>
 
 ## 🚀 RaveOs full Qubic Miner Integration
 
@@ -19,10 +20,7 @@ Qubic and Eloword are now successfully integrated into Rave OS. This seamless in
 
 ![3](https://github.com/EloWord/raveos/assets/155255722/d72ecac5-d158-4d03-9609-157d235a6503)
 
-
-
 <br>
-
 
 ## :warning: Mandatory Installation Instructions (12/03/2024)
 - The CPU where you run the Client must support AVX2 or AVX512 CPU instructions
