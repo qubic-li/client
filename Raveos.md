@@ -25,18 +25,6 @@ Packages are now uploaded in [Qubic-li official repository](https://github.com/q
 
 <br>
 
-## :star2: Support My Work and Contribute to its Growth :star2:
-
-If you appreciate my work and want to contribute to its ongoing development, consider leaving a tip. Every contribution, big or small, makes a huge difference and motivates me to continue creating and improving.
-
-- **To support me, use Qubic:** `TWVQTVPLEMNCWBJZFVCLCZCDGBDBLBWBAPCVQJOUECEZQQBMAPAXSRBEABSK`
-
-*Support received since this version: 620,240,488 Qubic - Thank you for your future support!*
-
-[<img src="https://github.com/EloWord/hiveos/assets/155255722/dedb996d-c517-4059-a55a-d9adea9a21f1" alt="discord" width="200">](https://discord.gg/bWHcuuyQBf)
-
-Thank you for being part of this journey!
-<br>
 
 ## :warning: Mandatory Installation Instructions (12/03/2024)
 - The CPU where you run the Client must support AVX2 or AVX512 CPU instructions
