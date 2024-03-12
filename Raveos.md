@@ -9,9 +9,9 @@ Version 1.8.8
 - Other stability fixes
 
 
-### RaveOs full Qubic Miner Integration
+### 🚀 RaveOs full Qubic Miner Integration
 
-🚀   No need for custom package additions anymore
+No need for custom package additions anymore
 Qubic and Eloword are now successfully integrated into Rave OS. This seamless integration enhances the Qubic mining experience and offers an efficient and user-friendly solution .
 
 1.8.8 custom package available: https://github.com/qubic-li/client/releases/download/v1.8.8/raveoscustom-eloword-1.8.8.zip
