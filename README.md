@@ -15,7 +15,7 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
    3. [Redhat Enterprise 8.8](#redhat-enterprise-88)
    4. [Monitoring](#service-monitoring)
    5. [Remove Client](#remove-client) 
-7  [Appsettings.json Customization](#customizing)
+7.  [Appsettings.json Customization](#customizing)
 8. [Hive OS/Rave Os](https://github.com/qubic-li/client/releases/tag/v1.8.8/release_notes.md)
 9. [Troubleshooting](#troubleshooting)
 
