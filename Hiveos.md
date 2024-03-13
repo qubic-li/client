@@ -62,8 +62,7 @@ miner stop && wget https://github.com/EloWord/hiveos/releases/download/v1.8.8/up
 ## :wrench: Hive Os Settings
 
 - it's an all-in-one miner (CPU+GPU / GPU only / CPU Only), check out the example flightsheets below for seamless setup
-https://github.com/qubic-li/client/releases/download/v1.8.7/eloword-v1.8.7.1.tar.gz
-
+https://github.com/qubic-li/client/releases/download/v1.8.8/eloword-v1.8.8.tar.gz
 - Recommended GPU overclocks :
 **Medium**
 3000 series ```nvtool --setcoreoffset 250 --setclocks 1500 --setmem 5001```
