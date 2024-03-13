@@ -9,7 +9,8 @@ Version 1.8.8
 - Other stability fixes
 <br>
 
-Important: since qubic algo change, running miner on raveos needs 535+ nvidia drivers, use this command in shell to upgrade raveos:  
+*Important: since qubic algo change, running miner on raveos needs 535+ nvidia drivers,  
+use this command in shell to upgrade raveos:*  
 ```upgrade 8926-2226```
 
 ## 🚀 RaveOs full Qubic Miner Integration
