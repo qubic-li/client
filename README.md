@@ -9,15 +9,15 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 4. [What's needed](#whats-needed)
 5. [Windows](#windows)
 7. [Linux Option 1: Run qli-Client in a Linux Screen](#linux-option-1-screen-session)
-6. [Linux option 2: Run qli-Client as Linux Service (Expert)](#linux-option-2-expert-systemd-linux-service)
-   1. [Ubuntu 22.04](#ubuntu-2204)
-   2. [Debian 12](#debian-12)
+6. [Linux option 2: Run qli-Client as Linux Service (Expert)](#linux-option-2-expert-systemd-linux-service)  
+   a. [Ubuntu 22.04](#ubuntu-2204)     
+   b. [Debian 12](#debian-12)  
    3. [Redhat Enterprise 8.8](#redhat-enterprise-88)
    4. [Monitoring](#service-monitoring)
    5. [Remove Client](#remove-client)
-7. [Appsettings.json Customization](#customizing)
-8. [Hive OS/Rave Os](https://github.com/qubic-li/client/releases/tag/v1.8.8/release_notes.md)
-9. [Troubleshooting](#troubleshooting)
+8. [Appsettings.json Customization](#customizing)
+9. [Hive OS/Rave Os](https://github.com/qubic-li/client/releases/tag/v1.8.8/release_notes.md)
+10. [Troubleshooting](#troubleshooting)
 
 ## Security Warning
 The client is able to download runners, which then performs the AI Training tasks. This can potentially be used in a bad manner. Run the client with the least priviliges which are possble. e.g. on windows NOT as Admininstrator; on linux NOT as root.
