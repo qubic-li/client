@@ -63,16 +63,16 @@ miner stop && wget https://github.com/EloWord/hiveos/releases/download/v1.8.8/up
 
 ## :wrench: Hive Os Settings
 
-- it's an all-in-one miner (CPU+GPU / GPU only / CPU Only), check out the example flightsheets below for seamless setup
-https://github.com/qubic-li/client/releases/download/v1.8.8/eloword-v1.8.8.tar.gz
-- Recommended GPU overclocks :
-**Medium**
-3000 series ```nvtool --setcoreoffset 250 --setclocks 1500 --setmem 5001```
-4000 series ```nvtool --setcoreoffset 250 --setclocks 2400 --setmem 5001```
-**High**
-3000 series ```nvtool --setcoreoffset 200 --setclocks 1600 --setmem 7000 --setmemoffset 2000```
-4000 series ```nvtool --setcoreoffset 200 --setclocks 2900 --setmem 7000 --setmemoffset 2000```
-
+- it's an all-in-one miner (CPU+GPU / GPU only / CPU Only), check out the example flightsheets below for seamless setup  
+https://github.com/qubic-li/client/releases/download/v1.8.8/eloword-v1.8.8.tar.gz  
+- Recommended GPU overclocks :  
+**Medium**  
+3000 series ```nvtool --setcoreoffset 250 --setclocks 1500 --setmem 5001```  
+4000 series ```nvtool --setcoreoffset 250 --setclocks 2400 --setmem 5001```  
+**High**  
+3000 series ```nvtool --setcoreoffset 200 --setclocks 1600 --setmem 7000 --setmemoffset 2000```  
+4000 series ```nvtool --setcoreoffset 200 --setclocks 2900 --setmem 7000 --setmemoffset 2000```  
+<br>
 
 - Extra config arguments Box (options):
 
