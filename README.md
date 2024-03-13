@@ -123,7 +123,7 @@ screen -S qubic ./qli-Client
 ```
 basic screen commands:  
 
-- exit screen : ctrl + d  
+- exit screen : ctrl a + d  
 - kill screen : ctrl + c  
 - display qubic screen: ``` screen -r qubic```  
 
