@@ -14,10 +14,10 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
    2. [Debian 12](#debian-12)
    3. [Redhat Enterprise 8.8](#redhat-enterprise-88)
    4. [Monitoring](#service-monitoring)
-   5. [Service Customizing](#customizing)
-   6. [Remove Client](#remove-client)
-7. [Hive OS/Rave Os](https://github.com/qubic-li/client/releases/tag/v1.8.8/release_notes.md)
-8. [Troubleshooting](#troubleshooting)
+   5. [Remove Client](#remove-client)
+7  [Appsettings.json Customization](#customizing)
+8. [Hive OS/Rave Os](https://github.com/qubic-li/client/releases/tag/v1.8.8/release_notes.md)
+9. [Troubleshooting](#troubleshooting)
 
 ## Security Warning
 The client is able to download runners, which then performs the AI Training tasks. This can potentially be used in a bad manner. Run the client with the least priviliges which are possble. e.g. on windows NOT as Admininstrator; on linux NOT as root.
@@ -202,31 +202,6 @@ the service logs to `/var/log/qli.log` or `/var/log/qli.error.log`.
 to live watch it on the console, use `tail -f /var/log/qli.log`.
 
 
-## Customizing
-you can customize the settings of your client in the settings file `/q/appsettings.json`
-
-This file contains the configuration of your client and need to be placed at the same location as the executable.
-You can create a custom file with the name `appsettings.production.json` which has higher priority to be loaded.
-
-|  Setting 	|  Default Value 	|  Description 	|
-|---	|---	|---	|
-|  baseUrl 	|  https://mine.qubic.li/ 	|  The Base Url of the API 	|
-|  amountOfThreads 	|  1 	|  How many threads should be used for the AI Training.	|
-|  accessToken* 	|  JWT Token 	| This is you personal JWT Token which you can obtain from the Control Panel at qubic.li 	|
-|  payoutId* 	|  NULL 	| This is the ID you want to get token payout for your found solutions.	|
-|  alias 	|  qli Client 	| You can give your Client a Name which will be displayed in the Control Panel. If empty it uses the Hostname.	|
-|  useAvx2 	|  false 	| !DEPRECATED! Set this to `true` to force the Client to use only AVX2	|
-|  allowHwInfoCollect	|  false 	| With that option set to `true` the client will collect CPU model, CPU Cache Size and RAM Size to get optimal runner for that maschine	|
-|  threadsDaySchedule 	|  empty 	| Can be used to schedule the training. e.g. training should only run during night time. |
-|  customRunner	|  false 	| Set this to `true`  to use a custom trainer. The Client will not automatically update runner. [Details](CustomRunner.md) | 
-|  serviceLock	|  false 	| Set this to `true`  to use a custom trainer with qiner protocol. | 
-|  overwrites	|  {} 	| An object to overwrite specific settings. (e.g. `"AVX512":false` to disable AVX512) | 
-|  autoupdateEnabled	|  false 	| Set this to `true` to enable auto update of the service client (from version 1.7.8) | 
-|  checkUpdateEnabled	|  true 	| Checks if there is a new version of the service client when starting | 
-
-
-*Only one of these can be defined.
-
 ### sample configuration with token
 ```json
 {
@@ -263,6 +238,37 @@ systemctl daemon-reload
 rm -R /q
 rm /var/log/qli.log
 ```
+
+## Customizing
+
+Appsettings.json contains the configuration of your client and need to be placed at the same location as the executable.
+
+if you opt for the Linux Screen session (Option 1):
+ - you can customize the settings of your client in the settings file ` ~/qubic/appsettings.json`
+
+if you opt for the Systemd Linux Service (Option 2):
+ - you can customize the settings of your client in the settings file `/q/appsettings.json`
+ - You can create a custom file with the name `appsettings.production.json` which has higher priority to be loaded.
+
+|  Setting 	|  Default Value 	|  Description 	|
+|---	|---	|---	|
+|  baseUrl 	|  https://mine.qubic.li/ 	|  The Base Url of the API 	|
+|  amountOfThreads 	|  1 	|  How many threads should be used for the AI Training.	|
+|  accessToken* 	|  JWT Token 	| This is you personal JWT Token which you can obtain from the Control Panel at qubic.li 	|
+|  payoutId* 	|  NULL 	| This is the ID you want to get token payout for your found solutions.	|
+|  alias 	|  qli Client 	| You can give your Client a Name which will be displayed in the Control Panel. If empty it uses the Hostname.	|
+|  useAvx2 	|  false 	| !DEPRECATED! Set this to `true` to force the Client to use only AVX2	|
+|  allowHwInfoCollect	|  false 	| With that option set to `true` the client will collect CPU model, CPU Cache Size and RAM Size to get optimal runner for that maschine	|
+|  threadsDaySchedule 	|  empty 	| Can be used to schedule the training. e.g. training should only run during night time. |
+|  customRunner	|  false 	| Set this to `true`  to use a custom trainer. The Client will not automatically update runner. [Details](CustomRunner.md) | 
+|  serviceLock	|  false 	| Set this to `true`  to use a custom trainer with qiner protocol. | 
+|  overwrites	|  {} 	| An object to overwrite specific settings. (e.g. `"AVX512":false` to disable AVX512) | 
+|  autoupdateEnabled	|  false 	| Set this to `true` to enable auto update of the service client (from version 1.7.8) | 
+|  checkUpdateEnabled	|  true 	| Checks if there is a new version of the service client when starting | 
+
+
+*Only one of these can be defined.
+
 
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
