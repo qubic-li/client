@@ -49,7 +49,7 @@ miner stop && wget https://github.com/EloWord/hiveos/releases/download/v1.8.8/up
 `/hive/sbin/hive-replace --list`  (choice 2/ yes to apply -- better to start this fresh install if you'r stuck)
 - GLIBC >=2.34
 ```apt update && apt upgrade -y && echo "deb http://archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install tmux -y && apt install libc6 -y``` (answer yes to any question)
-- Cuda 12+ drivers (525+) 
+- Cuda 12+ drivers (535+ recommended)
 - Cuda 12 for 1000 series must be 535+
 `nvidia-driver-update 535.146.02` (or newer)
 - RAM >= 16Go improves CPU it/s
