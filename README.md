@@ -76,7 +76,7 @@ Download the Client from the above link. The Client must not be installed.
 ## Linux Option 1: Screen Session  
 To run the qubic.li client you can use this streamlined installation guide. Please consider adapt the commands to suit your directory preferences. Note that all commands must be executed as the root user, or you should precede them with the sudo command for proper authorization.  
 
-1. Download and Unpack the qli-Client:**  
+**1. Download and Unpack the qli-Client:**  
 *Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-1.8.8-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
 ```bash
 mkdir ~/qubic;
@@ -85,7 +85,7 @@ wget https://dl.qubic.li/downloads/qli-Client-1.8.8-Linux-x64.tar.gz;
 tar -xvf qli-Client-1.8.8-Linux-x64.tar.gz;
 rm qli-Client-1.8.8-Linux-x64.tar.gz;
 ```  
-2. edit and set your appsettings.json according to your preferences
+**2. edit and set your appsettings.json according to your preferences**
 ```bash
 nano appsetings.json
 ```
@@ -116,7 +116,7 @@ sample appsettings.json for CPU set to 10 threads:
 }
 ```
 
-3. run qli-Client in a screen session named "qubic"
+**3. run qli-Client in a screen session named "qubic"**
 
 ```bash
 screen -S qubic ./qli-Client
