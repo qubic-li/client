@@ -1,4 +1,4 @@
-#V1.8.8
+# V1.8.8
 
 ![311440315-1d9941d4-e4e1-4206-b523-08735ae8faf2](https://github.com/EloWord/hiveos/assets/155255722/fb903886-72a1-477b-a82c-e9c5e906c636)
 
