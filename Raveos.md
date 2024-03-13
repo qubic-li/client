@@ -9,6 +9,9 @@ Version 1.8.8
 - Other stability fixes
 <br>
 
+Important: since qubic algo change, running miner on raveos needs 535+ nvidia drivers, use this command in shell to upgrade raveos:  
+```upgrade 8926-2226```
+
 ## 🚀 RaveOs full Qubic Miner Integration
 
 No need for custom package additions anymore
@@ -22,9 +25,9 @@ Qubic and Eloword are now successfully integrated into Rave OS. This seamless in
 <br>
 
 ## :warning: Mandatory Installation Instructions (12/03/2024)
+- Drivers 535+: run this command to upgrade RaveOs ```upgrade 8926-2226```
 - The CPU where you run the Client must support AVX2 or AVX512 CPU instructions
 `cat /proc/cpuinfo | grep avx2`(check if `avx2` is in the result)
-- Drivers 535+: run this command to upgrade RaveOs ```upgrade 8926-2226```
 - Use recommended OC **before** mining
 - RAM >= 16Go improves CPU it/s
 - Do not overload your CPUs with threads, instead, aim to find the sweetpoint
