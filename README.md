@@ -116,7 +116,7 @@ sample appsettings.json for CPU set to 10 threads:
 }
 ```
 
-**3. run qli-Client in a screen session named "qubic"**
+**3. run qli-Client in a screen session named "qubic"** (logs available in ~/qubic/logs)
 
 ```bash
 screen -S qubic ./qli-Client
