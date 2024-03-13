@@ -83,7 +83,7 @@ mkdir ~/qubic;
 cd ~/qubic;
 wget https://dl.qubic.li/downloads/qli-Client-1.8.8-Linux-x64.tar.gz;
 tar -xvf qli-Client-1.8.8-Linux-x64.tar.gz;
-rm qli-Client-1.8.8-Linux-x64.tar.gz
+rm qli-Client-1.8.8-Linux-x64.tar.gz;
 ```  
 b. edit and set your appsettings.json according to your preferences
 ```bash
