@@ -35,7 +35,7 @@ Use now in flightsheet : https://github.com/qubic-li/client/releases/download/v1
 </table>
 
 
-# How to patch Hiveos from 1.8.7.1 to 1.8.8beta
+## How to patch Hiveos from 1.8.7.1 to 1.8.8beta
 
 Patch by running this command:
 ```
