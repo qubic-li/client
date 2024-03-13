@@ -8,7 +8,8 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 3. [Download](#download)
 4. [What's needed](#whats-needed)
 5. [Windows](#windows)
-6. [Linux Service Installatin](#linux-service)
+7. [Linux Option 1: Run qli-Client in a Linux Screen](#linux-option-1-screen-session)
+6. [Linux option 2: Run qli-Client as Linux Service (Expert)](#linux-option-2-expert-systemd-linux-service)
    1. [Ubuntu 22.04](#ubuntu-2204)
    2. [Debian 12](#debian-12)
    3. [Redhat Enterprise 8.8](#redhat-enterprise-88)
@@ -72,7 +73,61 @@ You can run the client directly in your Windows. The Client provices a .exe file
 
 Download the Client from the above link. The Client must not be installed.
 
-## Linux Service
+## Linux Option 1: Screen Session  
+To run the qubic.li client you can use this streamlined installation guide. Please consider adapt the commands to suit your directory preferences. Note that all commands must be executed as the root user, or you should precede them with the sudo command for proper authorization.  
+
+a. Download and Unpack the qli-Client:**  
+*Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-1.8.8-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
+```bash
+mkdir ~/qubic;
+cd ~/qubic;
+wget https://dl.qubic.li/downloads/qli-Client-1.8.8-Linux-x64.tar.gz;
+tar -xvf qli-Client-1.8.8-Linux-x64.tar.gz;
+rm qli-Client-1.8.8-Linux-x64.tar.gz
+```  
+b. edit and set your appsettings.json according to your preferences
+```bash
+nano appsetings.json
+```
+sample appsettings.json for GPU:
+```json
+{
+  "Settings": {
+    "baseUrl": "https://mine.qubic.li/",
+    "allowHwInfoCollect": true,
+    "overwrites": {
+      "CUDA": "12"
+    },
+    "accessToken": "YOURACCESSTOKEN",
+    "alias": "YOURALIAS"
+  }
+}
+```
+sample appsettings.json for CPU set to 10 threads:
+```json
+{
+  "Settings": {
+    "baseUrl": "https://mine.qubic.li/",
+    "overwrites": {},
+    "accessToken": "YOURACCESSTOKEN",
+    "amountOfThreads": 10,
+    "alias": "YOURALIAS"
+  }
+}
+```
+
+c. run qli-Client in a screen session named "qubic"
+
+```bash
+screen -S qubic ./qli-Client
+```
+basic screen commands:  
+
+- exit screen : ctrl + d  
+- kill screen : ctrl + c  
+- display qubic screen: ``` screen -r qubic```  
+
+## Linux Option 2 (expert): Systemd Linux Service
 To install the qubic.li Service you can use our quick installation guide. Please consider to check the content of the service installation script.
 All commands should either be executed by root or you need to prepend the `sudo` command.
 
