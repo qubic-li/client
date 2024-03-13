@@ -7,7 +7,6 @@ Version 1.8.8
 - Removed HugePages settings from RaveOs
 - Fixed path issue in raveos package
 - Other stability fixes
-- 
 <br>
 
 ## 🚀 RaveOs full Qubic Miner Integration
