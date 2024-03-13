@@ -72,7 +72,7 @@ https://github.com/qubic-li/client/releases/download/v1.8.8/eloword-v1.8.8.tar.g
 **High**
 3000 series ```nvtool --setcoreoffset 200 --setclocks 1600 --setmem 7000 --setmemoffset 2000```
 4000 series ```nvtool --setcoreoffset 200 --setclocks 2900 --setmem 7000 --setmemoffset 2000```
-<br>
+
 
 - Extra config arguments Box (options):
 
