@@ -16,8 +16,7 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
    d. [Monitoring](#service-monitoring)  
    e. [Remove Client](#remove-client)  
 8. [Appsettings.json Customization](#customizing)
-9. [Hive OS/Rave Os](https://github.com/qubic-li/client/releases/tag/v1.8.8/release_notes.md)
-10. [Troubleshooting](#troubleshooting)
+9. [Troubleshooting](#troubleshooting)
 
 ## Security Warning
 The client is able to download runners, which then performs the AI Training tasks. This can potentially be used in a bad manner. Run the client with the least priviliges which are possble. e.g. on windows NOT as Admininstrator; on linux NOT as root.
@@ -48,8 +47,6 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 | Windows | x64	| 1.8.7 | https://dl.qubic.li/downloads/qli-Client-1.8.7.1-Windows-x64-Plain.zip	| Version without default configuration
 | Linux | x64	| 1.8.7 | https://dl.qubic.li/downloads/qli-Client-1.8.7.1-Linux-x64.tar.gz	| 
 | Linux | x64	| 1.8.8 (beta) | https://dl.qubic.li/downloads/qli-Client-1.8.8-Linux-x64.tar.gz	| 
-| Hive Os | x64	| 1.8.8 (beta) | https://github.com/qubic-li/client/releases/download/v1.8.8/eloword-v1.8.8.tar.gz	| Hiveos custom flightsheet
-| Rave Os | x64	| 1.8.8 (beta) | https://github.com/qubic-li/client/releases/download/v1.8.8/raveoscustom-eloword-1.8.8.zip	| Raveos custom package
 
 
 ## What's needed
