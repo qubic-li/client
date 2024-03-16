@@ -53,8 +53,21 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 The runner on windows needs also the VC Redistributable which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
 
 The runner on linux needs at least **GLIBC 2.34**.
-
 The CPU where you run the Client **must** support `AVX2` or `AVX512` CPU instructions.
+
+### Huge Pages
+Depending on your environment you might want to enable huge pages. This can increase your iterations per second.
+
+The trainer will tell you what is the optimal setting when it detects a wrong value.
+```bash
+2024-03-16 11:34:13     INFO    Trainer: WARNING: Free number of hugepages is smaller than needed, have: 10 - want: 1612 (52 x number of threads). Falling back to use malloc memory.
+2024-03-16 11:34:13     INFO    Trainer: To add more hugepages, please run this command as root before starting the miner
+2024-03-16 11:34:13     INFO    Trainer: /usr/sbin/sysctl -w vm.nr_hugepages=1612
+2024-03-16 11:34:13     INFO    Trainer: OR: /sbin/sysctl -w vm.nr_hugepages=1612
+```
+
+if you see this, you can run the command `/usr/sbin/sysctl -w vm.nr_hugepages=1612` as root or `sudo /usr/sbin/sysctl -w vm.nr_hugepages=1612`
+
 
 ## Command Line Arguments vs. Configuration
 You can either start the Client by providing command line arguments or using an [appsettings.json](#customizing) file.
