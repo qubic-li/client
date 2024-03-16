@@ -14,9 +14,10 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
    b. [Debian 12](#debian-12)  
    c. [Redhat Enterprise 8.8](#redhat-enterprise-88)  
    d. [Monitoring](#service-monitoring)  
-   e. [Remove Client](#remove-client)  
-8. [Appsettings.json Customization](#customizing)
-9. [Troubleshooting](#troubleshooting)
+   e. [Remove Client](#remove-client) 
+8. [HiveOs](#hiveos)
+9. [Appsettings.json Customization](#customizing)
+10. [Troubleshooting](#troubleshooting)
 
 ## Security Warning
 The client is able to download runners, which then performs the AI Training tasks. This can potentially be used in a bad manner. Run the client with the least priviliges which are possble. e.g. on windows NOT as Admininstrator; on linux NOT as root.
@@ -40,13 +41,12 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 We recommend to update your Version if there is a change in the Minor Version (e.g. from 1.3 to 1.4).
 Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 
-| OS |  Platform 	|  Version 	|  Download | Description
-|--- |---	|---	|---	|--- |
-| Windows | x64	| 1.8.7 | https://dl.qubic.li/downloads/qli-Client-1.8.7.1-Windows-x64.zip	|
-| Windows | x64	| 1.8.8 (beta) | https://dl.qubic.li/downloads/qli-Client-1.8.8-Windows-x64.zip	|
-| Windows | x64	| 1.8.7 | https://dl.qubic.li/downloads/qli-Client-1.8.7.1-Windows-x64-Plain.zip	| Version without default configuration
-| Linux | x64	| 1.8.7 | https://dl.qubic.li/downloads/qli-Client-1.8.7.1-Linux-x64.tar.gz	| 
-| Linux | x64	| 1.8.8 (beta) | https://dl.qubic.li/downloads/qli-Client-1.8.8-Linux-x64.tar.gz	| 
+| OS |  Platform 	|  Version  | MD5 Hash (qli-Client)	|  Download | Description
+|--- |---	|---	|--- |---	|--- |
+| Windows | x64	| 1.8.9 | https://dl.qubic.li/downloads/qli-Client-1.8.9-Windows-x64.zip | B1363CE25C692F6F2BBA9568751B06D0 	|
+| Windows | x64	| 1.8.9 | https://dl.qubic.li/downloads/qli-Client-1.8.9-Windows-x64-Plain.zip | B1363CE25C692F6F2BBA9568751B06D0 	| Version without default configuration
+| Linux | x64	| 1.8.9 | https://dl.qubic.li/downloads/qli-Client-1.8.9-Linux-x64.tar.gz | 9818CD426639626DFB5C531B3BE6B9AF 	| 
+| HiveOs | x64	| 1.8.9 | https://github.com/qubic-li/hiveos/releases/download/v1.8.9/qubminer-1.8.9.tar.gz | 9818CD426639626DFB5C531B3BE6B9AF 	| Source: https://github.com/qubic-li/hiveos; Release: https://github.com/qubic-li/hiveos/releases/tag/v1.8.9
 
 
 ## What's needed
@@ -248,6 +248,9 @@ systemctl daemon-reload
 rm -R /q
 rm /var/log/qli.log
 ```
+
+## HiveOs
+[WIP HiveOs Instructions](https://github.com/qubic-li/hiveos)
 
 ## Customizing
 
