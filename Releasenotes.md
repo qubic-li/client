@@ -1,5 +1,7 @@
 # Version 1.8.9
 + changed internal solution processing
++ added auto re-register of client if registration the first time fails (lead to 'waiting for task' loop)
++ fixed some minor bugs
 
 # Version 1.8.8
 + added ability to resend unsubmitted solution after a client restart
