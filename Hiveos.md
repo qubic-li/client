@@ -1,14 +1,16 @@
 # HIVEOS V1.8.8
 
-![311440315-1d9941d4-e4e1-4206-b523-08735ae8faf2](https://github.com/EloWord/hiveos/assets/155255722/fb903886-72a1-477b-a82c-e9c5e906c636)
+![HiveOS Overview](assets/155255722/fb903886-72a1-477b-a82c-e9c5e906c636)
 
 
-**qli-Client 1.8.8**
+**qli-Client 1.8.9**
 
-- added ability to resend unsubmitted solution after a client restart
+- changed internal solution processing
+- added auto re-register of client if registration the first time fails (lead to 'waiting for task' loop)
+- fixed some minor bugs
 
 
-Use now in flightsheet : https://github.com/qubic-li/client/releases/download/v1.8.8/eloword-v1.8.8.tar.gz
+Use now in flightsheet : [https://github.com/qubic-li/client/releases/download/v1.8.8/eloword-v1.8.8.tar.gz](https://github.com/qubic-li/hiveos/releases/download/v1.8.9/qubminer-1.8.9.tar.gz)
 
 
 <table>
