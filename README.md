@@ -97,7 +97,7 @@ rm qli-Client-1.8.8-Linux-x64.tar.gz;
 ```  
 **2. edit and set your appsettings.json according to your preferences**
 ```bash
-nano appsetings.json
+nano appsettings.json
 ```
 sample appsettings.json for GPU:
 ```json
