@@ -46,8 +46,7 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 | Windows | x64	| 1.8.9 | https://dl.qubic.li/downloads/qli-Client-1.8.9-Windows-x64.zip | B1363CE25C692F6F2BBA9568751B06D0 	|
 | Windows | x64	| 1.8.9 | https://dl.qubic.li/downloads/qli-Client-1.8.9-Windows-x64-Plain.zip | B1363CE25C692F6F2BBA9568751B06D0 	| Version without default configuration
 | Linux | x64	| 1.8.9 | https://dl.qubic.li/downloads/qli-Client-1.8.9-Linux-x64.tar.gz | 9818CD426639626DFB5C531B3BE6B9AF 	| 
-| HiveOs GPU only | x64	| 1.8.9 | https://github.com/qubic-li/hiveos/releases/download/v1.8.9/qubminer-1.8.9.tar.gz | 9818CD426639626DFB5C531B3BE6B9AF 	| Source: https://github.com/qubic-li/hiveos; Release: https://github.com/qubic-li/hiveos/releases/tag/v1.8.9
-| HiveOs CPU only | x64	| 1.8.9 | https://dl.qubic.li/downloads/qubminer-1.8.9.4.tar.gz | 9818CD426639626DFB5C531B3BE6B9AF 	| Source: https://github.com/qubic-li/hiveos; Release: https://github.com/qubic-li/hiveos/releases/tag/v1.8.9
+| HiveOs | x64	| 1.8.9 | https://github.com/qubic-li/hiveos | | Please follow instructions for hiveos.
 
 
 ## What's needed
@@ -251,7 +250,7 @@ rm /var/log/qli.log
 ```
 
 ## HiveOs
-[WIP HiveOs Instructions](https://github.com/qubic-li/hiveos)
+[HiveOs Instructions](https://github.com/qubic-li/hiveos)
 
 ## Customizing
 
