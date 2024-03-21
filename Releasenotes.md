@@ -1,3 +1,6 @@
+# Version 1.8.10
++ fixed cases when the client crashed unexpected
+  
 # Version 1.8.9
 + changed internal solution processing
 + added auto re-register of client if registration the first time fails (lead to 'waiting for task' loop)
