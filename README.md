@@ -45,7 +45,7 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 |--- |---	|---	|--- |---	|--- |
 | Windows | x64	| 1.8.9 | https://dl.qubic.li/downloads/qli-Client-1.8.9-Windows-x64.zip | B1363CE25C692F6F2BBA9568751B06D0 	|
 | Windows | x64	| 1.8.9 | https://dl.qubic.li/downloads/qli-Client-1.8.9-Windows-x64-Plain.zip | B1363CE25C692F6F2BBA9568751B06D0 	| Version without default configuration
-| Linux | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.9-Linux-x64.tar.gz | 9818CD426639626DFB5C531B3BE6B9AF 	| 
+| Linux | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Linux-x64.tar.gz | 66d428e71b889dddab885a92bd3601f2 	| 
 | HiveOs | x64	| 1.8.10 | https://github.com/qubic-li/hiveos | | Please follow instructions for hiveos.
 
 
