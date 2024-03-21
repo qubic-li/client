@@ -43,8 +43,8 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 
 | OS |  Platform 	|  Version  | Download | MD5 Hash (qli-Client) | Description
 |--- |---	|---	|--- |---	|--- |
-| Windows | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Windows-x64.zip | 5B51D60055A64473E35A811A73DC37EA 	|
-| Windows | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Windows-x64-Plain.zip | 5B51D60055A64473E35A811A73DC37EA 	| Version without default configuration
+| Windows | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Windows-x64.zip | 8837D676B455C0423C20DB94E79F1CDC 	|
+| Windows | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Windows-x64-Plain.zip | 8837D676B455C0423C20DB94E79F1CDC 	| Version without default configuration
 | Linux | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Linux-x64.tar.gz | 66d428e71b889dddab885a92bd3601f2 	| 
 | HiveOs | x64	| 1.8.10 | https://github.com/qubic-li/hiveos | | Please follow instructions for hiveos.
 
