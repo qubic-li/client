@@ -1,3 +1,8 @@
+# Version 1.9.0
++ optimized trainer handling
++ added possibility to configure cpu afinity
++ internal optimizations
+
 # Version 1.8.10
 + fixed cases when the client crashed unexpected
   
