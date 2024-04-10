@@ -1,3 +1,6 @@
+# Version 1.9.1
++ fixed windows trainer change problem
+  
 # Version 1.9.0
 + optimized trainer handling
 + added possibility to configure cpu afinity
