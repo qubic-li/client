@@ -16,8 +16,9 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
    d. [Monitoring](#service-monitoring)  
    e. [Remove Client](#remove-client) 
 8. [HiveOs](#hiveos)
-9. [Appsettings.json Customization](#customizing)
-10. [Troubleshooting](#troubleshooting)
+9. [Appsettings.json Customization](#customizing) 
+   a. [Trainer Options](#trainer-options)     
+11. [Troubleshooting](#troubleshooting)
 
 ## Security Warning
 The client is able to download runners, which then performs the AI Training tasks. This can potentially be used in a bad manner. Run the client with the least priviliges which are possble. e.g. on windows NOT as Admininstrator; on linux NOT as root.
@@ -41,14 +42,33 @@ You can also put your PayoutId into the [configuration file](#customizing) if yo
 We recommend to update your Version if there is a change in the Minor Version (e.g. from 1.3 to 1.4).
 Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 
+
+### QLI Client
+The QLI Client is the pool client and connects to the pool.
+
 | OS |  Platform 	|  Version  | Download | MD5 Hash (qli-Client) | Description
 |--- |---	|---	|--- |---	|--- |
 | Windows | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Windows-x64.zip | 8837D676B455C0423C20DB94E79F1CDC 	|
 | Windows | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Windows-x64-Plain.zip | 8837D676B455C0423C20DB94E79F1CDC 	| Version without default configuration
 | Linux | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Linux-x64.tar.gz | 66d428e71b889dddab885a92bd3601f2 	| 
-| Linux | x64	| 1.9.0 beta | https://dl.qubic.li/downloads/qli-Client-1.9.0-Linux-x64.tar.gz | E1A28AB7BE0B73B28B8A13A99713D9D5 | Experimental Beta.
+| Linux | x64	| 1.9.4 beta | https://dl.qubic.li/downloads/qli-Client-1.9.4-Linux-x64.tar.gz | 3160c82d3b118c64d36aadcc84948a3b | Experimental Beta.
 | HiveOs | x64	| 1.8.10 | https://github.com/qubic-li/hiveos | | Please follow instructions for hiveos.
 
+### QLI Trainer
+The trainer is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
+
+#### QLI Trainer Options
+The following table shows the available trainer options.
+
+|  Type 	|   Version Key (`gpuVersion`/`cpuVersion`)	|   Description	|  
+|---	|---	|--- |
+|   GPU	|  `CUDA11`  	|   CUDA Version optimized for GPU's up to GTX 4090 (may not be aveilable all the time) |
+|   GPU	|  `CUDA12`  	|   CUDA Version for all newer/bigger GPU's (>4090) |
+|   GPU	|  `AMD`  	|   General AMD Version |
+|   CPU	|  `GENERIC`  	|   Generic x64 CPU trainer (no specific instructions needed) |
+|   CPU	|  `AVX2`  	|   AVX2 x64 CPU trainer (AVX2 instructions needed) |
+|   CPU	|  `AVX512`  	|   AVX512 x64 CPU trainer (AVX512 instructions needed) |
+|   CPU	|  `SKYLAKE`  	|   For specific Intel Lake processors (may not be aveilable all the time) |
 
 ## What's needed
 The runner on Windows also requires the VC Redistributable, which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
@@ -100,7 +120,21 @@ rm qli-Client-1.9.0-Linux-x64.tar.gz;
 ```bash
 nano appsettings.json
 ```
-sample appsettings.json for GPU:
+sample appsettings.json for GPU (Client >= 1.9.4):
+```json
+{
+  "Settings": {
+    "baseUrl": "https://mine.qubic.li/",
+    "accessToken": "YOURACCESSTOKEN",
+    "alias": "YOURALIAS",
+    "trainer": { "gpu": true, "gpuVersion": "CUDA11" }
+  }
+}
+```
+> [!NOTE]
+> Please refer to [QLI Trainer Options](#qli-trainer-options) for available `gpuVersion` values.
+
+sample appsettings.json for GPU (Client < 1.9.4):
 ```json
 {
   "Settings": {
@@ -271,7 +305,6 @@ if you opt for the Systemd Linux Service (Option 2):
 |  accessToken* 	|  JWT Token 	| This is you personal JWT Token which you can obtain from the Control Panel at qubic.li 	|
 |  payoutId* 	|  NULL 	| This is the ID you want to get token payout for your found solutions.	|
 |  alias 	|  qli Client 	| You can give your Client a Name which will be displayed in the Control Panel. If empty it uses the Hostname.	|
-|  useAvx2 	|  false 	| !DEPRECATED! Set this to `true` to force the Client to use only AVX2	|
 |  allowHwInfoCollect	|  false 	| With that option set to `true` the client will collect CPU model, CPU Cache Size and RAM Size to get optimal runner for that maschine	|
 |  threadsDaySchedule 	|  empty 	| Can be used to schedule the training. e.g. training should only run during night time. |
 |  customRunner	|  false 	| Set this to `true`  to use a custom trainer. The Client will not automatically update runner. [Details](CustomRunner.md) | 
@@ -279,13 +312,62 @@ if you opt for the Systemd Linux Service (Option 2):
 |  overwrites	|  {} 	| An object to overwrite specific settings. (e.g. `"AVX512":false` to disable AVX512) | 
 |  autoupdateEnabled	|  false 	| Set this to `true` to enable auto update of the service client (from version 1.7.8) | 
 |  checkUpdateEnabled	|  true 	| Checks if there is a new version of the service client when starting | 
+|  trainer	|  {} 	| The trainer configuration object  | 
 
+### Trainer Options
+```json
+{
+	"cpu": false,
+	"cpuVersion": "AVX512",
+	"cpuThreads": 16,
+	"cpuAffinity": "",
+	"cpuVariant": "",
+	"gpu": true,
+	"gpuVersion": "CUDA11",
+	"gpuCards": "",
+	"gpuVariant": ""
+}
+```
+
+
+|  Setting 	|  Default Value 	|  Description 	|
+|---	|---	|---	|
+|  *cpu 	|  false	|  Enable CPU Training	|
+|  *gpu 	|  false	|  Enable GPU Training	|
+|  cpuVersion 	|  "GENERIC"	|  CPU Version to be used	|
+|  gpuVersion 	|  null	|  GPU Version to be used	|
+|  cpuThreads 	|  1	|  Number of Threads used for CPU training	|
+|  gpuCards 	|  null	|  Which GPU Cards should be used	|
+|  cpuAffinity	|  null	|  CPU Affinity for CPU training	|
+|  cpuVariant 	|  null	|  Which Variant of CPU trainer should be used	|
+|  gpuVariant 	|  null	|  Which Variant of GPU trainer should be used	|
+
+* currently only one of both options can be enabled (true)
+
+
+> [!NOTE]
+> Please refer to [QLI Trainer Options](#qli-trainer-options) for available `cpuVersion`/`gpuVersion` values.
 
 *Only one of these can be defined.
 
 
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
+
+### GPU and WSL doesn't work
+The Community showed several solutions to that Problem.
+
+#### Install GPU drivers in Ubuntu
+Try to install the Ubuntu nvidia drivers.
+
+```bash
+sudo apt update
+sudo apt install nvidia-driver
+sudo reboot
+```
+
+#### Disable Mining GPU for Windows
+If you have a second GPU (e.g. from your processor) you can try to disable your mining GPU for windows and let windows use the second GPU to render your windows.
 
 ### AVX CPU (Intel) not working
 Somtimes the detection of AVX2/AVX512 is not accurate and it loads the wrong trainer.
