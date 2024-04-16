@@ -62,7 +62,7 @@ The following table shows the available trainers.
 
 |  Type 	|   Version Key (`gpuVersion`/`cpuVersion`)	|   Description	|  
 |---	|---	|--- |
-|   GPU	|  `CUDA11`  	|   CUDA Version optimized for GPU's up to GTX 4090 (may not be aveilable all the time) |
+|   GPU	|  `CUDA11`  	|   CUDA Version optimized for GPU's up to RTX 4090 (may not be aveilable all the time) |
 |   GPU	|  `CUDA12`  	|   CUDA Version for all newer/bigger GPU's (>4090) |
 |   GPU	|  `AMD`  	|   General AMD Version |
 |   CPU	|  `GENERIC`  	|   Generic x64 CPU trainer (no specific instructions needed) |
