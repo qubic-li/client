@@ -58,7 +58,7 @@ The QLI Client is the pool client and connects to the pool.
 The trainer is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
 
 #### QLI Trainer Options
-The following table shows the available trainer options.
+The following table shows the available trainers.
 
 |  Type 	|   Version Key (`gpuVersion`/`cpuVersion`)	|   Description	|  
 |---	|---	|--- |
@@ -312,9 +312,10 @@ if you opt for the Systemd Linux Service (Option 2):
 |  overwrites	|  {} 	| An object to overwrite specific settings. (e.g. `"AVX512":false` to disable AVX512) | 
 |  autoupdateEnabled	|  false 	| Set this to `true` to enable auto update of the service client (from version 1.7.8) | 
 |  checkUpdateEnabled	|  true 	| Checks if there is a new version of the service client when starting | 
-|  trainer	|  {} 	| The trainer configuration object  | 
+|  trainer	|  {} 	| The trainer configuration options  | 
 
 ### Trainer Options
+
 ```json
 {
 	"cpu": false,
@@ -342,13 +343,11 @@ if you opt for the Systemd Linux Service (Option 2):
 |  cpuVariant 	|  null	|  Which Variant of CPU trainer should be used	|
 |  gpuVariant 	|  null	|  Which Variant of GPU trainer should be used	|
 
-* currently only one of both options can be enabled (true)
+currently only one of both options can be enabled (true)
 
 
 > [!NOTE]
 > Please refer to [QLI Trainer Options](#qli-trainer-options) for available `cpuVersion`/`gpuVersion` values.
-
-*Only one of these can be defined.
 
 
 ## Troubleshooting
