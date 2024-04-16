@@ -1,3 +1,11 @@
+# Version 1.9.3
++ Native AMD GPU support
++ Added new Options to select your trainer
++ Prepared for combined CPU+GPU training
+  
+# Version 1.9.2
+skipped version
+  
 # Version 1.9.1
 + fixed windows trainer change problem
   
