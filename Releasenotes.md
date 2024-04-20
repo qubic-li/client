@@ -1,3 +1,6 @@
+# Version 1.9.5
++ Added GPU Cards Feature (select which GPU Cards to use and how many threads or let the client auto tune them)
+  
 # Version 1.9.4
 + Minor Bugfixes
 
