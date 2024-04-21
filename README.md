@@ -51,7 +51,7 @@ The QLI Client is the pool client and connects to the pool.
 | Windows | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Windows-x64.zip | 8837D676B455C0423C20DB94E79F1CDC 	|
 | Windows | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Windows-x64-Plain.zip | 8837D676B455C0423C20DB94E79F1CDC 	| Version without default configuration
 | Linux | x64	| 1.8.10 | https://dl.qubic.li/downloads/qli-Client-1.8.10-Linux-x64.tar.gz | 66d428e71b889dddab885a92bd3601f2 	| 
-| Linux | x64	| 1.9.4 beta | https://dl.qubic.li/downloads/qli-Client-1.9.4-Linux-x64.tar.gz | 3160c82d3b118c64d36aadcc84948a3b | Experimental Beta.
+| Linux | x64	| 1.9.5 beta | https://dl.qubic.li/downloads/qli-Client-1.9.5-Linux-x64.tar.gz | 3160c82d3b118c64d36aadcc84948a3b | Experimental Beta.
 | HiveOs | x64	| 1.8.10 | https://github.com/qubic-li/hiveos | | Please follow instructions for hiveos.
 
 ### QLI Trainer
