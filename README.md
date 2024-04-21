@@ -62,7 +62,6 @@ The following table shows the available trainers.
 
 |  Type 	|   Version Key (`gpuVersion`/`cpuVersion`)	|   Description	|  
 |---	|---	|--- |
-|   GPU	|  `CUDA11`  	|   CUDA Version optimized for GPU's up to RTX 4090 (may not be aveilable all the time) |
 |   GPU	|  `CUDA12`  	|   CUDA Version for all newer/bigger GPU's (>4090) |
 |   GPU	|  `AMD`  	|   General AMD Version |
 |   CPU	|  `GENERIC`  	|   Generic x64 CPU trainer (no specific instructions needed) |
@@ -335,19 +334,26 @@ if you opt for the Systemd Linux Service (Option 2):
 |---	|---	|---	|
 |  *cpu 	|  false	|  Enable CPU Training	|
 |  *gpu 	|  false	|  Enable GPU Training	|
-|  cpuVersion 	|  "GENERIC"	|  CPU Version to be used	|
-|  gpuVersion 	|  null	|  GPU Version to be used	|
+|  cpuVersion 	|  "GENERIC"	|  CPU Version to be used [QLI Trainer Options](#qli-trainer-options)	|
+|  gpuVersion 	|  null	|  GPU Version to be used [QLI Trainer Options](#qli-trainer-options)	|
 |  cpuThreads 	|  1	|  Number of Threads used for CPU training	|
-|  gpuCards 	|  null	|  Which GPU Cards should be used	|
+|  gpuCards 	|  null	|  Which GPU Cards should be used (see details below; available from client `>=1.9.5` and runner `>=105.3`)	|
 |  cpuAffinity	|  null	|  CPU Affinity for CPU training	|
 |  cpuVariant 	|  null	|  Which Variant of CPU trainer should be used	|
 |  gpuVariant 	|  null	|  Which Variant of GPU trainer should be used	|
 
-currently only one of both options can be enabled (true)
+*currently only one of both options can be enabled (true)
 
 
 > [!NOTE]
-> Please refer to [QLI Trainer Options](#qli-trainer-options) for available `cpuVersion`/`gpuVersion` values.
+> The `gpuCards` property can be used to select `gThreads`. The default configuration is `auto tune` for all cards.<br>
+> For each GPU you can use (comma separated):<br>
+> `-1` => auto tune<br>
+>  `0` => disable GPU<br>
+> `>0` => number of `gThreads` to be used<br>
+> >e.g.: `0,-1,-1,-1,-1,-1` => GPU#1 disabled, #1-5 auto tuen<br>
+> e.g.: `0` => GPU#0 disabled, if there are more, all will be auto tuned<br>
+> e.g.: `512,256,256,256,256,512` => set `gThread` to 512 on GPU#0 and GPU#5, 256 to the rest<br>
 
 
 ## Troubleshooting
