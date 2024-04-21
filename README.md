@@ -1,4 +1,4 @@
-# qubic.li - Client
+f# qubic.li - Client
 This is the main client component from qubic.li. It connects to the backend api and receives tasks to perform.
 
 The Client runs on Docker, Windows and Linux. Below you find the instructions how to use it.
@@ -67,7 +67,7 @@ The following table shows the available trainers.
 |   CPU	|  `GENERIC`  	|   Generic x64 CPU trainer (no specific instructions needed) |
 |   CPU	|  `AVX2`  	|   AVX2 x64 CPU trainer (AVX2 instructions needed) |
 |   CPU	|  `AVX512`  	|   AVX512 x64 CPU trainer (AVX512 instructions needed) |
-|   CPU	|  `SKYLAKE`  	|   For specific Intel Lake processors (may not be aveilable all the time) |
+|   CPU	|  `SKYLAKE`  	|   For specific Intel Lake processors (may not be available all the time) |
 
 ## What's needed
 The runner on Windows also requires the VC Redistributable, which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
