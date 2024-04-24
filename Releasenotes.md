@@ -1,3 +1,7 @@
+# Version 1.9.6
++ Fixed a bug where trainer couldn't get a task (object reference not set...)
++ Re-Added CPU autodetection for new trainer config scheme (Auto AVX2/AVX512)
+ 
 # Version 1.9.5
 + Added GPU Cards Feature (select which GPU Cards to use and how many threads or let the client auto tune them)
   
