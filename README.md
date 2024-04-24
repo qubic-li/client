@@ -48,8 +48,8 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download | MD5 Hash (qli-Client) | Description
 |--- |---	|---	|--- |---	|--- |
-| Windows | x64	| 1.9.5 | https://dl.qubic.li/downloads/qli-Client-1.9.5-Windows-x64.zip |  	|
-| Windows | x64	| 1.9.5 | https://dl.qubic.li/downloads/qli-Client-1.9.5-Windows-x64-Plain.zip |  	| Version without default configuration
+| Windows | x64	| 1.9.5 | https://dl.qubic.li/downloads/qli-Client-1.9.5-Windows-x64.zip |  14F77858E9F4EFAFE592DD4356286F6B	|
+| Windows | x64	| 1.9.5 | https://dl.qubic.li/downloads/qli-Client-1.9.5-Windows-x64-Plain.zip |  14F77858E9F4EFAFE592DD4356286F6B	| Version without default configuration
 | Linux | x64	| 1.9.5 | https://dl.qubic.li/downloads/qli-Client-1.9.5-Linux-x64.tar.gz | 3160c82d3b118c64d36aadcc84948a3b 	| 
 | HiveOs | x64	| 1.9.5 | https://github.com/qubic-li/hiveos | | Please follow instructions for hiveos.
 
