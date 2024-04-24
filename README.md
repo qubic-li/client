@@ -48,10 +48,10 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download | MD5 Hash (qli-Client) | Description
 |--- |---	|---	|--- |---	|--- |
-| Windows | x64	| 1.9.5 | https://dl.qubic.li/downloads/qli-Client-1.9.5-Windows-x64.zip |  14F77858E9F4EFAFE592DD4356286F6B	|
-| Windows | x64	| 1.9.5 | https://dl.qubic.li/downloads/qli-Client-1.9.5-Windows-x64-Plain.zip |  14F77858E9F4EFAFE592DD4356286F6B	| Version without default configuration
-| Linux | x64	| 1.9.5 | https://dl.qubic.li/downloads/qli-Client-1.9.5-Linux-x64.tar.gz | 3160c82d3b118c64d36aadcc84948a3b 	| 
-| HiveOs | x64	| 1.9.5 | https://github.com/qubic-li/hiveos | | Please follow instructions for hiveos.
+| Windows | x64	| 1.9.6 | https://dl.qubic.li/downloads/qli-Client-1.9.6-Windows-x64.zip |  5F56AAF5FA0182C27616D8C1CC0B3DEB	|
+| Windows | x64	| 1.9.6 | https://dl.qubic.li/downloads/qli-Client-1.9.6-Windows-x64-Plain.zip |  5F56AAF5FA0182C27616D8C1CC0B3DEB	| Version without default configuration
+| Linux | x64	| 1.9.6 | https://dl.qubic.li/downloads/qli-Client-1.9.6-Linux-x64.tar.gz | A5E3D1C57F5C2D705DEB3B8CDC9EB5E9 	| 
+| HiveOs | x64	| 1.9.6 | https://github.com/qubic-li/hiveos | | Please follow instructions for hiveos.
 
 ### QLI Trainer
 The trainer is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
@@ -110,9 +110,9 @@ To run the qubic.li client you can use this streamlined installation guide. Plea
 ```bash
 mkdir ~/qubic;
 cd ~/qubic;
-wget https://dl.qubic.li/downloads/qli-Client-1.9.5-Linux-x64.tar.gz;
-tar -xvf qli-Client-1.9.5-Linux-x64.tar.gz;
-rm qli-Client-1.9.5-Linux-x64.tar.gz;
+wget https://dl.qubic.li/downloads/qli-Client-1.9.6-Linux-x64.tar.gz;
+tar -xvf qli-Client-1.9.6-Linux-x64.tar.gz;
+rm qli-Client-1.9.6-Linux-x64.tar.gz;
 ```  
 **2. edit and set your appsettings.json according to your preferences**
 ```bash
@@ -333,7 +333,7 @@ if you opt for the Systemd Linux Service (Option 2):
 |---	|---	|---	|
 |  *cpu 	|  false	|  Enable CPU Training	|
 |  *gpu 	|  false	|  Enable GPU Training	|
-|  cpuVersion 	|  "GENERIC"	|  CPU Version to be used [QLI Trainer Options](#qli-trainer-options)	|
+|  cpuVersion 	|  AUTO	|  AUTO = it tries to detect your CPU; CPU Version to be used [QLI Trainer Options](#qli-trainer-options)	|
 |  gpuVersion 	|  null	|  GPU Version to be used [QLI Trainer Options](#qli-trainer-options)	|
 |  cpuThreads 	|  1	|  Number of Threads used for CPU training	|
 |  gpuCards 	|  null	|  Which GPU Cards should be used (see details below; available from client `>=1.9.5` and runner `>=105.3`)	|
