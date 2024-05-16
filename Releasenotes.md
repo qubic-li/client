@@ -1,3 +1,6 @@
+# Version 1.9.7
++ Fixed AVX2 auto detection
+
 # Version 1.9.6
 + Fixed a bug where trainer couldn't get a task (object reference not set...)
 + Re-Added CPU autodetection for new trainer config scheme (Auto AVX2/AVX512)
