@@ -47,7 +47,7 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
-|--- |---	|---	|--- |---	|--- |
+|--- |---	|---	|--- |---	|
 | Windows | x64	| 1.9.7 | https://dl.qubic.li/downloads/qli-Client-1.9.7-Windows-x64.zip | 
 | Windows | x64	| 1.9.7 | https://dl.qubic.li/downloads/qli-Client-1.9.7-Windows-x64-Plain.zip | Version without default configuration
 | Linux | x64	| 1.9.7 | https://dl.qubic.li/downloads/qli-Client-1.9.7-Linux-x64.tar.gz |  
