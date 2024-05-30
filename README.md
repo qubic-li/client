@@ -1,5 +1,5 @@
-f# qubic.li - Client
-This is the main client component from qubic.li. It connects to the backend api and receives tasks to perform.
+# qubic.li - Client
+This is the main client component from qubic.li. It connects to the backend API and receives tasks to perform.
 
 The Client runs on Docker, Windows and Linux. Below you find the instructions how to use it.
 
