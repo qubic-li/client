@@ -1,3 +1,8 @@
+# Version 2.0
++ Added PPS+ Support
++ Added Live Connection Support
++ Added Idle Task Support
+  
 # Version 1.9.7
 + Fixed AVX2 auto detection
 
