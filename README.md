@@ -48,9 +48,9 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 1.9.7 | https://dl.qubic.li/downloads/qli-Client-1.9.7-Windows-x64.zip | 
-| Windows | x64	| 1.9.7 | https://dl.qubic.li/downloads/qli-Client-1.9.7-Windows-x64-Plain.zip | Version without default configuration
-| Linux | x64	| 1.9.7 | https://dl.qubic.li/downloads/qli-Client-1.9.7-Linux-x64.tar.gz |  
+| Windows | x64	| 2.0.6 | https://dl.qubic.li/downloads/qli-Client-2.0.6-Windows-x64.zip | 
+| Windows | x64	| 2.0.6 | https://dl.qubic.li/downloads/qli-Client-2.0.6-Windows-x64-Plain.zip | Version without default configuration
+| Linux | x64	| 2.0.6 | https://dl.qubic.li/downloads/qli-Client-2.0.6-Linux-x64.tar.gz |  
 | HiveOs | x64	| 1.9.7 | https://dl.qubic.li/downloads/qubminer-latest.tar.gz | Please follow instructions for hiveos: https://github.com/qubic-li/hiveos |
 
 ### QLI Trainer
@@ -61,8 +61,8 @@ The following table shows the available trainers.
 
 |  Type 	|   Version Key (`gpuVersion`/`cpuVersion`)	|   Description	|  
 |---	|---	|--- |
-|   GPU	|  `CUDA12`  	|   CUDA Version for all newer/bigger GPU's (>4090) |
-|   GPU	|  `AMD`  	|   General AMD Version |
+|   GPU	|  `CUDA12`  	|   CUDA Version for all GPU's |
+|   GPU	|  `AMD`  	|   General AMD Version (may not be available all the time; depends on the epoch) |
 |   CPU	|  `GENERIC`  	|   Generic x64 CPU trainer (no specific instructions needed) |
 |   CPU	|  `AVX2`  	|   AVX2 x64 CPU trainer (AVX2 instructions needed) |
 |   CPU	|  `AVX512`  	|   AVX512 x64 CPU trainer (AVX512 instructions needed) |
@@ -71,7 +71,7 @@ The following table shows the available trainers.
 ## What's needed
 The runner on Windows also requires the VC Redistributable, which can be obtained from: https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
 
-The runner on linux needs at least **GLIBC 2.34**.
+The runner on linux needs at least **GLIBC 2.31**.
 The CPU where you run the Client **must** support `AVX2` or `AVX512` CPU instructions.
 
 ### Huge Pages
