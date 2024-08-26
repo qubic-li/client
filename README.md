@@ -48,9 +48,9 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 2.1.0 | https://dl.qubic.li/downloads/qli-Client-2.1.0-Windows-x64.zip | 
-| Windows | x64	| 2.1.0 | https://dl.qubic.li/downloads/qli-Client-2.1.0-Windows-x64-Plain.zip | Version without default configuration
-| Linux | x64	| 2.1.0 | https://dl.qubic.li/downloads/qli-Client-2.1.0-Linux-x64.tar.gz |  
+| Windows | x64	| 2.0.9 | https://dl.qubic.li/downloads/qli-Client-2.0.9-Windows-x64.zip | 
+| Windows | x64	| 2.0.9 | https://dl.qubic.li/downloads/qli-Client-2.0.9-Windows-x64-Plain.zip | Version without default configuration
+| Linux | x64	| 2.0.9 | https://dl.qubic.li/downloads/qli-Client-2.0.9-Linux-x64.tar.gz |  
 | HiveOs | x64	| 2.0.9 | https://github.com/qubic-li/hiveos/releases/download/latest/qubminer-latest.tar.gz | Please follow instructions for hiveos: https://github.com/qubic-li/hiveos |
 
 ### QLI Trainer
@@ -110,9 +110,9 @@ To run the qubic.li client you can use this streamlined installation guide. Plea
 ```bash
 mkdir ~/qubic;
 cd ~/qubic;
-wget https://dl.qubic.li/downloads/qli-Client-2.1.0-Linux-x64.tar.gz;
-tar -xvf qli-Client-2.1.0-Linux-x64.tar.gz;
-rm qli-Client-2.1.0-Linux-x64.tar.gz;
+wget https://dl.qubic.li/downloads/qli-Client-2.0.9-Linux-x64.tar.gz;
+tar -xvf qli-Client-2.0.9-Linux-x64.tar.gz;
+rm qli-Client-2.0.9-Linux-x64.tar.gz;
 ```  
 **2. edit and set your appsettings.json according to your preferences**
 ```bash
