@@ -1,3 +1,8 @@
+# Versin 2.1
++ Optimized binary file
++ Added support for idling in classic environment
+
+  
 # Version 2.0
 + Added PPS+ Support
 + Added Live Connection Support
