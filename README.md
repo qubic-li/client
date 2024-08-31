@@ -26,10 +26,18 @@ The client is able to download runners, which then performs the AI Training task
 Find more information about the "principle of least privilege" on wikipedia: https://en.wikipedia.org/wiki/Principle_of_least_privilege
 
 ## Pool Mining
-If you don't want to operate your own Qubic infrastructure. You can join the qubic.li pool mining. You can either register an account (highly recomended) on http://app.qubic.li or you can join pool mining register-less.
+If you don't want to operate your own Qubic infrastructure. You can join the qubic.li pool mining. You can either register an account (**highly recomended**) on http://pool.qubic.li or you can join pool mining register-less.
+The simplest way to join is to create an account and login to https://pool.qubic.li, follow the instructions after you have logged in there.
 
-If you want to create your own account, follow the instructions here: https://doc.qubic.world/becoming-a-computor-miner/how-to-participate
+### PPS+ vs Solo
+With the qli pools you can choose between PPS (Pay Per Share) or solo training. With PPS the revenue for Qubic is delayed one week but has advantages for smaller environments. It is also allowed to run some workers as PPS and others as solo training where you will see revenue only when you find valid Qubic Solutions.
 
+To Enable/Disable PPS use either `"isPps": true` or `"isPps": false` in your settings.
+
+### Client Configuration
+We recommend to use our Client Setup Configurator: https://pool.qubic.li/en-US/setup
+
+### LEGACY Registerless training
 If you want registration-less pool mining, do the following:
 1. Create a Qubic Id (e.g. on https://wallet.qubic.li)
 2. Download Client from below (Version >=1.2)
@@ -48,10 +56,10 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 2.1.1 | https://dl.qubic.li/downloads/qli-Client-2.1.1-Windows-x64.zip | 
-| Windows | x64	| 2.1.1 | https://dl.qubic.li/downloads/qli-Client-2.1.1-Windows-x64-Plain.zip | Version without default configuration
-| Linux | x64	| 2.1.1 | https://dl.qubic.li/downloads/qli-Client-2.1.1-Linux-x64.tar.gz |  
-| HiveOs | x64	| 2.0.9 | https://github.com/qubic-li/hiveos/releases/download/latest/qubminer-latest.tar.gz | Please follow instructions for hiveos: https://github.com/qubic-li/hiveos |
+| Windows | x64	| 2.1.2 | https://dl.qubic.li/downloads/qli-Client-2.1.2-Windows-x64.zip | 
+| Windows | x64	| 2.1.2 | https://dl.qubic.li/downloads/qli-Client-2.1.2-Windows-x64-Plain.zip | Version without default configuration
+| Linux | x64	| 2.1.2 | https://dl.qubic.li/downloads/qli-Client-2.1.2-Linux-x64.tar.gz |  
+| HiveOs | x64	| 2.1.2 | https://github.com/qubic-li/hiveos/releases/download/latest/qubminer-latest.tar.gz | Please follow instructions for hiveos: https://github.com/qubic-li/hiveos |
 
 ### QLI Trainer
 The trainer is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
@@ -110,9 +118,9 @@ To run the qubic.li client you can use this streamlined installation guide. Plea
 ```bash
 mkdir ~/qubic;
 cd ~/qubic;
-wget https://dl.qubic.li/downloads/qli-Client-2.1.1-Linux-x64.tar.gz;
-tar -xvf qli-Client-2.1.1-Linux-x64.tar.gz;
-rm qli-Client-2.1.1-Linux-x64.tar.gz;
+wget https://dl.qubic.li/downloads/qli-Client-2.1.2-Linux-x64.tar.gz;
+tar -xvf qli-Client-2.1.2-Linux-x64.tar.gz;
+rm qli-Client-2.1.2-Linux-x64.tar.gz;
 ```  
 **2. edit and set your appsettings.json according to your preferences**
 ```bash
