@@ -306,7 +306,7 @@ if you opt for the Systemd Linux Service (Option 2):
 
 |  Setting 	|  Default Value 	|  Description 	|
 |---	|---	|---	|
-|  baseUrl 	|  https://mine.qubic.li/ 	|  The Base Url of the API 	|
+|  baseUrl 	|  https://wps.qubic.li/ 	|  The Base Url of the API 	|
 |  amountOfThreads 	|  1 	|  How many threads should be used for the AI Training.	|
 |  accessToken* 	|  JWT Token 	| This is you personal JWT Token which you can obtain from the Control Panel at qubic.li 	|
 |  payoutId* 	|  NULL 	| This is the ID you want to get token payout for your found solutions.	|
@@ -318,7 +318,10 @@ if you opt for the Systemd Linux Service (Option 2):
 |  overwrites	|  {} 	| An object to overwrite specific settings. (e.g. `"AVX512":false` to disable AVX512) | 
 |  autoupdateEnabled	|  false 	| Set this to `true` to enable auto update of the service client (from version 1.7.8) | 
 |  checkUpdateEnabled	|  true 	| Checks if there is a new version of the service client when starting | 
+|  isPps	|  true 	| If the trainer should run in PPS mode  | 
+|  useLiveConnection	|  true 	| The client will use a websocket connection for optimal performance  | 
 |  trainer	|  {} 	| The trainer configuration options  | 
+|  idleSettings	|  {} 	| The configuration options for the Qubic idling period | 
 
 ### Trainer Options
 
@@ -351,7 +354,6 @@ if you opt for the Systemd Linux Service (Option 2):
 
 *currently only one of both options can be enabled (true)
 
-
 > [!NOTE]
 > The `gpuCards` property can be used to select `gThreads`. The default configuration is `auto tune` for all cards.<br>
 > For each GPU you can use (comma separated):<br>
@@ -362,6 +364,20 @@ if you opt for the Systemd Linux Service (Option 2):
 > e.g.: `0` => GPU#0 disabled, if there are more, all will be auto tuned<br>
 > e.g.: `512,256,256,256,256,512` => set `gThread` to 512 on GPU#0 and GPU#5, 256 to the rest<br>
 
+### Idle Options
+During the Qubic idling phase. You can run another program or miner.
+
+```json
+{
+	"command": "ping",
+	"arguments": "google.com"
+}
+```
+
+|  Setting 	|  Default Value 	|  Description 	|
+|---	|---	|---	|
+|  command 	|  ""	|  the command/programm to execute	|
+|  argument 	|  ""	|  the arguments that should be given to the command/program	|
 
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
