@@ -192,9 +192,9 @@ Don't forget to replace the token from the below examples with your own.
 # update your sources
 apt update
 # download service installation script with autoupdate
-# wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto.sh
+wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto.sh
 # download service installation script without auto update
-wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install.sh
+# wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
@@ -382,6 +382,9 @@ During the Qubic idling phase. You can run another program or miner.
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
 
+### Authentication failed
+If you see an error like this `ERROR   LIVE AUTHENTICATION FAILED`, you should create a new AccessToken. https://pool.qubic.li
+
 ### GPU and WSL doesn't work
 The Community showed several solutions to that Problem.
 
@@ -397,7 +400,7 @@ sudo reboot
 #### Disable Mining GPU for Windows
 If you have a second GPU (e.g. from your processor) you can try to disable your mining GPU for windows and let windows use the second GPU to render your windows.
 
-### AVX CPU (Intel) not working
+### AVX CPU (Intel) not working (legacy)
 Somtimes the detection of AVX2/AVX512 is not accurate and it loads the wrong trainer.
 If this happens to you, you can enforce certain configuration.
 
