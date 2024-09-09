@@ -1,3 +1,11 @@
+# Version 3.0
++ Added hybrid/dual mode
+- Removed legacy constructs (Qiner, Custom runner and more)
+
+# Version 2.2
++ Bugfixing
++ Added support for skylake in modern environment
+
 # Versin 2.1
 + Optimized binary file
 + Added support for idling in classic environment
