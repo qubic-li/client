@@ -59,7 +59,7 @@ The QLI Client is the pool client and connects to the pool.
 | Windows | x64	| 2.2.1 | https://dl.qubic.li/downloads/qli-Client-2.2.1-Windows-x64.zip | 
 | Windows | x64	| 2.2.1 | https://dl.qubic.li/downloads/qli-Client-2.2.1-Windows-x64-Plain.zip | Version without default configuration
 | Linux | x64	| 2.2.1 | https://dl.qubic.li/downloads/qli-Client-2.2.1-Linux-x64.tar.gz |  
-| HiveOs | x64	| 2.2.1 | https://github.com/qubic-li/hiveos/releases/download/latest/qubminer-latest.tar.gz | Please follow instructions for hiveos: https://github.com/qubic-li/hiveos (ass `AutoUpdate` to the extra config to get latest version |
+| HiveOs | x64	| 2.2.1 | https://github.com/qubic-li/hiveos/releases/download/latest/qubminer-latest.tar.gz | Please follow instructions for hiveos: https://github.com/qubic-li/hiveos (add `AutoUpdate` to the extra config to get latest version |
 
 ### QLI Trainer
 The trainer is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
