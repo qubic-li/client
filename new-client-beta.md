@@ -352,16 +352,16 @@ if you opt for the Systemd Linux Service (Option 2):
 	"gpuVersion": "CUDA",
 	"gpuCards": "",
 	"gpuVariant": "",
-    "cpuName": null,
-    "gpuName": null
+    	"cpuName": null,
+    	"gpuName": null
 }
 ```
 
 
 |  Setting 	|  Default Value 	|  Description 	|
 |---	|---	|---	|
-|  cpu 	|  `false`	|  Enable CPU Training	|
-|  gpu 	|  `false`	|  Enable GPU Training	|
+|  cpu 	|  `true`	|  Enable CPU Training	|
+|  gpu 	|  `true`	|  Enable GPU Training	|
 |  cpuVersion 	|  `null`	|  null=AUTO = it tries to detect your CPU; CPU Version to be used [QLI Trainer Options](#qli-trainer-options)	|
 |  gpuVersion 	|  `null`	|  null=AUTO = it tries to detect your GPU; GPU Version to be used [QLI Trainer Options](#qli-trainer-options)	|
 |  cpuThreads 	|  `0`	|  Number of Threads used for CPU training	|
