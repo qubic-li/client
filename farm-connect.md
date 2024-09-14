@@ -2,6 +2,14 @@
 QLI Farm Connect is a specific proxy to connect to the QLI platform.
 This allows anyone to operate its own entry point (API) for the [QLI Client](https://github.com/qubic-li/client).
 
+1. [Account is needed](#account-is-needed)
+2. [Quick Test (not recommended)](#quick-test-not-recommended)
+3. [Docker Compose (recommended)](#docker-compose-recommended)
+4. [Docker Environment Variables](#docker-environment-variables)
+5. [Farm Connect API](#farm-connect-api)
+6. [When to use Farm Connect](#when-to-use-farm-connect)
+7. [How to connect Clients to Farm Connect](#how-to-connect-clients-to-farm-connect)
+
 ![QLI-FarmConnect](https://github.com/user-attachments/assets/7f124085-dacb-4203-af5e-f1c9f06f9592)
 
 ## Account is needed
@@ -68,7 +76,7 @@ docker logs -f qli-farm-connect`
 # (Cancel with CTRL+C)
 ```
 
-## Docker Environument Variables
+## Docker Environment Variables
 
 
 | Param    | Default | Description |
