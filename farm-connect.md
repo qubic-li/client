@@ -2,6 +2,9 @@
 QLI Farm Connect is a specific proxy to connect to the QLI platform.
 This allows anyone to operate its own entry point (API) for the [QLI Client](https://github.com/qubic-li/client).
 
+>[!Important]
+>Farm Connect is in beta state and may run with errors.
+
 1. [Account is needed](#account-is-needed)
 2. [Quick Test (not recommended)](#quick-test-not-recommended)
 3. [Docker Compose (recommended)](#docker-compose-recommended)
@@ -117,7 +120,7 @@ Sample: `http://10.10.10.10:80/status/LiveStat?pw=suhc.ksdfdsf`
 ## When to use Farm Connect
 Using Farm Connect can have a possitive effect for you when:
 
-- When you want to connect **>100** clints from same location
+- When you want to connect **>100** clients from same location
 - When your internet bandwidth is limited
 - When you do not want to use official QLI pool addresses
 - When you want to do custom statitstics
