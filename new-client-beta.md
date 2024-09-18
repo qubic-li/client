@@ -22,9 +22,10 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
    d. [Monitoring](#service-monitoring)  
    e. [Remove Client](#remove-client) 
 9. [HiveOs](#hiveos)
-10. [Appsettings.json Customization](#customizing) 
-   a. [Trainer Options](#trainer-options)     
-11. [Troubleshooting](#troubleshooting)
+10. [Appsettings.json Customization](#customizing)
+11. [Trainer Options](#trainer-options)
+12. [Idling Options](#idle-options) 
+13. [Troubleshooting](#troubleshooting)
 
 ## Security Warning
 The client is able to download runners, which then performs the AI Training tasks. This can potentially be used in a bad manner. Run the client with the least priviliges which are possble. e.g. on windows NOT as Admininstrator; on linux NOT as root.
