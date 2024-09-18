@@ -79,9 +79,9 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 3.0.4 BETA | not available | 
-| Linux | x64	| 3.0.4 BETA | https://dl.qubic.li/downloads/qli-Client-3.0.4-beta-Linux-x64.tar.gz |  
-| HiveOs | x64	| 3.0.4 BETA | - | not available |
+| Windows | x64	| 3.0.5 BETA | https://dl.qubic.li/downloads/qli-Client-3.0.5-beta-Windows-x64.zip  | 
+| Linux | x64	| 3.0.5 BETA | https://dl.qubic.li/downloads/qli-Client-3.0.5-beta-Linux-x64.tar.gz |  
+| HiveOs | x64	| 3.0.5 BETA | - | not available |
 
 ### QLI Trainer
 The trainer/worker is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
@@ -124,9 +124,11 @@ Every setting can be translated into a command line argument, below some example
 
 |  Setting 	|  Command Line Argument 	|  Description 	|
 |---	|---	|---	|
-| `AccessToken`	| `--ClientSettings__AccessToken`	| The Access Token to use |
-| `Trainer.CpuThreads`	| `--ClientSettings__Trainer__CpuThreads`	| How many threads should the trainer for CPU use	|
-| `Alias`	| `--ClientSettigns__ALias`	| The Alias/Name of your rig/worker. Leave it empty to use machinename |
+| `AccessToken`	| `--ClientSettings:AccessToken`	| The Access Token to use |
+| `Trainer.CpuThreads`	| `--ClientSettings:Trainer:CpuThreads`	| How many threads should the trainer for CPU use	|
+| `Alias`	| `--ClientSettigns:ALias`	| The Alias/Name of your rig/worker. Leave it empty to use machinename |
+
+Sample call: `./qli-Client --ClientSettings:QubicAddress=IERULKJFHESLKJSLDFHZLKSUHLSKDHFLSDF --ClientSettings:Trainer:CpuThreads:16`
 
 ## Windows
 You can run the client directly on Windows. Open a command console and start it with `./qli-Client.exe` or double click the file when you have the file `appsettings.json` in the same folder.
