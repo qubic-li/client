@@ -56,7 +56,7 @@ If you want registration-less pool mining, do the following:
 # <THREADS> with the amount of threads you want to run training
 
 # bash/shell/command line
-./qli-Client --ClientSettings__QubicAddress=<QUBICID> --ClientSettings__Trainer__CpuThreads=<THREADS>
+./qli-Client --ClientSettings:QubicAddress=<QUBICID> --ClientSettings:Trainer:CpuThreads=<THREADS>
 
 # docker cpu only
 docker run --name qli-client -e ClientSettings__QubicAddress=<QUBICID>   -e ClientSettings__Alias= -e ClientSettings__Trainer__CpuThreads=<THREADS>  qliplatform/qubic-client:latest
