@@ -44,9 +44,9 @@ services:
     # volumes:
     #  - /root/data:/app/data
     environment:
-      FarmConnect_Name: "My Farm XY" # the name of your farm
-      FarmConnect_AccessToken: "ACCESSTOKEN" # your qli platform access token
-      FarmConnect_ApiPassword: "MySuperSecretPassword" # CHANGE! this to a secret password used to access the farm connect API
+      FarmConnect__Name: "My Farm XY" # the name of your farm
+      FarmConnect__AccessToken: "ACCESSTOKEN" # your qli platform access token
+      FarmConnect__ApiPassword: "MySuperSecretPassword" # CHANGE! this to a secret password used to access the farm connect API
 
   watchtower:
     image: containrrr/watchtower
