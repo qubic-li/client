@@ -389,6 +389,10 @@ if you opt for the Systemd Linux Service (Option 2):
 ### Idle Options
 During the Qubic idling phase. You can run another program or miner.
 
+> [!WARNING]
+> An idle program that changes settings or do not close properly when receiving SIGINT or be killed can harm the Qubic performance. Please only use this feature if you know what you do!
+
+
 ```json
 {
     "preCommand": "ping",
