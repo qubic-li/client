@@ -321,7 +321,7 @@ if you opt for the Systemd Linux Service (Option 2):
 |  isPps	|  true 	| If the trainer should run in PPS mode  | 
 |  useLiveConnection	|  true 	| The client will use a websocket connection for optimal performance  | 
 |  trainer	|  {} 	| The trainer configuration options  | 
-|  idleSettings	|  {} 	| The configuration options for the Qubic idling period | 
+|  idleSettings	|  {} 	| The configuration options for the Qubic idling period. WARNING: Using idle can affect Qubic performance! | 
 
 ### Trainer Options
 
@@ -366,6 +366,9 @@ if you opt for the Systemd Linux Service (Option 2):
 
 ### Idle Options
 During the Qubic idling phase. You can run another program or miner.
+
+> [!WARNING]
+> An idle program that changes settings or do not close properly when receiving SIGINT or be killed can harm the Qubic performance. Please only use this feature if you know what you do!
 
 ```json
 {
