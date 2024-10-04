@@ -80,9 +80,9 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 3.0.8 BETA | https://dl.qubic.li/downloads/qli-Client-3.0.8-beta-Windows-x64.zip  | 
-| Linux | x64	| 3.0.8 BETA | https://dl.qubic.li/downloads/qli-Client-3.0.8-beta-Linux-x64.tar.gz |  
-| HiveOs | x64	| 3.0.8 BETA | - | not available |
+| Windows | x64	| 3.0.9 BETA | https://dl.qubic.li/downloads/qli-Client-3.0.9-beta-Windows-x64.zip  | 
+| Linux | x64	| 3.0.9 BETA | https://dl.qubic.li/downloads/qli-Client-3.0.9-beta-Linux-x64.tar.gz |  
+| HiveOs | x64	| 3.0.9 BETA | - | not available |
 
 ### QLI Trainer
 The trainer/worker is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
