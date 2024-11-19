@@ -1,9 +1,5 @@
 # QLI qubic.li - Client
 
->[!IMPORTANT]
-> THIS PAGE IS FOR CLIENT `>= 3.0` ONLY!
-> The BETA version is experimental!
-
 This is the main client component from qubic.li. It connects to the backend API and receives tasks to perform.
 
 The Client runs on Docker, Windows and Linux. Below you find the instructions how to use it.
@@ -18,7 +14,6 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 8. [Linux option 2: Run qli-Client as Linux Service (Expert)](#linux-option-2-expert-systemd-linux-service)  
    a. [Ubuntu 22.04](#ubuntu-2204)     
    b. [Debian 12](#debian-12)  
-   c. [Redhat Enterprise 8.8](#redhat-enterprise-88)  
    d. [Monitoring](#service-monitoring)  
    e. [Remove Client](#remove-client) 
 9. [HiveOs](#hiveos)
@@ -68,7 +63,7 @@ docker run --name qli-client -e ClientSettings__QubicAddress=<QUBICID>   -e Clie
 ```
 4. Check your performance: https://pool.qubic.li (Login with Qubic Address)
 
-You can also put your PayoutId into the [configuration file](#customizing) if you don't want to use command line arguments.
+You can also put your Qubic Address into the [configuration file](#customizing) if you don't want to use command line arguments.
 
 ## Download
 We recommend to update your Version if there is a change in the Minor Version (e.g. from 1.3 to 1.4).
@@ -80,9 +75,9 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 3.0.11 BETA | https://dl.qubic.li/downloads/qli-Client-3.0.11-beta-Windows-x64.zip  | 
-| Linux | x64	| 3.0.11 BETA | https://dl.qubic.li/downloads/qli-Client-3.0.11-beta-Linux-x64.tar.gz |  
-| HiveOs | x64	| 3.0.11 BETA | - | not available |
+| Windows | x64	| 3.1.0 | https://dl.qubic.li/downloads/qli-Client-3.1.0-Windows-x64.zip  | 
+| Linux | x64	| 3.1.0 | https://dl.qubic.li/downloads/qli-Client-3.1.0-Linux-x64.tar.gz |  
+| HiveOs | x64	| 3.1.0 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
 
 ### QLI Trainer
 The trainer/worker is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
@@ -162,8 +157,6 @@ The path inside the container is `/app/appsettings.json`.
 # start client for cpu training
 docker run --name qli-client -e ClientSettings__AccessToken=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImUxODc5YzQ3LTIwZjUtNDA5Yy05MThkLTRhYzgyNzFiYjYxMSIsIk1pbmluZyI6IiIsIm5iZiI6MTcyNTE5NzA5NSwiZXhwIjoxNzU2NzMzMDk1LCJpYXQiOjE3MjUxOTcwOTUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.hBYWpMvvpj8N-t6r6iIdF5y8ayKxtSi0FEb689oOrbPiwBrs76MBvpva7mbOQslzuEFJ8jZSFHlD1QgR6P9YMcTh5fZndI24VBD8lEkNUQPP1wWAOwEUQy-Yk1VTRg7L654ksf0jE4Obj_CDTPyIkK2f5C817--zE7uyngF3-hMRf3Taqus_jR2qqxYSz2D2B2nEYbrRWMDGoMf1tDHq3kFWaFqOr72IjgqkIDV3hs880mhiKcdI0USv54UK-tBon5B_WFJivPr5uo-OUrbILlU24AgTeLYskf1ajIIFnCqJVrAbYxEiaZ0cH1Ey5k6aDfRveb9wqhSQbTMGZuTsOw -e ClientSettings__Alias=docker-test -e ClientSettings__Trainer__CpuThreads=5  qliplatform/qubic-client:latest
 ```
-
-
 
 ## Linux Option 1: Screen Session  
 To run the qubic.li client you can use this streamlined installation guide. Please consider adapt the commands to suit your directory preferences. Note that all commands must be executed as the root user, or you should precede them with the sudo command for proper authorization.  
@@ -356,7 +349,10 @@ if you opt for the Systemd Linux Service (Option 2):
 	"gpuCards": "",
 	"gpuVariant": "",
     	"cpuName": null,
-    	"gpuName": null
+    	"gpuName": null,
+	"downloadUrlRewrites": {
+		"URLRegex": "anydomain.com"
+	}
 }
 ```
 
@@ -374,6 +370,11 @@ if you opt for the Systemd Linux Service (Option 2):
 |  gpuVariant 	|  `null`	|  Which Variant of GPU trainer should be used	|
 |  cpuName 	|  `null`	|  The specific name of the CPU trainer/worker.	|
 |  gpuName 	|  `null`	|  The specific name of the GPU trainer/worker.	|
+|  downloadUrlRewrites 	|  `null`	|  If you want to use your own download proxies for the trainer.	|
+
+> [!NOTE]
+> `"downloadUrlRewrites": { "dl\\.qubic\\.li": "anydomain.com" }`
+> This example will rewrite the download url from `dl.qubic.li` to `anydomain.com`
 
 
 > [!NOTE]
