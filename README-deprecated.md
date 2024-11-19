@@ -1,6 +1,9 @@
 # qubic.li - Client
 This is the main client component from qubic.li. It connects to the backend API and receives tasks to perform.
 
+> [!WARNING]
+> This information is for the deprecated client version `<3.0`. Please update to to latest version.
+
 The Client runs on Docker, Windows and Linux. Below you find the instructions how to use it.
 
 1. [Security Warning](#security-warning)
