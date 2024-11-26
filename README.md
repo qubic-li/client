@@ -169,9 +169,9 @@ To run the qubic.li client you can use this streamlined installation guide. Plea
 ```bash
 mkdir ~/qubic;
 cd ~/qubic;
-wget https://dl.qubic.li/downloads/qli-Client-3.0.0-beta-Linux-x64.tar.gz;
-tar -xvf qli-Client-3.0.0-beta-Linux-x64.tar.gz;
-rm qli-Client-3.0.0-beta-Linux-x64.tar.gz;
+wget https://dl.qubic.li/downloads/qli-Client-3.1.0-Linux-x64.tar.gz;
+tar -xvf qli-Client-3.1.0-Linux-x64.tar.gz;
+rm qli-Client-3.1.0-Linux-x64.tar.gz;
 ```  
 **2. edit and set your appsettings.json according to your preferences**
 ```bash
