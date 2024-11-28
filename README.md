@@ -229,7 +229,7 @@ Don't forget to replace the token from the below examples with your own.
 # update your sources
 apt update
 # download service installation script with autoupdate
-wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto-beta.sh
+wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
@@ -250,7 +250,7 @@ apt install -y g++-11
 ```bash
 # download service installation script with autoupdate
 # download service installation script
-wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto-beta.sh
+wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto.sh
 # set the script as executable
 chmod u+x qli-Service-install.sh
 # install qubic.li client as systemd service
