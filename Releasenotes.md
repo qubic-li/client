@@ -1,3 +1,8 @@
+# Version 3.2
++ Added client autoupdate when running as linux systemd service
++ Bugfixes
++ Optimized legacy config reader
+
 # Version 3.0
 + Added hybrid/dual mode
 - Removed legacy constructs (Qiner, Custom runner and more)
