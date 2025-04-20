@@ -28,12 +28,12 @@ The client is able to download runners, which then performs the AI Training task
 Find more information about the "principle of least privilege" on wikipedia: https://en.wikipedia.org/wiki/Principle_of_least_privilege
 
 ## Pool Mining
-If you don't want to operate your own Qubic infrastructure. You can join the qubic.li pool mining. You can either register an account (**highly recomended**) on http://pool.qubic.li or you can join pool mining register-less.
+If you don't want to operate your own Qubic infrastructure. You can join the QLI (qubic.li) pool mining. You can either register an account (**highly recomended**) on http://pool.qubic.li or you can join pool mining register-less.
 
 The simplest way to join is to create an account and login to https://pool.qubic.li, follow the instructions after you have logged in there.
 
 ### PPS+ vs Solo
-With the qli pools you can choose between PPS (Pay Per Share) or solo training. With PPS the revenue for Qubic is delayed one week but has advantages for smaller environments. It is also allowed to run some workers as PPS and others as solo training where you will see revenue only when you find valid Qubic Solutions.
+With the QLI pools you can choose between PPS (Pay Per Share) or solo training. With PPS you avoid the own volatility which is useful for smaller environments. It is also allowed to run some workers as PPS and others as solo training where you will see revenue only when you find valid Qubic Solutions.
 
 To Enable/Disable PPS use either `"pps": true` or `"pps": false` in your settings.
 
