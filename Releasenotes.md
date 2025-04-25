@@ -1,3 +1,7 @@
+# Version 3.3
++ Added automatic XMR/Monero handling for CPU's
++ Minor optimizations in handling of workers
+  
 # Version 3.2
 + Added client autoupdate when running as linux systemd service
 + Bugfixes
