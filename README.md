@@ -20,6 +20,7 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 10. [Appsettings.json Customization](#customizing)
 11. [Trainer Options](#trainer-options)
 12. [Idling Options](#idle-options) 
+12. [XMR Options](#xmr-options) 
 13. [Troubleshooting](#troubleshooting)
 
 ## Security Warning
@@ -76,8 +77,13 @@ The QLI Client is the pool client and connects to the pool.
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
 | Windows | x64	| 3.1.1 | https://dl.qubic.li/downloads/qli-Client-3.1.1-Windows-x64.zip  | 
+| Windows | x64	| 3.3.1 | https://dl.qubic.li/downloads/qli-Client-3.3.1-Windows-x64-beta.zip  | Qubic XMR Beta Version*
 | Linux | x64	| 3.2.0 | https://dl.qubic.li/downloads/qli-Client-3.2.0-Linux-x64.tar.gz |  
+| Linux | x64	| 3.3.2 | https://dl.qubic.li/downloads/qli-Client-3.3.2-Linux-x64-beta.tar.gz | Qubic XMR Beta Version*
 | HiveOs | x64	| 3.1.1 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
+
+> *Qubic XMR Beta Version runs the Qubic Monero POC during idle phase. It uses CPU only. You can still use the [Qubic idling](#idle-options) to run another program/software.
+> For XMR mining, the configured amount of CPU threads apply.
 
 ### QLI Trainer
 The trainer/worker is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
@@ -334,6 +340,7 @@ if you opt for the Systemd Linux Service (Option 2):
 |  autoUpdate	|  `false` 	| If the trainer should try to do an autoupdate  | 
 |  trainer	|  {} 	| The [trainer configuration](#trainer-options) options  | 
 |  idling	|  {} 	| The configuration options for the [Qubic idling](#idle-options) period | 
+|  xmrSettings	|  {} 	| The configuration options for the [Qubic XMR POC](#xmr-options) period | 
 
 ### Trainer Options
 
@@ -413,6 +420,26 @@ During the Qubic idling phase. You can run another program or miner.
 |  preCommandArguments 	|  ""	|  the arguments that should be given to the preCommand/program	|
 |  postCommand 	|  ""	|  a command/programm to start once the idling period stopps	|
 |  postCommandArguments 	|  ""	|  the arguments that should be given to the postCommand/program	|
+
+### XMR Options
+During the Qubic idling phase, the XMR POC is started automatically. You do not have to change anything at your current configuration.
+We suggest to not add/change the below settings. They are here listed for reference only.
+
+```json
+"xmrSettings": {
+  "disabled": false,
+  "enableGpu": false,
+  "poolAddress": "stratum+tcp://xmr.qubic.li:3333",
+  "binaryName": null
+}
+```
+
+|  Setting 	|  Default Value 	|  Description 	|
+|---	|---	|---	|
+|  disabled 	|  false	|  to disable the XMR module	|
+|  enableGpu 	|  false	|  to enable GPU for XMR (not yet supported)	|
+|  poolAddress 	|  "stratum+tcp://xmr.qubic.li:3333"	|  qubic xmr pool address (not a standrd XMR pool address)	|
+|  binaryName 	|  "qli-worker-XMR"	|  the name of the xmr worker binary (default: qli-worker-XMR)	|
 
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
