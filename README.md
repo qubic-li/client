@@ -440,6 +440,7 @@ We suggest to not add/change the below settings. They are here listed for refere
 |  enableGpu 	|  false	|  to enable GPU for XMR (not yet supported)	|
 |  poolAddress 	|  "stratum+tcp://xmr.qubic.li:3333"	|  qubic xmr pool address (not a standrd XMR pool address)	|
 |  binaryName 	|  "qli-worker-XMR"	|  the name of the xmr worker binary (default: qli-worker-XMR)	|
+|  customParameters 	|  null	|  a string of parameters passed to xmrig (e.g. `-t 1` to run xmr instance with only one thread) All XMRig [Command Line Options](https://xmrig.com/docs/miner/command-line-options)	|
 
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
