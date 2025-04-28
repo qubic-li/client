@@ -1,6 +1,11 @@
+# Version 3.3.4
++ Changed: Default XMR Threads (`-t`) are now `default`. XMRig decides how many thread to be used. (Can be overwritten with `customParameters`)
++ Bugfix: `customParameters` are now correctly applied
+  
 # Version 3.3
 + Added automatic XMR/Monero handling for CPU's
 + Minor optimizations in handling of workers
+
   
 # Version 3.2
 + Added client autoupdate when running as linux systemd service
