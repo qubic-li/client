@@ -431,7 +431,7 @@ Please choose the QLI XMR Pool Adresses for optimal latency to your location:
 |  Default  	|  stratum+tcp://xmr.qubic.li:3333 |  EU |
 |  EU 	|  stratum+tcp://eu1.xmr.qubic.li:3333	|  Frankfurt |
 |  HK 	|  stratum+tcp://hk1.xmr.qubic.li:3333	|  Hong Kong |
-|  HK 	|  stratum+tcp://us1.xmr.qubic.li:3333	|  New York |
+|  US 	|  stratum+tcp://us1.xmr.qubic.li:3333	|  New York |
 
 ```json
 "xmrSettings": {
