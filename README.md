@@ -425,6 +425,14 @@ During the Qubic idling phase. You can run another program or miner.
 During the Qubic idling phase, the XMR POC is started automatically. You do not have to change anything at your current configuration.
 We suggest to not add/change the below settings. They are here listed for reference only.
 
+Please choose the QLI XMR Pool Adresses for optimal latency to your location:
+|  Location 	|  Address 	|  Comments |
+|---	|---	|---	|
+|  Default  	|  stratum+tcp://xmr.qubic.li:3333 |  EU |
+|  EU 	|  stratum+tcp://eu1.xmr.qubic.li:3333	|  Frankfurt |
+|  HK 	|  stratum+tcp://hk1.xmr.qubic.li:3333	|  Honk Kong |
+|  HK 	|  stratum+tcp://us1.xmr.qubic.li:3333	|  New York |
+
 ```json
 "xmrSettings": {
   "disabled": false,
