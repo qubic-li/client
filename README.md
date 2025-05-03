@@ -433,7 +433,7 @@ Please choose the QLI XMR Pool Adresses for optimal latency to your location:
 
 ```json
 "xmrSettings": {
-  "disabled": false,
+  "disable": false,
   "enableGpu": false,
   "poolAddress": "stratum+tcp://xmr.qubic.li:3333",
   "binaryName": null
@@ -442,7 +442,7 @@ Please choose the QLI XMR Pool Adresses for optimal latency to your location:
 
 |  Setting 	|  Default Value 	|  Description 	|
 |---	|---	|---	|
-|  disabled 	|  false	|  to disable the XMR module	|
+|  disable 	|  false	|  to disable the XMR module	|
 |  enableGpu 	|  false	|  to enable GPU for XMR (not yet supported)	|
 |  poolAddress 	|  "stratum+tcp://xmr.qubic.li:3333"	|  qubic xmr pool address (not a standrd XMR pool address)	|
 |  binaryName 	|  "qli-worker-XMR"	|  the name of the xmr worker binary (default: qli-worker-XMR)	|
