@@ -1,3 +1,9 @@
+# Version 3.3.6
++ Changed: When `CPU: false` also the XMR CPU part is not started.
++ Optimized switching between Qubic and XMR to avoid drop of hashrate
++ Added hashrate (it/s) reporting for XMR
++ Optimized XMR handling on Windows  
+  
 # Version 3.3.4
 + Changed: Default XMR Threads (`-t`) are now `default`. XMRig decides how many thread to be used. (Can be overwritten with `customParameters`)
 + Bugfix: `customParameters` are now correctly applied
