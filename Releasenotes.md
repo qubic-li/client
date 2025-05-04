@@ -1,3 +1,10 @@
+# Version 3.3.7 (Windows)
+:warning: Important update if you run any `3.3.x.y` version :warning:
+
++ Windows: Fix: Potential crash of client after switching back from idling
+
+
+  
 # Version 3.3.6
 + Changed: When `CPU: false` also the XMR CPU part is not started.
 + Optimized switching between Qubic and XMR to avoid drop of hashrate
