@@ -336,6 +336,7 @@ if you opt for the Systemd Linux Service (Option 2):
 |  alias 	|  qli Client 	| You can give your Client a Name which will be displayed in the Control Panel. If empty it uses the Hostname.	|
 |  pps	|  `true` 	| If the trainer should run in PPS mode  | 
 |  autoUpdate	|  `false` 	| If the trainer should try to do an autoupdate  | 
+|  displayDetailedHashrates	|  `false` 	| Enable details Hashrates in console log. Displays GPU/CPU/XMR explicitly.  | 
 |  trainer	|  {} 	| The [trainer configuration](#trainer-options) options  | 
 |  idling	|  {} 	| The configuration options for the [Qubic idling](#idle-options) period | 
 |  xmrSettings	|  {} 	| The configuration options for the [Qubic XMR POC](#xmr-options) period | 
