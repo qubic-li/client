@@ -1,3 +1,6 @@
+# Version 3.3.8
+- Advanced Support for CPU's with higher core/thread count (>32)
+  
 # Version 3.3.7 (RC EP160)
 :warning: Important update for Windows users if you run any `3.3.x.y` version :warning:
 
