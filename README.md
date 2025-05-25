@@ -78,7 +78,7 @@ The QLI Client is the pool client and connects to the pool.
 |--- |---	|---	|--- |---	|
 | Windows | x64	| 3.3.8 | https://dl.qubic.li/downloads/qli-Client-3.3.8-Windows-x64.zip  | Includes XMR
 | Linux | x64	| 3.3.8 | https://dl.qubic.li/downloads/qli-Client-3.3.8-Linux-x64.tar.gz | Includes XMR
-| HiveOs | x64	| 3.3.6 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
+| HiveOs | x64	| 3.3.7 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
 
 > Qubic XMR Version for the Qubic Monero POC during idle phase. It uses CPU only. You can still use the [Qubic idling](#idle-options) to run another program/software.
 > For XMR mining, the configured amount of CPU threads apply.
