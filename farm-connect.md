@@ -51,6 +51,8 @@ services:
   watchtower:
     image: containrrr/watchtower
     container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     command: --interval 300
 ```
 
