@@ -425,12 +425,22 @@ During the Qubic idling phase, the XMR POC is started automatically. You do not 
 We suggest to not add/change the below settings. They are here listed for reference only.
 
 Please choose the QLI XMR Pool Adresses for optimal latency to your location:
-|  Location 	|  Address 	|  Comments |
-|---	|---	|---	|
-|  Default  	|  stratum+tcp://xmr.qubic.li:3333 |  EU |
-|  EU 	|  stratum+tcp://eu1.xmr.qubic.li:3333	|  Frankfurt |
-|  HK 	|  stratum+tcp://hk1.xmr.qubic.li:3333	|  Hong Kong |
-|  US 	|  stratum+tcp://us1.xmr.qubic.li:3333	|  New York |
+
+#### Available QLI XMR Endpoints
+
+TCP Port: `3333` (stratum+tcp://xmr.qubic.li:3333)
+
+SSL/TLS Port: `3334` (stratum+ssl://xmr.qubic.li:3334)
+
+
+|  Location 	|  TCP | SSL/TLS 	|  Comments |
+|---	|---	|--- |---	|
+|  Default  	|  stratum+tcp://xmr.qubic.li:3333 |  stratum+ssl://xmr.qubic.li:3334 |  EU |
+|  EU 	|  stratum+tcp://eu1.xmr.qubic.li:3333 |  stratum+ssl://eu1.qubic.li:3334	|  Frankfurt |
+|  HK 	|  stratum+tcp://hk1.xmr.qubic.li:3333 |  stratum+ssl://hk1.qubic.li:3334	|  Hong Kong |
+|  US 	|  stratum+tcp://us1.xmr.qubic.li:3333 |  stratum+ssl://us1.qubic.li:3334	|  New York |
+|  SG 	|  stratum+tcp://sg.xmr.qubic.li:3333 |  stratum+ssl://sg.qubic.li:3334	|  Singapore |
+
 
 ```json
 "xmrSettings": {
