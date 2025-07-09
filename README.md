@@ -436,10 +436,10 @@ SSL/TLS Port: `3334` (stratum+ssl://xmr.qubic.li:3334)
 |  Location 	|  TCP | SSL/TLS 	|  Comments |
 |---	|---	|--- |---	|
 |  Default  	|  stratum+tcp://xmr.qubic.li:3333 |  stratum+ssl://xmr.qubic.li:3334 |  EU |
-|  EU 	|  stratum+tcp://eu1.xmr.qubic.li:3333 |  stratum+ssl://eu1.qubic.li:3334	|  Frankfurt |
-|  HK 	|  stratum+tcp://hk1.xmr.qubic.li:3333 |  stratum+ssl://hk1.qubic.li:3334	|  Hong Kong |
-|  US 	|  stratum+tcp://us1.xmr.qubic.li:3333 |  stratum+ssl://us1.qubic.li:3334	|  New York |
-|  SG 	|  stratum+tcp://sg.xmr.qubic.li:3333 |  stratum+ssl://sg.qubic.li:3334	|  Singapore |
+|  EU 	|  stratum+tcp://eu1.xmr.qubic.li:3333 |  stratum+ssl://eu1.xmr.qubic.li:3334	|  Frankfurt |
+|  HK 	|  stratum+tcp://hk1.xmr.qubic.li:3333 |  stratum+ssl://hk1.xmr.qubic.li:3334	|  Hong Kong |
+|  US 	|  stratum+tcp://us1.xmr.qubic.li:3333 |  stratum+ssl://us1.xmr.qubic.li:3334	|  New York |
+|  SG 	|  stratum+tcp://sg.xmr.qubic.li:3333 |  stratum+ssl://sg.xmr.qubic.li:3334	|  Singapore |
 
 
 ```json
