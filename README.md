@@ -76,8 +76,8 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 3.3.8 | https://dl.qubic.li/downloads/qli-Client-3.3.8-Windows-x64.zip  | Includes XMR
-| Linux | x64	| 3.3.8 | https://dl.qubic.li/downloads/qli-Client-3.3.8-Linux-x64.tar.gz | Includes XMR
+| Windows | x64	| 3.3.9 | https://dl.qubic.li/downloads/qli-Client-3.3.9-Windows-x64.zip  | Includes XMR
+| Linux | x64	| 3.3.9 | https://dl.qubic.li/downloads/qli-Client-3.3.9-Linux-x64.tar.gz | Includes XMR
 | HiveOs | x64	| 3.3.7 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
 
 > Qubic XMR Version for the Qubic Monero POC during idle phase. It uses CPU only. You can still use the [Qubic idling](#idle-options) to run another program/software.
@@ -169,13 +169,13 @@ To run the qubic.li client you can use this streamlined installation guide. Plea
 > With this method you do not have auto update
 
 **1. Download and Unpack the qli-Client:**  
-*Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-3.3.8-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
+*Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-3.3.9-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
 ```bash
 mkdir ~/qubic;
 cd ~/qubic;
-wget https://dl.qubic.li/downloads/qli-Client-3.3.8-Linux-x64.tar.gz;
-tar -xvf qli-Client-3.3.8-Linux-x64.tar.gz;
-rm qli-Client-3.3.8-Linux-x64.tar.gz;
+wget https://dl.qubic.li/downloads/qli-Client-3.3.9-Linux-x64.tar.gz;
+tar -xvf qli-Client-3.3.9-Linux-x64.tar.gz;
+rm qli-Client-3.3.9-Linux-x64.tar.gz;
 ```  
 **2. edit and set your appsettings.json according to your preferences**
 ```bash
