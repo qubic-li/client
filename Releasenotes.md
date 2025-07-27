@@ -1,3 +1,8 @@
+# Version 3.3.9
+- Minor Bugfix
+- Added Option to set `User-Agent`
+- Optimized websocket connnection
+  
 # Version 3.3.8
 - Advanced Support for CPU's with higher core/thread count (>32)
   
