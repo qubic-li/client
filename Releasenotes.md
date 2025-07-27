@@ -1,4 +1,4 @@
-# Version 3.3.9
+# Version 3.3.9.1
 - Minor Bugfix
 - Added Option to set `User-Agent`
 - Optimized websocket connnection
