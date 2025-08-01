@@ -1,3 +1,6 @@
+# Version 3.3.9.2
+- Added Option to set `UseAliasAsIdentifier` to allow multiple instances on same machine to be displayed as own workers
+  
 # Version 3.3.9.1
 - Minor Bugfix
 - Added Option to set `User-Agent`
