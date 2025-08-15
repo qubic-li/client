@@ -17,13 +17,13 @@ This allows anyone to operate its own entry point (API) for the [QLI Client](htt
 
 ## Account is needed
 To operate with Farm Connect, you need a valid account on the QLI Platform. You can register an account on https://pool.qubic.li.
-Farm Connect is compatible with standard pool and self hosted training. Currently it only works in **solo** mode.
+Farm Connect is compatible with standard pool and self hosted training.
 
 ## Quick Test (not recommended)
 If you want to see how it works the quick way, start the following command.
 
 ```bash
-docker run --name qli-farm-connect   -e FarmConnect__AccessToken=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImUxODc5YzQ3LTIwZjUtNDA5Yy05MThkLTRhYzgyNzFiYjYxMSIsIk1pbmluZyI6IiIsIm5iZiI6MTcyNTE5NzA5NSwiZXhwIjoxNzU2NzMzMDk1LCJpYXQiOjE3MjUxOTcwOTUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.hBYWpMvvpj8N-t6r6iIdF5y8ayKxtSi0FEb689oOrbPiwBrs76MBvpva7mbOQslzuEFJ8jZSFHlD1QgR6P9YMcTh5fZndI24VBD8lEkNUQPP1wWAOwEUQy-Yk1VTRg7L654ksf0jE4Obj_CDTPyIkK2f5C817--zE7uyngF3-hMRf3Taqus_jR2qqxYSz2D2B2nEYbrRWMDGoMf1tDHq3kFWaFqOr72IjgqkIDV3hs880mhiKcdI0USv54UK-tBon5B_WFJivPr5uo-OUrbILlU24AgTeLYskf1ajIIFnCqJVrAbYxEiaZ0cH1Ey5k6aDfRveb9wqhSQbTMGZuTsOw   -e FarmConnect__Name=test-container1 -v /root/data:/app/data qliplatform/farm-connect:latest
+docker run --name qli-farm-connect   -e FarmConnect__AccessToken=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImUxODc5YzQ3LTIwZjUtNDA5Yy05MThkLTRhYzgyNzFiYjYxMSIsIk1pbmluZyI6IiIsIm5iZiI6MTcyNTE5NzA5NSwiZXhwIjoxNzU2NzMzMDk1LCJpYXQiOjE3MjUxOTcwOTUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.hBYWpMvvpj8N-t6r6iIdF5y8ayKxtSi0FEb689oOrbPiwBrs76MBvpva7mbOQslzuEFJ8jZSFHlD1QgR6P9YMcTh5fZndI24VBD8lEkNUQPP1wWAOwEUQy-Yk1VTRg7L654ksf0jE4Obj_CDTPyIkK2f5C817--zE7uyngF3-hMRf3Taqus_jR2qqxYSz2D2B2nEYbrRWMDGoMf1tDHq3kFWaFqOr72IjgqkIDV3hs880mhiKcdI0USv54UK-tBon5B_WFJivPr5uo-OUrbILlU24AgTeLYskf1ajIIFnCqJVrAbYxEiaZ0cH1Ey5k6aDfRveb9wqhSQbTMGZuTsOw   -e FarmConnect__Name=test-container1 -v /root/data:/app/data qubicli/farm-connect:latest
 ```
 
 ## Docker Compose (recommended)
@@ -35,7 +35,7 @@ Add the following content:
 ```yaml
 services:
   qli-farm-connect:
-    image: qliplatform/farm-connect:latest
+    image: qubicli/farm-connect:latest
     restart: always
     container_name: qli-farm-connect
     ports:
@@ -51,7 +51,11 @@ services:
   watchtower:
     image: containrrr/watchtower
     container_name: watchtower
-    command: --interval 300
+    volumes:
+      - ~/.docker/config.json:/config.json:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30
+    restart: always
 ```
 
 The above `compose.yaml` file will start Farm Connect and also add the [Watchtower](https://github.com/containrrr/watchtower) which will keep your Farm Connect always up to date. With `--interval 300` every 5 minutes Watchtower will check for a new Farm Connect version and if there is one, update it automatically.
@@ -132,15 +136,7 @@ Assuming you run an own training farm with 100erds of clients and you have only 
 Farm Connect as proxy between the QLI API and your clients helps to reduce needed bandwith. Your clients will connect to Farm Connect instead of the official QLI API.
 
 ## How to connect Clients to Farm Connect
-To connect your clients to Farm Connect, just change the `baseUrl`, `socketUrl` and/or `poolAddress` to your own IP Address/Domain.
-
-Sample Configuration for Clients with Version `< 3.0`
-```json
-...
-"baseUrl": "http://YOURIPADDRESS:YOURPORT",
-"socketUrl": "ws://YOURIPADDRRESS:YOURPORT/ws"
-...
-```
+To connect your clients to Farm Connect, just change the `poolAddress` to your own IP Address/Domain.
 
 Sample Configuration for Clients with Version `>= 3.0`
 ```json
