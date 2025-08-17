@@ -77,6 +77,7 @@ The QLI Client is the pool client and connects to the pool.
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
 | Windows | x64	| 3.3.9.1 | https://dl.qubic.li/downloads/qli-Client-3.3.9.1-Windows-x64.zip  | Includes XMR
+| Linux | x64	| 3.4.0 Beta | https://dl.qubic.li/downloads/qli-Client-3.4.0-Linux-x64.tar.gz | Includes XMR
 | Linux | x64	| 3.3.9.1 | https://dl.qubic.li/downloads/qli-Client-3.3.9.1-Linux-x64.tar.gz | Includes XMR
 | HiveOs | x64	| 3.3.7 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
 
