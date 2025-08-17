@@ -1,5 +1,6 @@
-# Version 3.4.1 - Beta
+# Version 3.4.2 - Beta
 - Added internal Stratum Bridging for optimal pool connection
+- Bugfixes
 
 # Version 3.3.9.2
 - Added Option to set `UseAliasAsIdentifier` to allow multiple instances on same machine to be displayed as own workers
