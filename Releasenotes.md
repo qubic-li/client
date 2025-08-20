@@ -1,3 +1,6 @@
+# Version 3.4.3
+- Added detection of expired Access Token
+
 # Version 3.4.2 - Beta
 - Added internal Stratum Bridging for optimal pool connection
 - Bugfixes
