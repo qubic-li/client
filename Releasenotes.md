@@ -1,3 +1,6 @@
+# Version 3.4.4
+- Optimized Solution/Share submit to pool
+  
 # Version 3.4.3
 - Added detection of expired Access Token
 
