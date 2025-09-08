@@ -1,5 +1,7 @@
 # Version 3.4.4
 - Optimized Solution/Share submit to pool
+- Optimized: Switching between Training and Idling phases
+- Fixed: Issue when idle Task was not executed
   
 # Version 3.4.3
 - Added detection of expired Access Token
