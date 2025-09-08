@@ -2,6 +2,7 @@
 - Optimized Solution/Share submit to pool
 - Optimized: Switching between Training and Idling phases
 - Fixed: Issue when idle Task was not executed
+- Removed: TLS for local stratum bridge connection
   
 # Version 3.4.3
 - Added detection of expired Access Token
