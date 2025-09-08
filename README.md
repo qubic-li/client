@@ -55,10 +55,10 @@ If you want registration-less pool mining, do the following:
 ./qli-Client --ClientSettings:QubicAddress=<QUBICID> --ClientSettings:Trainer:CpuThreads=<THREADS>
 
 # docker cpu only
-docker run --name qli-client -e ClientSettings__QubicAddress=<QUBICID>   -e ClientSettings__Alias= -e ClientSettings__Trainer__CpuThreads=<THREADS>  qliplatform/qubic-client:latest
+docker run --name qli-client -e ClientSettings__QubicAddress=<QUBICID>   -e ClientSettings__Alias= -e ClientSettings__Trainer__CpuThreads=<THREADS>  qubicli/client:latest
 
 # docker cpu + gpu
-docker run --name qli-client -e ClientSettings__QubicAddress=<QUBICID>   -e ClientSettings__Alias= -e ClientSettings__Trainer__CpuThreads=<THREADS>  qliplatform/qubic-client:cuda
+docker run --name qli-client -e ClientSettings__QubicAddress=<QUBICID>   -e ClientSettings__Alias= -e ClientSettings__Trainer__CpuThreads=<THREADS>  qubicli/client:cuda
 
 # to use appsettings.json see below
 ```
@@ -339,6 +339,7 @@ if you opt for the Systemd Linux Service (Option 2):
 |  pps	|  `true` 	| If the trainer should run in PPS mode  | 
 |  autoUpdate	|  `false` 	| If the trainer should try to do an autoupdate  | 
 |  displayDetailedHashrates	|  `false` 	| Enable details Hashrates in console log. Displays GPU/CPU/XMR explicitly.  | 
+|  displayUptime |  `false` 	| Display the client uptime every 5-10s in the console. | 
 |  trainer	|  {} 	| The [trainer configuration](#trainer-options) options  | 
 |  idling	|  {} 	| The configuration options for the [Qubic idling](#idle-options) period | 
 |  xmrSettings	|  {} 	| The configuration options for the [Qubic XMR POC](#xmr-options) period | 
