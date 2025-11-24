@@ -140,8 +140,8 @@ Download the Client from the above link. The Client must not be installed.
 ## Docker
 We provide two prepared docker images for you:
 
-1. Any CPU: `docker pull qliplatform/qubic-client:latest`
-2. NVIDIA/CUDA GPU +  Any GPU: `docker pull qliplatform/qubic-client:cuda`
+1. Any CPU: `docker pull qubicli/qubic-client:latest`
+2. NVIDIA/CUDA GPU +  Any GPU: `docker pull qubicli/qubic-client:cuda`
 
 To start a docker container, you need to pass your configuration either via Environment veriables or you can map your `appsettings.json` into your container.
 
@@ -161,7 +161,7 @@ The path inside the container is `/app/appsettings.json`.
 
 ```bash
 # start client for cpu training
-docker run --name qli-client -e ClientSettings__AccessToken=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImUxODc5YzQ3LTIwZjUtNDA5Yy05MThkLTRhYzgyNzFiYjYxMSIsIk1pbmluZyI6IiIsIm5iZiI6MTcyNTE5NzA5NSwiZXhwIjoxNzU2NzMzMDk1LCJpYXQiOjE3MjUxOTcwOTUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.hBYWpMvvpj8N-t6r6iIdF5y8ayKxtSi0FEb689oOrbPiwBrs76MBvpva7mbOQslzuEFJ8jZSFHlD1QgR6P9YMcTh5fZndI24VBD8lEkNUQPP1wWAOwEUQy-Yk1VTRg7L654ksf0jE4Obj_CDTPyIkK2f5C817--zE7uyngF3-hMRf3Taqus_jR2qqxYSz2D2B2nEYbrRWMDGoMf1tDHq3kFWaFqOr72IjgqkIDV3hs880mhiKcdI0USv54UK-tBon5B_WFJivPr5uo-OUrbILlU24AgTeLYskf1ajIIFnCqJVrAbYxEiaZ0cH1Ey5k6aDfRveb9wqhSQbTMGZuTsOw -e ClientSettings__Alias=docker-test -e ClientSettings__Trainer__CpuThreads=5  qliplatform/qubic-client:latest
+docker run --name qli-client -e ClientSettings__AccessToken=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImUxODc5YzQ3LTIwZjUtNDA5Yy05MThkLTRhYzgyNzFiYjYxMSIsIk1pbmluZyI6IiIsIm5iZiI6MTcyNTE5NzA5NSwiZXhwIjoxNzU2NzMzMDk1LCJpYXQiOjE3MjUxOTcwOTUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.hBYWpMvvpj8N-t6r6iIdF5y8ayKxtSi0FEb689oOrbPiwBrs76MBvpva7mbOQslzuEFJ8jZSFHlD1QgR6P9YMcTh5fZndI24VBD8lEkNUQPP1wWAOwEUQy-Yk1VTRg7L654ksf0jE4Obj_CDTPyIkK2f5C817--zE7uyngF3-hMRf3Taqus_jR2qqxYSz2D2B2nEYbrRWMDGoMf1tDHq3kFWaFqOr72IjgqkIDV3hs880mhiKcdI0USv54UK-tBon5B_WFJivPr5uo-OUrbILlU24AgTeLYskf1ajIIFnCqJVrAbYxEiaZ0cH1Ey5k6aDfRveb9wqhSQbTMGZuTsOw -e ClientSettings__Alias=docker-test -e ClientSettings__Trainer__CpuThreads=5  qubicli/qubic-client:latest
 ```
 
 ## Linux Option 1: Screen Session  
