@@ -76,9 +76,9 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 3.4.4 Beta | https://dl.qubic.li/downloads/qli-Client-3.4.4-Windows-x64.zip  | Includes XMR
+| Windows | x64	| 3.5.0 Beta | https://dl.qubic.li/downloads/qli-Client-3.5.0-Windows-x64.zip  | Includes XMR
 | Windows | x64	| 3.3.9.1 | https://dl.qubic.li/downloads/qli-Client-3.3.9.1-Windows-x64.zip  | Includes XMR
-| Linux | x64	| 3.4.4 Beta | https://dl.qubic.li/downloads/qli-Client-3.4.4-Linux-x64.tar.gz | Includes XMR
+| Linux | x64	| 3.5.0 Beta | https://dl.qubic.li/downloads/qli-Client-3.5.0-Linux-x64.tar.gz | Includes XMR
 | Linux | x64	| 3.3.9.1 | https://dl.qubic.li/downloads/qli-Client-3.3.9.1-Linux-x64.tar.gz | Includes XMR
 | HiveOs | x64	| 3.4.4 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
 
@@ -171,13 +171,13 @@ To run the qubic.li client you can use this streamlined installation guide. Plea
 > With this method you do not have auto update
 
 **1. Download and Unpack the qli-Client:**  
-*Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-3.4.4-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
+*Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-3.5.0-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
 ```bash
 mkdir ~/qubic;
 cd ~/qubic;
-wget https://dl.qubic.li/downloads/qli-Client-3.4.4-Linux-x64.tar.gz;
-tar -xvf qli-Client-3.4.4-Linux-x64.tar.gz;
-rm qli-Client-3.4.4-Linux-x64.tar.gz;
+wget https://dl.qubic.li/downloads/qli-Client-3.5.0-Linux-x64.tar.gz;
+tar -xvf qli-Client-3.5.0-Linux-x64.tar.gz;
+rm qli-Client-3.5.0-Linux-x64.tar.gz;
 ```  
 **2. edit and set your appsettings.json according to your preferences**
 ```bash
