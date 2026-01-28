@@ -76,10 +76,10 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 3.5.0 Beta | https://dl.qubic.li/downloads/qli-Client-3.5.0-Windows-x64.zip  | Includes XMR
-| Windows | x64	| 3.3.9.1 | https://dl.qubic.li/downloads/qli-Client-3.3.9.1-Windows-x64.zip  | Includes XMR
-| Linux | x64	| 3.5.0 Beta | https://dl.qubic.li/downloads/qli-Client-3.5.0-Linux-x64.tar.gz | Includes XMR
-| Linux | x64	| 3.3.9.1 | https://dl.qubic.li/downloads/qli-Client-3.3.9.1-Linux-x64.tar.gz | Includes XMR
+| Windows | x64	| 3.5.0 Beta | https://dl.qubic.li/downloads/qli-Client-3.5.0-Windows-x64.zip  | Allow algo selection
+| Windows | x64	| 3.3.9.1 | https://dl.qubic.li/downloads/qli-Client-3.3.9.1-Windows-x64.zip  | 
+| Linux | x64	| 3.5.0 Beta | https://dl.qubic.li/downloads/qli-Client-3.5.0-Linux-x64.tar.gz | Allow algo selection
+| Linux | x64	| 3.3.9.1 | https://dl.qubic.li/downloads/qli-Client-3.3.9.1-Linux-x64.tar.gz | 
 | HiveOs | x64	| 3.4.4 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
 
 > Qubic XMR Version for the Qubic Monero POC during idle phase. It uses CPU only. You can still use the [Qubic idling](#idle-options) to run another program/software.
