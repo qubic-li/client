@@ -377,9 +377,13 @@ if you opt for the Systemd Linux Service (Option 2):
 |  cpuAffinity	|  `null`	|  CPU Affinity for CPU training	|
 |  cpuVariant 	|  `null`	|  Which Variant of CPU trainer should be used	|
 |  gpuVariant 	|  `null`	|  Which Variant of GPU trainer should be used	|
+|  cpuAlgorithm* 	|  `null`	|  Which Algorithm of CPU trainer should be used: 0, 1	|
+|  gpuAlgorithm* 	|  `null`	|  Which Algorithm of GPU trainer should be used: 0, 1	|
 |  cpuName 	|  `null`	|  The specific name of the CPU trainer/worker.	|
 |  gpuName 	|  `null`	|  The specific name of the GPU trainer/worker.	|
 |  downloadUrlRewrites 	|  `null`	|  If you want to use your own download proxies for the trainer.	|
+
+*this setting is for testing purposes only - the client decides based on the platform what algorithm to use
 
 > [!NOTE]
 > `"downloadUrlRewrites": { "dl\\.qubic\\.li": "anydomain.com" }`
