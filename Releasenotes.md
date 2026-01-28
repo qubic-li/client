@@ -1,3 +1,8 @@
+# Version 3.5.0
+- Optimized websocket connections
+- Updated to support qubic algorithm selection
+- Fixed display of shaares in local console
+
 # Version 3.4.4
 - Optimized Solution/Share submit to pool
 - Optimized: Switching between Training and Idling phases
