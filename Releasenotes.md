@@ -1,4 +1,8 @@
 # Version 3.5.0
+- Fixed: Connection issue (client stops randomly)
+- Added: CPU detection to autoselect the right algorithm
+
+# Version 3.5.0
 - Optimized websocket connections
 - Updated to support qubic algorithm selection
 - Fixed display of pps shares in local console
