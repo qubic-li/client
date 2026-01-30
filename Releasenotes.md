@@ -1,4 +1,4 @@
-# Version 3.5.0
+# Version 3.5.1
 - Fixed: Connection issue (client stops randomly)
 - Added: CPU detection to autoselect the right algorithm
 
