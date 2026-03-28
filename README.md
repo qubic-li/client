@@ -4,6 +4,9 @@ This is the main client component from qubic.li. It connects to the backend API 
 
 The Client runs on Docker, Windows and Linux. Below you find the instructions how to use it.
 
+> [!TIP]
+> For Doge Connect (Doge on Qubic) you can connect your equipment directly and bypass the QLI Client. Follow the [Instructions](https://github.com/qubic-li/.github/blob/main/profile/doge-scrypt-on%20qubic.md).
+
 1. [Security Warning](#security-warning)
 2. [Pool Mining](#pool-mining)
 3. [Download](#download)
