@@ -1,3 +1,9 @@
+# Version 3.5.3
+- Added: Support for seamless seed changes (Optimization for less down time)
+- Fixed: Client reporting wrong worker version
+- Fixed: Minor internal bugfixes
+- Removed: XMR support
+
 # Version 3.5.2
 - Fixed: Connection issue (client stops randomly)
   
