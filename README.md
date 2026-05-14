@@ -78,9 +78,9 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 3.5.3 | https://dl.qubic.li/downloads/qli-Client-3.5.3-Windows-x64.zip  | 
-| Linux | x64	| 3.5.3 | https://dl.qubic.li/downloads/qli-Client-3.5.3-Linux-x64.tar.gz | 
-| HiveOs | x64	| 3.5.3 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
+| Windows | x64	| 3.6.0 | https://dl.qubic.li/downloads/qli-Client-3.6.0-Windows-x64.zip  | 
+| Linux | x64	| 3.6.0 | https://dl.qubic.li/downloads/qli-Client-3.6.0-Linux-x64.tar.gz | 
+| HiveOs | x64	| 3.6.0 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
 
 ### QLI Trainer
 The trainer/worker is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
@@ -168,13 +168,13 @@ To run the qubic.li client you can use this streamlined installation guide. Plea
 > With this method you do not have auto update
 
 **1. Download and Unpack the qli-Client:**  
-*Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-3.5.3-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
+*Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-3.6.0-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
 ```bash
 mkdir ~/qubic;
 cd ~/qubic;
-wget https://dl.qubic.li/downloads/qli-Client-3.5.3-Linux-x64.tar.gz;
-tar -xvf qli-Client-3.5.3-Linux-x64.tar.gz;
-rm qli-Client-3.5.3-Linux-x64.tar.gz;
+wget https://dl.qubic.li/downloads/qli-Client-3.6.0-Linux-x64.tar.gz;
+tar -xvf qli-Client-3.6.0-Linux-x64.tar.gz;
+rm qli-Client-3.6.0-Linux-x64.tar.gz;
 ```  
 **2. edit and set your appsettings.json according to your preferences**
 ```bash
