@@ -1,3 +1,7 @@
+# Version 3.6.0
+- Optimized worker handling under load
+- Added: Hybrid Gateway
+
 # Version 3.5.3
 - Added: Support for seamless seed changes (Optimization for less down time)
 - Fixed: Client reporting wrong worker version
