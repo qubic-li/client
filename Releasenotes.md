@@ -1,3 +1,6 @@
+# Version 3.6.1
+- Fixed: Bug which can lead to high rejected share/solution rate
+
 # Version 3.6.0
 - Optimized worker handling under load
 - Added: Hybrid Gateway
