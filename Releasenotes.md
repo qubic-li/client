@@ -1,3 +1,6 @@
+# Version 3.7.0
+- Applied needed changes for BPP9000 algorithm
+
 # Version 3.6.1
 - Fixed: Bug which can lead to high rejected share/solution rate
 
