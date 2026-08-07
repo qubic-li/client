@@ -1,3 +1,7 @@
+# Version 3.7.2
+- Minor Bugfixes
+- Optimized high load share handling (BPP9000)
+
 # Version 3.7.0
 - Applied needed changes for BPP9000 algorithm
 
