@@ -83,6 +83,8 @@ The QLI Client is the pool client and connects to the pool.
 | HiveOs | x64	| 3.7.2 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
 | RaveOs | x64	| 3.7.2 | [RaveOs Instructions](https://github.com/qubic-li/raveos) | 
 | mmpOs | x64	| 3.7.2 | [mmpOs Instructions](https://github.com/qubic-li/mmpos) | 
+| Android | arm64	| 3.7.2 | [Android unsigned APK](http://dl.qubic.li/downloads/qli-Client-3.7.2-android-arm64.apk) | 
+
 
 ### QLI Trainer
 The trainer/worker is the binary executable which is responsible for the training. The Trainer is automatically downloaded by the Client. This ensures, that you always have the latest updates and the most optimized training experience.
