@@ -1,3 +1,7 @@
+# Version 3.8.0
+- Added Ant Colony support
+- Internal optimizations
+  
 # Version 3.7.2
 - Minor Bugfixes
 - Optimized high load share handling (BPP9000)
