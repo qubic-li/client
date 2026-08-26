@@ -1,3 +1,6 @@
+# Version 3.8.1
+- Minimum Version for Ant Colony workers/runners
+  
 # Version 3.8.0
 - Added Ant Colony support
 - Internal optimizations
