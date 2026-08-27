@@ -1,3 +1,7 @@
+# Version 3.8.2
+- Major bugfix for Ant Colony
+- Minor internal optimizations
+  
 # Version 3.8.1
 - Minimum Version for Ant Colony workers/runners
   
