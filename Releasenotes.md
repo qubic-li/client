@@ -1,5 +1,5 @@
 # Version 3.8.3
-- Speed up for And Colony
+- Speed up for Ant Colony
 
 # Version 3.8.2
 - Major bugfix for Ant Colony
