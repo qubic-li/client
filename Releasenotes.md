@@ -1,3 +1,6 @@
+# Version 3.8.4
+- Fix start-up bug
+  
 # Version 3.8.3
 - Speed up for Ant Colony
 
