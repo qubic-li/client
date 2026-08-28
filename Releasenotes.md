@@ -1,3 +1,7 @@
+# Version 3.8.5
+- Added: Client displays share reject reason in log
+- Added: Client marks obvious rejected shares locally
+  
 # Version 3.8.4
 - Fix start-up bug
   
