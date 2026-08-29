@@ -1,3 +1,6 @@
+# Version 3.8.6
+- Fix GPU #1 low performance
+  
 # Version 3.8.5
 - Added: Client displays share reject reason in log
 - Added: Client marks obvious rejected shares locally
