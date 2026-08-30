@@ -1,3 +1,6 @@
+# Version 3.8.7
+- Fix correct watchdog behavior on restart/update of a worker (GPU, CPU)
+  
 # Version 3.8.6
 - Fix GPU #1 low performance
   
