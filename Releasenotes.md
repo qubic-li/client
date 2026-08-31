@@ -1,4 +1,4 @@
-# Version 3.8.7
+# Version 3.8.8
 - Fixed: Redundant/duplicate share counting (e.g. you see locally X shares and on platform only Y)
 - Added: Local score stats
 - Bumped solution submit version to 1
