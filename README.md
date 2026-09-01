@@ -78,13 +78,13 @@ The QLI Client is the pool client and connects to the pool.
 
 | OS |  Platform 	|  Version  | Download  | Description
 |--- |---	|---	|--- |---	|
-| Windows | x64	| 3.8.8 | https://dl.qubic.li/downloads/qli-Client-3.8.8-Windows-x64.zip  | 
-| Linux | x64	| 3.8.8 | https://dl.qubic.li/downloads/qli-Client-3.8.8-Linux-x64.tar.gz | 
-| Linux | arm64	| 3.8.8 | https://dl.qubic.li/downloads/qli-Client-3.8.8-Linux-arm64.tar.gz | 
-| HiveOs | x64	| 3.8.8 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
-| RaveOs | x64	| 3.8.8 | [RaveOs Instructions](https://github.com/qubic-li/raveos) | 
-| mmpOs | x64	| 3.8.8 | [mmpOs Instructions](https://github.com/qubic-li/mmpos) | 
-| Android | arm64	| 3.8.8 | [Android unsigned APK](http://dl.qubic.li/downloads/qli-Client-3.8.8-android-arm64.apk) | 
+| Windows | x64	| 3.8.9 | https://dl.qubic.li/downloads/qli-Client-3.8.9-Windows-x64.zip  | 
+| Linux | x64	| 3.8.9 | https://dl.qubic.li/downloads/qli-Client-3.8.9-Linux-x64.tar.gz | 
+| Linux | arm64	| 3.8.9 | https://dl.qubic.li/downloads/qli-Client-3.8.9-Linux-arm64.tar.gz | 
+| HiveOs | x64	| 3.8.9 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
+| RaveOs | x64	| 3.8.9 | [RaveOs Instructions](https://github.com/qubic-li/raveos) | 
+| mmpOs | x64	| 3.8.9 | [mmpOs Instructions](https://github.com/qubic-li/mmpos) | 
+| Android | arm64	| 3.8.9 | [Android unsigned APK](http://dl.qubic.li/downloads/qli-Client-3.8.9-android-arm64.apk) | 
 
 
 ### QLI Trainer
@@ -173,13 +173,13 @@ To run the qubic.li client you can use this streamlined installation guide. Plea
 > With this method you do not have auto update
 
 **1. Download and Unpack the qli-Client:**  
-*Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-3.8.8-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
+*Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-3.8.9-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
 ```bash
 mkdir ~/qubic;
 cd ~/qubic;
-wget https://dl.qubic.li/downloads/qli-Client-3.8.8-Linux-x64.tar.gz;
-tar -xvf qli-Client-3.8.8-Linux-x64.tar.gz;
-rm qli-Client-3.8.8-Linux-x64.tar.gz;
+wget https://dl.qubic.li/downloads/qli-Client-3.8.9-Linux-x64.tar.gz;
+tar -xvf qli-Client-3.8.9-Linux-x64.tar.gz;
+rm qli-Client-3.8.9-Linux-x64.tar.gz;
 ```  
 **2. edit and set your appsettings.json according to your preferences**
 ```bash
