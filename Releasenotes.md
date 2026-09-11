@@ -1,3 +1,7 @@
+# Version 3.8.10
+- Fixed: Minor internal connection bugs
+- Optimized: Ant Colony parent handling
+
 # Version 3.8.9
 - Fixed: Workers are not shown in stats
   
