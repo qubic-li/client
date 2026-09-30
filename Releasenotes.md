@@ -1,3 +1,6 @@
+# Version 3.9.0
+- Mandatory Update for latest algorithm
+
 # Version 3.8.10
 - Fixed: Minor internal connection bugs
 - Optimized: Ant Colony parent handling
