@@ -1,3 +1,6 @@
+# Version 3.9.1
+- Mandatory Update: Fix solution detection
+
 # Version 3.9.0
 - Mandatory Update for latest algorithm
 
