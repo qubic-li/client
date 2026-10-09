@@ -1,3 +1,9 @@
+# Version 3.10.0
+- Added: tree template support
+
+# Version 3.9.2
+- Added: Gateway/Proxy support
+
 # Version 3.9.1
 - Mandatory Update: Fix solution detection
 
