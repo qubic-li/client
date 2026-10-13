@@ -1,3 +1,7 @@
+# Version 3.10.1
+- Fixed: Pool connection errors
+- Optimized: internal data handling
+
 # Version 3.10.0
 - Added: tree template support
 
