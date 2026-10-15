@@ -76,15 +76,13 @@ Bugfix releases (e.g. from 1.3.1 to 1.3.2) are optional.
 ### QLI Client
 The QLI Client is the pool client and connects to the pool.
 
-| OS |  Platform 	|  Version  | Download  | Description
-|--- |---	|---	|--- |---	|
-| Windows | x64	| 3.10.1 | https://dl.qubic.li/downloads/qli-Client-3.10.1-Windows-x64.zip  | 
-| Linux | x64	| 3.10.1 | https://dl.qubic.li/downloads/qli-Client-3.10.1-Linux-x64.tar.gz | 
-| Linux | arm64	| 3.10.1 | https://dl.qubic.li/downloads/qli-Client-3.10.1-Linux-arm64.tar.gz | 
-| HiveOs | x64	| 3.10.1 | [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
-| RaveOs | x64	| 3.10.1 | [RaveOs Instructions](https://github.com/qubic-li/raveos) | 
-| mmpOs | x64	| 3.10.1 | [mmpOs Instructions](https://github.com/qubic-li/mmpos) | 
-| Android | arm64	| 3.10.1 | [Android unsigned APK](https://dl.qubic.li/downloads/qli-Client-3.10.1-android-arm64.apk) | 
+For manual downloads, please find the latest release here: https://github.com/qubic-li/client/releases
+
+| OS |  Platform 	|  Download  | Description
+|--- |---	|---	|---	|
+| HiveOs | x64	| [HiveOs Instructions](https://github.com/qubic-li/hiveos) | 
+| RaveOs | x64	| [RaveOs Instructions](https://github.com/qubic-li/raveos) | 
+| mmpOs | x64	| [mmpOs Instructions](https://github.com/qubic-li/mmpos) | 
 
 
 ### QLI Trainer
