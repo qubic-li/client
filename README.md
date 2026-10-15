@@ -4,9 +4,6 @@ This is the main client component from qubic.li. It connects to the backend API 
 
 The Client runs on Docker, Windows and Linux. Below you find the instructions how to use it.
 
-> [!TIP]
-> For Doge Connect (Doge on Qubic) you can connect your equipment directly and bypass the QLI Client. Follow the [Instructions](https://github.com/qubic-li/.github/blob/main/profile/doge-scrypt-on%20qubic.md).
-
 1. [Security Warning](#security-warning)
 2. [Pool Mining](#pool-mining)
 3. [Download](#download)
@@ -21,8 +18,7 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 9. [HiveOs](#hiveos)
 10. [Appsettings.json Customization](#customizing)
 11. [Trainer Options](#trainer-options)
-12. [Idling Options](#idle-options) 
-13. [Troubleshooting](#troubleshooting)
+12. [Troubleshooting](#troubleshooting)
 
 ## Security Warning
 The client is able to download runners, which then performs the AI Training tasks. This can potentially be used in a bad manner. Run the client with the least privileges possible. e.g. on windows NOT as Administrator; on linux NOT as root.
@@ -351,7 +347,6 @@ if you opt for the Systemd Linux Service (Option 2):
 |  displayDetailedHashrates	|  `false` 	| Enable detailed hashrates in the console log. Displays GPU/CPU explicitly.  | 
 |  displayUptime |  `false` 	| Display the client uptime every 5-10s in the console. | 
 |  trainer	|  {} 	| The [trainer configuration](#trainer-options) options  | 
-|  idling	|  {} 	| The configuration options for the [Qubic idling](#idle-options) period | 
 
 ### Trainer Options
 
@@ -408,33 +403,6 @@ if you opt for the Systemd Linux Service (Option 2):
 > >e.g.: `0,-1,-1,-1,-1,-1` => GPU#1 disabled, #1-5 auto tune<br>
 > e.g.: `0` => GPU#0 disabled, if there are more, all will be auto tuned<br>
 > e.g.: `512,256,256,256,256,512` => set `gThread` to 512 on GPU#0 and GPU#5, 256 to the rest<br>
-
-### Idle Options
-During the Qubic idling phase. You can run another program or miner.
-
-> [!WARNING]
-> An idle program that changes settings or do not close properly when receiving SIGINT or be killed can harm the Qubic performance. Please only use this feature if you know what you do!
-
-
-```json
-{
-    "preCommand": "ping",
-    "preCommandArguments": "-c 2 google.com",
-	"command": "ping",
-	"arguments": "google.com",
-    "postCommand": "ping",
-    "postCommandArguments": "-c 2 google.com"
-}
-```
-
-|  Setting 	|  Default Value 	|  Description 	|
-|---	|---	|---	|
-|  command 	|  ""	|  the command/program to execute	|
-|  arguments 	|  ""	|  the arguments that should be given to the command/program	|
-|  preCommand 	|  ""	|  a command/program to start once the idling period starts	|
-|  preCommandArguments 	|  ""	|  the arguments that should be given to the preCommand/program	|
-|  postCommand 	|  ""	|  a command/program to start once the idling period stops	|
-|  postCommandArguments 	|  ""	|  the arguments that should be given to the postCommand/program	|
 
 ## Troubleshooting
 The Client creates a folder `log` where all error messages are stored. If the Client stops unexpected or doesn't open check if there is a log file with current date and check the error messages.
