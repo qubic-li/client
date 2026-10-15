@@ -15,10 +15,9 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 6. [Docker: Run qli-Client with Docker](#docker)
 7. [Linux Option 1: Run qli-Client in a Linux Screen](#linux-option-1-screen-session)
 8. [Linux option 2: Run qli-Client as Linux Service (Expert)](#linux-option-2-expert-systemd-linux-service)  
-   a. [Ubuntu 22.04](#ubuntu-2204)     
-   b. [Debian 12](#debian-12)  
-   d. [Monitoring](#service-monitoring)  
-   e. [Remove Client](#remove-client) 
+   a. [Install](#install)  
+   b. [Monitoring](#service-monitoring)  
+   c. [Remove Client](#remove-client) 
 9. [HiveOs](#hiveos)
 10. [Appsettings.json Customization](#customizing)
 11. [Trainer Options](#trainer-options)
@@ -26,12 +25,12 @@ The Client runs on Docker, Windows and Linux. Below you find the instructions ho
 13. [Troubleshooting](#troubleshooting)
 
 ## Security Warning
-The client is able to download runners, which then performs the AI Training tasks. This can potentially be used in a bad manner. Run the client with the least priviliges which are possble. e.g. on windows NOT as Admininstrator; on linux NOT as root.
+The client is able to download runners, which then performs the AI Training tasks. This can potentially be used in a bad manner. Run the client with the least privileges possible. e.g. on windows NOT as Administrator; on linux NOT as root.
 
 Find more information about the "principle of least privilege" on wikipedia: https://en.wikipedia.org/wiki/Principle_of_least_privilege
 
 ## Pool Mining
-If you don't want to operate your own Qubic infrastructure. You can join the QLI (qubic.li) pool mining. You can either register an account (**highly recomended**) on http://pool.qubic.li or you can join pool mining register-less.
+If you don't want to operate your own Qubic infrastructure. You can join the QLI (qubic.li) pool mining. You can either register an account (**highly recommended**) on http://pool.qubic.li or you can join pool mining register-less.
 
 The simplest way to join is to create an account and login to https://pool.qubic.li, follow the instructions after you have logged in there.
 
@@ -41,7 +40,9 @@ With the QLI pools you can choose between PPS (Pay Per Share) or solo training. 
 To Enable/Disable PPS use either `"pps": true` or `"pps": false` in your settings.
 
 ### Client Configuration
-We recommend to use our Client Setup Configurator: https://pool.qubic.li/en-US/setup
+We recommend using our Client Setup Configurator: https://platform.qubic.li/setup
+
+It generates a ready-to-run install script for your machine, with your token and settings already filled in.
 
 ### Registerless training
 If you want registration-less pool mining, do the following:
@@ -93,7 +94,7 @@ The following table shows the available trainers.
 
 |  Type 	|   Version Key (`gpuVersion`/`cpuVersion`)	|   Description	|  
 |---	|---	|--- |
-|   GPU	|  `CUDA`  	|   CUDA Version for all GPU's |
+|   GPU	|  `CUDA`  	|   CUDA Version for all GPUs |
 |   GPU	|  `AMD`  	|   General AMD Version (may not be available all the time; depends on the epoch) |
 |   CPU	|  `GENERIC`  	|   Generic x64 CPU trainer (no specific instructions needed) |
 |   CPU	|  `AVX2`  	|   AVX2 x64 CPU trainer (AVX2 instructions needed) |
@@ -128,31 +129,33 @@ Every setting can be translated into a command line argument, below some example
 |---	|---	|---	|
 | `AccessToken`	| `--ClientSettings:AccessToken`	| The Access Token to use |
 | `Trainer.CpuThreads`	| `--ClientSettings:Trainer:CpuThreads`	| How many threads should the trainer for CPU use	|
-| `Alias`	| `--ClientSettigns:ALias`	| The Alias/Name of your rig/worker. Leave it empty to use machinename |
+| `Alias`	| `--ClientSettings:Alias`	| The Alias/Name of your rig/worker. Leave it empty to use machinename |
 
-Sample call: `./qli-Client --ClientSettings:QubicAddress=IERULKJFHESLKJSLDFHZLKSUHLSKDHFLSDF --ClientSettings:Trainer:CpuThreads:16`
+Sample call: `./qli-Client --ClientSettings:QubicAddress=IERULKJFHESLKJSLDFHZLKSUHLSKDHFLSDF --ClientSettings:Trainer:CpuThreads=16`
 
 ## Windows
 You can run the client directly on Windows. Open a command console and start it with `./qli-Client.exe` or double click the file when you have the file `appsettings.json` in the same folder.
 
-Download the Client from the above link. The Client must not be installed.
+Download the Client from the above link. The Client does not need to be installed.
 
 ## Docker
 We provide two prepared docker images for you:
 
-1. Any CPU: `docker pull qubicli/qubic-client:latest`
-2. NVIDIA/CUDA GPU +  Any GPU: `docker pull qubicli/qubic-client:cuda`
+1. Any CPU: `docker pull qubicli/client:latest`
+2. NVIDIA/CUDA GPU + Any CPU: `docker pull qubicli/client:cuda`
 
-To start a docker container, you need to pass your configuration either via Environment veriables or you can map your `appsettings.json` into your container.
+Each release is also tagged with its version, if you want to pin one: `qubicli/client:3.10.2`, `qubicli/client:cuda-3.10.2`.
+
+To start a docker container, you need to pass your configuration either via environment variables or you can map your `appsettings.json` into your container.
 
 ### Environment Variables
-Every setting can be translated into a environment variable, below some examples:
+Every setting can be translated into an environment variable, below some examples:
 
 |  Setting 	|  Env Variable 	|  Description 	|
 |---	|---	|---	|
 | `AccessToken`	| `ClientSettings__AccessToken`	| The Access Token to use	|
 | `Trainer.CpuThreads`	| `ClientSettings__Trainer__CpuThreads`	| How many threads should the trainer for CPU use	|
-| `Alias`	| `ClientSettigns__ALias`	| The Alias/Name of your rig/worker. Leave it empty to use machinename |
+| `Alias`	| `ClientSettings__Alias`	| The Alias/Name of your rig/worker. Leave it empty to use machinename |
 
 ### Mapping appsettings.json
 The path inside the container is `/app/appsettings.json`.
@@ -161,7 +164,7 @@ The path inside the container is `/app/appsettings.json`.
 
 ```bash
 # start client for cpu training
-docker run --name qli-client -e ClientSettings__AccessToken=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImUxODc5YzQ3LTIwZjUtNDA5Yy05MThkLTRhYzgyNzFiYjYxMSIsIk1pbmluZyI6IiIsIm5iZiI6MTcyNTE5NzA5NSwiZXhwIjoxNzU2NzMzMDk1LCJpYXQiOjE3MjUxOTcwOTUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.hBYWpMvvpj8N-t6r6iIdF5y8ayKxtSi0FEb689oOrbPiwBrs76MBvpva7mbOQslzuEFJ8jZSFHlD1QgR6P9YMcTh5fZndI24VBD8lEkNUQPP1wWAOwEUQy-Yk1VTRg7L654ksf0jE4Obj_CDTPyIkK2f5C817--zE7uyngF3-hMRf3Taqus_jR2qqxYSz2D2B2nEYbrRWMDGoMf1tDHq3kFWaFqOr72IjgqkIDV3hs880mhiKcdI0USv54UK-tBon5B_WFJivPr5uo-OUrbILlU24AgTeLYskf1ajIIFnCqJVrAbYxEiaZ0cH1Ey5k6aDfRveb9wqhSQbTMGZuTsOw -e ClientSettings__Alias=docker-test -e ClientSettings__Trainer__CpuThreads=5  qubicli/qubic-client:latest
+docker run --name qli-client -e ClientSettings__AccessToken=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImUxODc5YzQ3LTIwZjUtNDA5Yy05MThkLTRhYzgyNzFiYjYxMSIsIk1pbmluZyI6IiIsIm5iZiI6MTcyNTE5NzA5NSwiZXhwIjoxNzU2NzMzMDk1LCJpYXQiOjE3MjUxOTcwOTUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.hBYWpMvvpj8N-t6r6iIdF5y8ayKxtSi0FEb689oOrbPiwBrs76MBvpva7mbOQslzuEFJ8jZSFHlD1QgR6P9YMcTh5fZndI24VBD8lEkNUQPP1wWAOwEUQy-Yk1VTRg7L654ksf0jE4Obj_CDTPyIkK2f5C817--zE7uyngF3-hMRf3Taqus_jR2qqxYSz2D2B2nEYbrRWMDGoMf1tDHq3kFWaFqOr72IjgqkIDV3hs880mhiKcdI0USv54UK-tBon5B_WFJivPr5uo-OUrbILlU24AgTeLYskf1ajIIFnCqJVrAbYxEiaZ0cH1Ey5k6aDfRveb9wqhSQbTMGZuTsOw -e ClientSettings__Alias=docker-test -e ClientSettings__Trainer__CpuThreads=5  qubicli/client:latest
 ```
 
 ## Linux Option 1: Screen Session  
@@ -171,13 +174,14 @@ To run the qubic.li client you can use this streamlined installation guide. Plea
 > With this method you do not have auto update
 
 **1. Download and Unpack the qli-Client:**  
-*Execute the following command to download and extract the qli-Client. This example uses the package qli-Client-3.10.1-Linux-x64.tar.gz. Please ensure you replace it with the latest available version.*  
+*Execute the following commands to download and extract the latest qli-Client. On an ARM machine use `Linux-arm64` instead of `Linux-x64`.*  
 ```bash
-mkdir ~/qubic;
-cd ~/qubic;
-wget https://dl.qubic.li/downloads/qli-Client-3.10.1-Linux-x64.tar.gz;
-tar -xvf qli-Client-3.10.1-Linux-x64.tar.gz;
-rm qli-Client-3.10.1-Linux-x64.tar.gz;
+mkdir ~/qubic && cd ~/qubic
+# latest release version, e.g. 3.10.2
+VER=$(curl -fsSLI -o /dev/null -w '%{url_effective}' https://github.com/qubic-li/client/releases/latest); VER=${VER##*/v}
+wget https://github.com/qubic-li/client/releases/download/v$VER/qli-Client-$VER-Linux-x64.tar.gz
+tar -xvf qli-Client-$VER-Linux-x64.tar.gz
+rm qli-Client-$VER-Linux-x64.tar.gz
 ```  
 **2. edit and set your appsettings.json according to your preferences**
 ```bash
@@ -201,8 +205,8 @@ sample appsettings.json for CPU set to 10 threads:
 {
   "ClientSettings": {
     "accessToken": "YOURACCESSTOKEN",
-    "amountOfThreads": 10,
-    "alias": "YOURALIAS"
+    "alias": "YOURALIAS",
+    "trainer": { "cpuThreads": 10 }
   }
 }
 ```
@@ -222,26 +226,47 @@ basic screen commands:
 To install the qubic.li Service you can use our quick installation guide. Please consider to check the content of the service installation script.
 All commands should either be executed by root or you need to prepend the `sudo` command.
 
-The installerscript places all qubic.li stuff in `/q`.
+The installer script places all qubic.li stuff in `/q`.
 
 > [!NOTE]
 > WSL is by default not shipped with `systemd`. You may activate it with this help: https://learn.microsoft.com/de-de/windows/wsl/systemd
 
 
-### Ubuntu 22.04
-Don't forget to replace the token from the below examples with your own.
+### Install
+Works on Ubuntu 22.04+ and Debian 12+, on x86_64 and arm64.
+
+> [!TIP]
+> The easiest way: use the [Client Setup Configurator](https://platform.qubic.li/setup). It generates the complete install command for you, with your token and settings already filled in. Use the commands below if you prefer to do it by hand.
+
+The installer always fetches the **latest released** qli-Client from this repository's
+[releases](https://github.com/qubic-li/client/releases), verifies its SHA256 checksum and
+installs it into `/q` as the systemd service `qli`. Re-run it at any time to update.
+The scripts are in [`install/`](install/) — please read them before running.
+
+Replace `<THREADS>` and `<TOKEN>` (your access token, or your Qubic address) below.
 
 ```bash
-# update your sources
-apt update
-# download service installation script with autoupdate
-wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto.sh
-# set the script as executable
-chmod u+x qli-Service-install.sh
-# install qubic.li client as systemd service
-# Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
-./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImMyYmUyNTVkLWRkNzAtNDE4Mi04MDdkLWM1M2M5Yjc5ZDgyNiIsIk1pbmluZyI6IiIsIm5iZiI6MTcwNDczODc4NSwiZXhwIjoxNzM2Mjc0Nzg1LCJpYXQiOjE3MDQ3Mzg3ODUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.j8oI56OqV-gjoHxacwegetd2nha1zHLfSjW-REcNsp8q0lWW-NbvClPIuy_nig-YqpbyPXRPAZvYjh1SUjkw7g
+# with auto update (recommended)
+curl -fsSL https://raw.githubusercontent.com/qubic-li/client/main/install/qli-Service-install-auto.sh | sudo bash -s -- <THREADS> <TOKEN> [ALIAS]
+
+# without auto update
+curl -fsSL https://raw.githubusercontent.com/qubic-li/client/main/install/qli-Service-install.sh | sudo bash -s -- <THREADS> <TOKEN> [ALIAS]
 ```
+
+Or download first and run:
+```bash
+wget -O qli-Service-install.sh https://raw.githubusercontent.com/qubic-li/client/main/install/qli-Service-install-auto.sh
+chmod u+x qli-Service-install.sh
+# Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
+sudo ./qli-Service-install.sh <THREADS> <TOKEN>
+```
+
+Options (environment variables):
+- `QLI_VERSION=3.10.1` — install a specific version instead of the latest, e.g. `curl … | sudo QLI_VERSION=3.10.1 bash -s -- <THREADS> <TOKEN>`
+- `QLI_AUTO_UPDATE=true|false` — override the auto-update setting
+
+> [!NOTE]
+> The previous installer URLs under `https://dl.qubic.li/cloud-init/` keep working.
 
 for **ubuntu 20.04** you might need to install a more recent libc version.
 ```
@@ -251,19 +276,7 @@ apt update
 apt install libc6
 apt install -y g++-11
 ```
-
-### Debian 12
-```bash
-# download service installation script with autoupdate
-# download service installation script
-wget -O qli-Service-install.sh https://dl.qubic.li/cloud-init/qli-Service-install-auto.sh
-# set the script as executable
-chmod u+x qli-Service-install.sh
-# install qubic.li client as systemd service
-# Syntax: qli-Service-install.sh <threads> <accessToken|payoutId> [alias]
-./qli-Service-install.sh 2 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImMyYmUyNTVkLWRkNzAtNDE4Mi04MDdkLWM1M2M5Yjc5ZDgyNiIsIk1pbmluZyI6IiIsIm5iZiI6MTcwNDczODc4NSwiZXhwIjoxNzM2Mjc0Nzg1LCJpYXQiOjE3MDQ3Mzg3ODUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.j8oI56OqV-gjoHxacwegetd2nha1zHLfSjW-REcNsp8q0lWW-NbvClPIuy_nig-YqpbyPXRPAZvYjh1SUjkw7g
-```
-for **debian 11** you might need to install a more recent libc version.
+For **debian 11** you might need to install a more recent libc version as well.
 
 ### Service Monitoring
 You can manage your qubic.li Client with the systemd control.
@@ -281,40 +294,37 @@ to live watch it on the console, use `tail -f /var/log/qli.log`.
 ### sample minimal configuration with token
 ```json
 {
-	"Settings": {
-        "trainer": {
-            "cpuThreads": 16
-        },
-		"alias": "Client 3",
-		"accessToken": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImMyYmUyNTVkLWRkNzAtNDE4Mi04MDdkLWM1M2M5Yjc5ZDgyNiIsIk1pbmluZyI6IiIsIm5iZiI6MTcwNDczODc4NSwiZXhwIjoxNzM2Mjc0Nzg1LCJpYXQiOjE3MDQ3Mzg3ODUsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.j8oI56OqV-gjoHxacwegetd2nha1zHLfSjW-REcNsp8q0lWW-NbvClPIuy_nig-YqpbyPXRPAZvYjh1SUjkw7g"
-	}
+  "ClientSettings": {
+    "trainer": { "cpuThreads": 16 },
+    "alias": "Client 3",
+    "accessToken": "YOURACCESSTOKEN"
+  }
 }
 ```
-### sample minimal configuration with payout id
+### sample minimal configuration with Qubic address (no account)
 ```json
 {
-	"Settings": {
-		"trainer": {
-            "cpuThreads": 16
-        },
-		"alias": "My super miner",
-		"payoutId": "VGIWRRNVVRRXSEASPENCIMVNANPCFHAASZVPBIEFLCRYHWSZYSGXHNSBYPVN"
-	}
+  "ClientSettings": {
+    "trainer": { "cpuThreads": 16 },
+    "alias": "My super miner",
+    "qubicAddress": "VGIWRRNVVRRXSEASPENCIMVNANPCFHAASZVPBIEFLCRYHWSZYSGXHNSBYPVN"
+  }
 }
 ```
 
 ## Remove Client
 To remove the qubic.li Client execute the following commands.
 ```
-# stop service
-systemctl stop qli --no-block
+# stop and disable service
+systemctl stop qli
+systemctl disable qli
 # remove service definition
 rm /etc/systemd/system/qli.service
 # reload systemd
 systemctl daemon-reload
 # remove all related files
 rm -R /q
-rm /var/log/qli.log
+rm -f /var/log/qli.log /var/log/qli.error.log
 ```
 
 ## HiveOs
@@ -333,12 +343,12 @@ if you opt for the Systemd Linux Service (Option 2):
 |  Setting 	|  Default Value 	|  Description 	|
 |---	|---	|---	|
 |  poolAddress 	|  `wss://wps.qubic.li/ws` 	|  The Pool Address 	|
-|  accessToken* 	|  JWT Token 	| This is you personal JWT Token which you can obtain from the Control Panel at qubic.li 	|
+|  accessToken* 	|  JWT Token 	| This is your personal JWT Token which you can obtain from the Control Panel at qubic.li 	|
 |  qubicAddress* 	|  NULL 	| This is the ID you want to get token payout for your found solutions.	|
 |  alias 	|  qli Client 	| You can give your Client a Name which will be displayed in the Control Panel. If empty it uses the Hostname.	|
 |  pps	|  `true` 	| If the trainer should run in PPS mode  | 
 |  autoUpdate	|  `false` 	| If the trainer should try to do an autoupdate  | 
-|  displayDetailedHashrates	|  `false` 	| Enable details Hashrates in console log. Displays GPU/CPU explicitly.  | 
+|  displayDetailedHashrates	|  `false` 	| Enable detailed hashrates in the console log. Displays GPU/CPU explicitly.  | 
 |  displayUptime |  `false` 	| Display the client uptime every 5-10s in the console. | 
 |  trainer	|  {} 	| The [trainer configuration](#trainer-options) options  | 
 |  idling	|  {} 	| The configuration options for the [Qubic idling](#idle-options) period | 
@@ -395,7 +405,7 @@ if you opt for the Systemd Linux Service (Option 2):
 > `-1` => auto tune<br>
 >  `0` => disable GPU<br>
 > `>0` => number of `gThreads` to be used<br>
-> >e.g.: `0,-1,-1,-1,-1,-1` => GPU#1 disabled, #1-5 auto tuen<br>
+> >e.g.: `0,-1,-1,-1,-1,-1` => GPU#1 disabled, #1-5 auto tune<br>
 > e.g.: `0` => GPU#0 disabled, if there are more, all will be auto tuned<br>
 > e.g.: `512,256,256,256,256,512` => set `gThread` to 512 on GPU#0 and GPU#5, 256 to the rest<br>
 
@@ -413,17 +423,17 @@ During the Qubic idling phase. You can run another program or miner.
 	"command": "ping",
 	"arguments": "google.com",
     "postCommand": "ping",
-    "postCommandArguments": "-c 2 google.com",
+    "postCommandArguments": "-c 2 google.com"
 }
 ```
 
 |  Setting 	|  Default Value 	|  Description 	|
 |---	|---	|---	|
-|  command 	|  ""	|  the command/programm to execute	|
+|  command 	|  ""	|  the command/program to execute	|
 |  arguments 	|  ""	|  the arguments that should be given to the command/program	|
-|  preCommand 	|  ""	|  a command/programm to start once the idling period starts	|
+|  preCommand 	|  ""	|  a command/program to start once the idling period starts	|
 |  preCommandArguments 	|  ""	|  the arguments that should be given to the preCommand/program	|
-|  postCommand 	|  ""	|  a command/programm to start once the idling period stopps	|
+|  postCommand 	|  ""	|  a command/program to start once the idling period stops	|
 |  postCommandArguments 	|  ""	|  the arguments that should be given to the postCommand/program	|
 
 ## Troubleshooting
@@ -448,7 +458,7 @@ sudo reboot
 If you have a second GPU (e.g. from your processor) you can try to disable your mining GPU for windows and let windows use the second GPU to render your windows.
 
 ### AVX CPU (Intel) not working (legacy)
-Somtimes the detection of AVX2/AVX512 is not accurate and it loads the wrong trainer.
+Sometimes the detection of AVX2/AVX512 is not accurate and it loads the wrong trainer.
 If this happens to you, you can enforce certain configuration.
 
 #### Enforce SKYLAKE
@@ -466,7 +476,7 @@ add `"cpuVersion": "SKYLAKE"` to trainer settings in appsettings.json
 ```
 
 #### Enforce AVX2
-add `"cpuVersion": "AVX2"` to overwrites in appsettings.json
+add `"cpuVersion": "AVX2"` to trainer settings in appsettings.json
 
 ```json
 {
@@ -498,9 +508,9 @@ systemctl start qli --no-block
 if you think the client reports wrong or random hashrate you could restart your server. Or stop all qli services. (e.g. for linux: `systemctl stop qli --no-block && pkill -f qli && systemctl start qli`)
 
 ### Possible Optimizations
-Every specific CPU or general Hardware configuration can need speific performance settings. Depending on your Setup you can try:
+Every specific CPU or general Hardware configuration can need specific performance settings. Depending on your Setup you can try:
 
 1. Enable/Disable SMT/HT in Bios
-2. Enabled/Disable Performance Boost (Windows)
+2. Enable/Disable Performance Boost (Windows)
 3. Enable/Disable specific Power Schema (Ubuntu)
-4. Adjust Threads to your needs. Sometimes less threads is more effective thatn to many.
+4. Adjust Threads to your needs. Sometimes fewer threads are more effective than too many.
