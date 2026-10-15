@@ -1,3 +1,7 @@
+# Version 3.10.2
+- Added: CPU cluster support
+- Added: transport compression
+
 # Version 3.10.1
 - Fixed: Pool connection errors
 - Optimized: internal data handling
