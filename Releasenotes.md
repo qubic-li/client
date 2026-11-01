@@ -1,3 +1,8 @@
+# Version 3.12.0
+- Optimized: CPU/GPU support
+- Added: dynamic ant tree mining
+- Fixed: share counting
+
 # Version 3.10.2
 - Added: CPU cluster support
 - Added: transport compression
