@@ -1,3 +1,7 @@
+# Version 3.13.0
+MANDATORY UPDATE FOR QUBIC ANT Algorithm
+- Added: Tree Start Nonce handling
+
 # Version 3.12.0
 - Optimized: CPU/GPU support
 - Added: dynamic ant tree mining
