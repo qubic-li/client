@@ -1,3 +1,6 @@
+# Version 3.13.1
+- Fixed: Race condition in startup (could lead to non working trainer)
+
 # Version 3.13.0
 MANDATORY UPDATE FOR QUBIC ANT Algorithm
 - Added: Tree Start Nonce handling
