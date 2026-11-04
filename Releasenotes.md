@@ -1,3 +1,9 @@
+# Version 3.13.4
+- Fixed: Internal version mismatch in binary
+
+# Version 3.13.3
+- Fixed: Auto evict local finished solutions
+
 # Version 3.13.1
 - Fixed: Race condition in startup (could lead to non working trainer)
 
