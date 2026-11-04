@@ -1,10 +1,4 @@
 #!/usr/bin/env bash
-# qli-Client in-place update. Served from the install/ dir of qubic-li/client,
-# fetched by the ~15-line bootstrap stored in Redis under
-# TrainerClient.UpdateScript. The stub passes target release + arch via env:
-#   QLI_VERSION    e.g. 3.13.3.0
-#   QLI_PLATFORM   Linux-x64 | Linux-arm64
-# Nothing in this script changes between releases — only the stub does.
 set -uo pipefail
 
 VERSION=${QLI_VERSION:?QLI_VERSION not set}
