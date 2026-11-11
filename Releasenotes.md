@@ -1,3 +1,6 @@
+# Version 3.13.5
+- Fixed: Compatibility with EP239 algo
+  
 # Version 3.13.4
 - Fixed: Internal version mismatch in binary
 
