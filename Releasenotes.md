@@ -1,3 +1,7 @@
+# Version 3.14.0
+**MANDATORY UPDATE FOR QUBIC EP240 - 2026-11-18**
+- Updated: Compatibility with EP240 algo
+
 # Version 3.13.5
 - Fixed: Compatibility with EP239 algo
   
