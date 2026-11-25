@@ -1,3 +1,6 @@
+# Version 3.14.1
+- Fixed: Internal race condition
+
 # Version 3.14.0
 **MANDATORY UPDATE FOR QUBIC EP240 - 2026-11-18**
 - Updated: Compatibility with EP240 algo
